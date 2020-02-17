@@ -111,7 +111,7 @@ GameObject:
   - component: {fileID: 11481936}
   - component: {fileID: 11466726}
   - component: {fileID: 11460614}
-  - component: {fileID: -6923218737993613752}
+  - component: {fileID: 9082283393392702531}
   m_Layer: 5
   m_Name: RoomListEntry
   m_TagString: Untagged
@@ -222,7 +222,7 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: 0
   m_LayoutPriority: 1
---- !u!114 &-6923218737993613752
+--- !u!114 &9082283393392702531
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
