@@ -31,6 +31,10 @@
             <e p="PlayerListEntry.cs" t="Include" />
             <e p="RoomListEntry.cs" t="Include" />
           </e>
+          <e p="Options" t="Include">
+            <e p="HideOrShow.cs" t="Include" />
+            <e p="SoundController.cs" t="Include" />
+          </e>
           <e p="Photon" t="Include">
             <e p="GameManager.cs" t="Include" />
             <e p="GameSetup.cs" t="Include" />
