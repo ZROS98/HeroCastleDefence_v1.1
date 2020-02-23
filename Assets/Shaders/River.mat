@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: New Material
+  m_Name: River
   m_Shader: {fileID: -6465566751694194690, guid: 48458cc55d0424b49b41bc1f669b956d,
     type: 3}
   m_ShaderKeywords: 
@@ -120,11 +120,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_14ED9136: 10
+    - Vector1_14ED9136: 15
     - Vector1_588394A4: 0.2
-    - Vector1_5D161D59: 2
-    - Vector1_C0A3715F: 5
-    - Vector1_EEA99EF0: 2
+    - Vector1_5D161D59: 2.5
+    - Vector1_C0A3715F: 2.5
+    - Vector1_EEA99EF0: 1
     - _AORemapMax: 1
     - _AORemapMin: 0
     - _ATDistance: 1
@@ -245,8 +245,8 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - Color_A7848A63: {r: 0.72156864, g: 2.5882354, b: 4, a: 1}
-    - Vector2_338B1566: {r: 0, g: 0.2, b: 0, a: 0}
+    - Color_A7848A63: {r: 0.22214028, g: 0.7870112, b: 1.2122512, a: 1}
+    - Vector2_338B1566: {r: 0, g: 0.1, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
