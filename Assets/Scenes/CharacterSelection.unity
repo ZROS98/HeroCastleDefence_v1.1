@@ -920,6 +920,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 893194363}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &430758564
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1608,7 +1619,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mage
+  m_Text: Wizard
 --- !u!222 &562447789
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2198,6 +2209,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 893194363}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &778607480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2590,7 +2612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e69c073acfe357498d3cdc2d2f829db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabSelectedCharacter: {fileID: 5682434098739292252, guid: 2c604dee4bb52014bad28c7ce9176714,
+  prefabSelectedCharacter: {fileID: 132106997770699223, guid: df04f560aafd27b4cbf5833d6b25728a,
     type: 3}
 --- !u!1 &903094838
 GameObject:
@@ -2757,7 +2779,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3.5
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -7623,18 +7645,22 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 16
-    m_FontStyle: 0
+    m_FontSize: 40
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 0
+    m_MaxSize: 50
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: ASSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSAAAAAAAAAAAAAAASIN
+  m_Text: 'Assasin
+
+
+
+    Work In Progress'
 --- !u!222 &1078058350
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7834,7 +7860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1195616170
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7874,18 +7900,18 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 16
-    m_FontStyle: 0
+    m_FontSize: 40
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
-    m_MaxSize: 40
-    m_Alignment: 0
+    m_MaxSize: 50
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: WAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAARIOR
+  m_Text: "Warrior \n\n\nWork In Progress"
 --- !u!222 &1195616172
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8750,6 +8776,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 893194363}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1595215162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8803,7 +8840,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1827037831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8824,18 +8861,24 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 16
+    m_FontSize: 15
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: MAAAAAAAAAGE
+  m_Text: Wizards are a ranged magical damage dealer class. Wizards enter the game
+    relatively weak compared to other classes, and as they gain levels and skills,
+    their performance improves dramatically. Wizards control three types of magic,
+    of which they have damage and shields for. The fire path is the AoE (Area of
+    Effect) path that also has a knockback skill and the only physical damage skill
+    wizards have. The water path has buffs and three damage skills that can slow
+    the enemy down. And last there's the earth path which has debuff and stun skills.
 --- !u!222 &1827037832
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9028,7 +9071,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 3.5
+      scalar: 2.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
