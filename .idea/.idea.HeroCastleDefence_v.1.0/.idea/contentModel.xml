@@ -33,6 +33,8 @@
             <e p="RoomListEntry.cs" t="Include" />
           </e>
           <e p="Options" t="Include">
+            <e p="ArenaMobBuyMenu.cs" t="Include" />
+            <e p="ArenaOptions.cs" t="Include" />
             <e p="HideOrShow.cs" t="Include" />
             <e p="SoundController.cs" t="Include" />
           </e>
