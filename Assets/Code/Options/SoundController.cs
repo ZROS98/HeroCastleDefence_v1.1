@@ -17,11 +17,11 @@ public class SoundController : MonoBehaviour
     {
         if (enabled)
         {
-            _mixerGroup.audioMixer.SetFloat("MasterVolume", 0);
+            _mixerGroup.audioMixer.SetFloat("MasterVolume", -80);
         }
         else
         {
-            _mixerGroup.audioMixer.SetFloat("MasterVolume", -80);
+            _mixerGroup.audioMixer.SetFloat("MasterVolume", 0);
         }
 
         PlayerPrefs.SetInt("MasterVolume", enabled ? 1 : 0);

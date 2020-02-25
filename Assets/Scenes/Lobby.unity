@@ -5741,6 +5741,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 17230055321894205, guid: 683321213d4d2a2458436ca450009754,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 812339053920399813, guid: 683321213d4d2a2458436ca450009754,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -5754,7 +5759,7 @@ PrefabInstance:
     - target: {fileID: 812339053920399813, guid: 683321213d4d2a2458436ca450009754,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 675.0301
+      value: 933.2504
       objectReference: {fileID: 0}
     - target: {fileID: 812339053920399813, guid: 683321213d4d2a2458436ca450009754,
         type: 3}
@@ -5906,9 +5911,24 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ChangeMusicVolume
       objectReference: {fileID: 0}
+    - target: {fileID: 5257196285487593880, guid: 683321213d4d2a2458436ca450009754,
+        type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5997585365694392052, guid: 683321213d4d2a2458436ca450009754,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5997585365694392052, guid: 683321213d4d2a2458436ca450009754,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5997585365694392052, guid: 683321213d4d2a2458436ca450009754,
+        type: 3}
+      propertyPath: m_AnchorMax.x
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6984461781185349805, guid: 683321213d4d2a2458436ca450009754,
@@ -5989,7 +6009,7 @@ PrefabInstance:
     - target: {fileID: 6984461782691788768, guid: 683321213d4d2a2458436ca450009754,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 675.0301
+      value: 933.2504
       objectReference: {fileID: 0}
     - target: {fileID: 6984461782691788768, guid: 683321213d4d2a2458436ca450009754,
         type: 3}
@@ -6016,6 +6036,11 @@ PrefabInstance:
       propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ToggleMasterVolume
       objectReference: {fileID: 0}
+    - target: {fileID: 6984461782765054214, guid: 683321213d4d2a2458436ca450009754,
+        type: 3}
+      propertyPath: m_IsOn
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6984461782765054217, guid: 683321213d4d2a2458436ca450009754,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -6029,7 +6054,7 @@ PrefabInstance:
     - target: {fileID: 6984461782765054217, guid: 683321213d4d2a2458436ca450009754,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 675.0301
+      value: 933.2504
       objectReference: {fileID: 0}
     - target: {fileID: 6984461782765054217, guid: 683321213d4d2a2458436ca450009754,
         type: 3}
@@ -6089,7 +6114,7 @@ PrefabInstance:
     - target: {fileID: 7473120219604483377, guid: 683321213d4d2a2458436ca450009754,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 675.0301
+      value: 933.2504
       objectReference: {fileID: 0}
     - target: {fileID: 7473120219604483377, guid: 683321213d4d2a2458436ca450009754,
         type: 3}
