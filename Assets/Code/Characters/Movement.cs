@@ -19,7 +19,6 @@ public class Movement : MonoBehaviour
         Screen.lockCursor = true;
         chrCamera.transform.SetParent(gameObject.transform);
         chrCamera.transform.localPosition = new Vector3(0, 3, -20);
-        Debug.Log(chrCamera.transform.localPosition);
     }
 
     // Update is called once per frame
@@ -29,7 +28,6 @@ public class Movement : MonoBehaviour
 
         Vector3 vectorMovement = new Vector3(Input.GetAxisRaw("Horizontal"), 0.0f, Input.GetAxisRaw("Vertical"));
         transform.Translate(vectorMovement.normalized * moveSpeed * Time.deltaTime);
-        Debug.Log(chrCamera.transform.localPosition);
     }
 
     public void CameraRotation()
