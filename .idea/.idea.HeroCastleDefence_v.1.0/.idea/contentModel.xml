@@ -19,6 +19,7 @@
           <e p="Characters" t="Include">
             <e p="Movement.cs" t="Include" />
             <e p="PhotonPlayer.cs" t="Include" />
+            <e p="ShootingMechanic.cs" t="Include" />
           </e>
           <e p="CharacterSelection" t="Include">
             <e p="CharacterSelect.cs" t="Include" />
@@ -38,6 +39,10 @@
           <e p="Photon" t="Include">
             <e p="GameManager.cs" t="Include" />
             <e p="GameSetup.cs" t="Include" />
+          </e>
+          <e p="Weapons" t="Include">
+            <e p="DestroyProjectile.cs" t="Include" />
+            <e p="Fireball.cs" t="Include" />
           </e>
         </e>
         <e p="Photon" t="Include">
