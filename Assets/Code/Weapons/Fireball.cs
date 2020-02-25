@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using Photon.Pun;
 
 public class Fireball : MonoBehaviour
 {
@@ -10,15 +11,30 @@ public class Fireball : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(gameObject);
+        PhotonView.Get(this).RPC("DestroyObject", RpcTarget.All);
         if (_explosionVFX != null)
         {
-            Instantiate(_explosionVFX, transform.position, transform.rotation);
+            PhotonNetwork.Instantiate(_explosionVFX.name, transform.position, transform.rotation);
         }
     }
 
     private void Start()
     {
-        Destroy(gameObject,10f);
+        StartCoroutine(DestroyObjectCoroutines());    
+    }
+
+    [PunRPC]
+    private void DestroyObject()
+    {
+    PhotonNetwork.Destroy(gameObject);
+    }
+
+    IEnumerator DestroyObjectCoroutines()
+    {
+        for (;;)
+        {
+            yield return new WaitForSeconds(10.0f);
+            PhotonView.Get(this).RPC("DestroyObject", RpcTarget.All);
+        }
     }
 }
