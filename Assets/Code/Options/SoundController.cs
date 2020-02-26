@@ -38,4 +38,10 @@ public class SoundController : MonoBehaviour
         _mixerGroup.audioMixer.SetFloat("MusicVolume", Mathf.Lerp(-80, 0, volume));
         PlayerPrefs.SetFloat("MusicVolume", enabled ? 1 : 0);
     }
+    
+    public void ChangePlayerVolume(float volume)
+    {
+        _mixerGroup.audioMixer.SetFloat("PlayerVolume", Mathf.Lerp(-80, 0, volume));
+        PlayerPrefs.SetFloat("PlayerVolume", enabled ? 1 : 0);
+    }
 }
