@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d9972a48dd5f404aa4c612b0b947c91, type: 3}
-  m_Name: Axe
+  m_Name: Fireball
   m_EditorClassIdentifier: 
-  name: Axe
+  name: Fireball
   damage: 55

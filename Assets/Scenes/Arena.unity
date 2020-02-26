@@ -447,6 +447,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 75836cac8af52414c85343289a17535e, type: 3}
+--- !u!1 &177261302 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1533428177928048, guid: 75836cac8af52414c85343289a17535e,
+    type: 3}
+  m_PrefabInstance: {fileID: 177261301}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &224311055
 GameObject:
   m_ObjectHideFlags: 0
@@ -527,7 +533,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 224311058}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2068072961}
+        m_MethodName: CreateMob
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1009295489438026, guid: 66e77aa60f5941c4fac8214300600242,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &224311058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -787,7 +805,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 693450864}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2068072961}
+        m_MethodName: CreateMob
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1944628432748810, guid: fe9db8c6cb8cd5349a930a01b4931507,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &693450864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1133,7 +1163,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1038071763}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2068072961}
+        m_MethodName: CreateMob
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1906022184173130, guid: 425a7a28888869b4bb0df40aa65e26bf,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1038071763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2153,7 +2195,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1531237623}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2068072961}
+        m_MethodName: CreateMob
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1152512832814340, guid: 50818c83516699c47b45ef4e84cdba90,
+            type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1531237623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2784,6 +2838,7 @@ GameObject:
   - component: {fileID: 2068072955}
   - component: {fileID: 2068072959}
   - component: {fileID: 2068072960}
+  - component: {fileID: 2068072961}
   m_Layer: 0
   m_Name: GameSetup
   m_TagString: Untagged
@@ -2881,6 +2936,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameObject: {fileID: 1106293079}
+--- !u!114 &2068072961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2068072954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adefdb2cbeb52de40b47203f40a0baaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 177261302}
 --- !u!1 &2144827626
 GameObject:
   m_ObjectHideFlags: 0

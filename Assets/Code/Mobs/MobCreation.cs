@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class MobCreation : MonoBehaviour
 {
-    public GameObject mob;
-    private Vector3 _position = Vector3.zero;
-    public GameObject varMob;
+    [SerializeField]
+    private GameObject spawnPoint;
+    private GameObject _varMob;
 
-    public void CreateMob()
+    public void CreateMob(GameObject selectedMob)
     {
         Vector3 force = Vector3.forward;
         Vector3 torque = Vector3.forward;
         object[] instantiationData = { force, torque, true };
-        varMob = PhotonNetwork.Instantiate(mob.name, _position, Quaternion.Euler(0.0f, 0.0f, 0.0f), 0, instantiationData);
+        _varMob = PhotonNetwork.Instantiate(selectedMob.name, spawnPoint.transform.position, Quaternion.Euler(0.0f, 0.0f, 0.0f), 0, instantiationData);
     }
 }
