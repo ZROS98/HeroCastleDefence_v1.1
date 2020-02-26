@@ -17,8 +17,10 @@ public class WalkSound : MonoBehaviour
 
     public void PlayRandomSound()
     {
-        _audioSource.clip = _audioClipArray[Random.Range(0, _audioClipArray.Length)];
-        //_audioSource.PlayOneShot(_audioSource.clip); 
-        _audioSource.PlayScheduled(0.5f);
+        if (!_audioSource.isPlaying)
+        {
+            _audioSource.clip = _audioClipArray[Random.Range(0, _audioClipArray.Length)];
+            _audioSource.PlayOneShot(_audioSource.clip);
+        }
     }
 }
