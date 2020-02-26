@@ -15,13 +15,13 @@ public class PhotonPlayer : MonoBehaviourPunCallbacks
     void Start()
     {
         myAvatar = SelectedCharacter.Prefab;
-     //   PV = GetComponent<PhotonView>();
+        PV = GetComponent<PhotonView>();
         int spawnPicker = Random.Range(0, GameSetup.GS.spawnPoints.Length);
-     //   if (PV.IsMine)
-    //    {
+        if (PV.IsMine)
+        {
              photonAvatar = PhotonNetwork.Instantiate(myAvatar.name,
                 GameSetup.GS.spawnPoints[spawnPicker].position, GameSetup.GS.spawnPoints[spawnPicker].rotation, 0);
-    //    }
+        }
         photonAvatar.GetComponent<Movement>().chrCamera = mainCamera;
     }
 }
