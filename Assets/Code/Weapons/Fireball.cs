@@ -8,8 +8,8 @@ using Photon.Pun;
 public class Fireball : MonoBehaviour
 {
     [SerializeField] private GameObject _explosionVFX;
-
-    private void OnTriggerEnter(Collider other)
+    
+    private void OnCollisionEnter(Collision other)
     {
         PhotonView.Get(this).RPC("DestroyObject", RpcTarget.All);
         if (_explosionVFX != null)

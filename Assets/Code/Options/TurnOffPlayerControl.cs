@@ -16,7 +16,6 @@ public class TurnOffPlayerControl : MonoBehaviour
         foreach (GameObject panel in _panels)
         {
             _dictionaryPanels.Add(panel, false);
-            Debug.Log(_dictionaryPanels);
         }
         componentMovement = character.GetComponent<Movement>();
         componentShootingMechanics = character.GetComponentInChildren<ShootingMechanics>();
@@ -29,12 +28,8 @@ public class TurnOffPlayerControl : MonoBehaviour
             if (_dictionaryPanels[panel.Key] != panel.Key.active)
             {
                 _dictionaryPanels[panel.Key] = panel.Key.active;
-            }           
-        }
+            }
 
-
-        foreach (KeyValuePair<GameObject, bool> panel in _dictionaryPanels)
-        {
             if (panel.Value)
             {
                 componentMovement.enabled = false;
