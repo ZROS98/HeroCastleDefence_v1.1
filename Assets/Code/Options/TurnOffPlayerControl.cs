@@ -5,6 +5,7 @@ using UnityEngine;
 public class TurnOffPlayerControl : MonoBehaviour
 {
     [SerializeField] private GameObject[] _panels;
+    private Dictionary<GameObject, bool> _dictionaryPanels = new Dictionary<GameObject, bool>();
     public GameObject character;//character witch owner the current gamer. Need to appoint from instantiate 
     private int _amountActivePanels;
     private Movement componentMovement;
@@ -12,35 +13,38 @@ public class TurnOffPlayerControl : MonoBehaviour
 
     void Start()
     {
+        foreach (GameObject panel in _panels)
+        {
+            _dictionaryPanels.Add(panel, false);
+            Debug.Log(_dictionaryPanels);
+        }
         componentMovement = character.GetComponent<Movement>();
         componentShootingMechanics = character.GetComponentInChildren<ShootingMechanics>();
     }
 
     void Update()
     {
-        foreach (GameObject panel in _panels)
+        foreach (KeyValuePair<GameObject, bool> panel in _dictionaryPanels)
         {
-            Debug.Log(panel);
-            if (panel.active)
+            if (_dictionaryPanels[panel.Key] != panel.Key.active)
             {
-                _amountActivePanels += 1;            
-            }
-            else if (_amountActivePanels > 0)
-            {
-                _amountActivePanels -= 1;
-            }
+                _dictionaryPanels[panel.Key] = panel.Key.active;
+            }           
         }
 
-        if (_amountActivePanels>0)
+
+        foreach (KeyValuePair<GameObject, bool> panel in _dictionaryPanels)
         {
-            componentMovement.enabled = false;
-            componentShootingMechanics.enabled = false;
-            Debug.Log("MovOff");
-        }
-        else
-        {
-            componentMovement.enabled = true;
-            componentShootingMechanics.enabled = true;
+            if (panel.Value)
+            {
+                componentMovement.enabled = false;
+                componentShootingMechanics.enabled = false;
+            }
+            else
+            {
+                componentMovement.enabled = true;
+                componentShootingMechanics.enabled = true;
+            }
         }
     }
 }

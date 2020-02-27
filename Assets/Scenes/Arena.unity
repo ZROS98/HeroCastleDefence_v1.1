@@ -1872,7 +1872,8 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 50
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6984461782689332721, guid: 683321213d4d2a2458436ca450009754, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 683321213d4d2a2458436ca450009754, type: 3}
 --- !u!224 &1106293078 stripped
 RectTransform:
@@ -3461,8 +3462,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _panels:
-  - {fileID: 1271691693}
   - {fileID: 1106293079}
+  - {fileID: 1271691693}
   character: {fileID: 0}
 --- !u!1 &2144827626
 GameObject:
