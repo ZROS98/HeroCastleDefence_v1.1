@@ -13,6 +13,4 @@ public class HideOrShow : MonoBehaviour
             _gameObject.SetActive(!isActive);
         }
     }
-
-    
 }
