@@ -1,24 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!243 &-7560651726486869061
-AudioMixerGroupController:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: UI
-  m_AudioMixer: {fileID: 24100000}
-  m_GroupID: 0be43de470d9b484b91ee336092f5c9f
-  m_Children: []
-  m_Volume: 7ae00f32c828f194d96d0aab36c05dd4
-  m_Pitch: e5df3b8b7ef0e0f4fa74a31d3f89084a
-  m_Send: 00000000000000000000000000000000
-  m_Effects:
-  - {fileID: -4645232826063205969}
-  m_UserColorIndex: 0
-  m_Mute: 0
-  m_Solo: 0
-  m_BypassEffects: 0
 --- !u!244 &-6332217026658269219
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -29,20 +10,6 @@ AudioMixerEffectController:
   m_EffectID: 58c4e7f74f5b18247b21dd0de0597e32
   m_EffectName: Attenuation
   m_MixLevel: 0d3a394fe5142664c9ce1655129ff5e3
-  m_Parameters: []
-  m_SendTarget: {fileID: 0}
-  m_EnableWetMix: 0
-  m_Bypass: 0
---- !u!244 &-4645232826063205969
-AudioMixerEffectController:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_EffectID: 86ef537213b07ca4b8f4ab6c537cafa6
-  m_EffectName: Attenuation
-  m_MixLevel: f86c3252fbe7e6743b51e4384e38f6fb
   m_Parameters: []
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
@@ -71,12 +38,9 @@ AudioMixerController:
     name: MusicVolume
   - guid: 6e67f671a8c158940976b5a6f1e217fc
     name: PlayerVolume
-  - guid: 7ae00f32c828f194d96d0aab36c05dd4
-    name: UIVolume
   m_AudioMixerGroupViews:
   - guids:
     - 46d93624a0ec5b34c9ffd9c32acd40ba
-    - 0be43de470d9b484b91ee336092f5c9f
     - 5b4ebef528dc44542b6f2672a7b00e55
     - 2fdf3c8f79ca659479b924b511048f59
     - 0174b86192cb07a4fa21493e99a74635
@@ -93,7 +57,6 @@ AudioMixerGroupController:
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 46d93624a0ec5b34c9ffd9c32acd40ba
   m_Children:
-  - {fileID: -7560651726486869061}
   - {fileID: 6897744620691088118}
   - {fileID: 8289892671240263561}
   - {fileID: 2317219280277930895}
