@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-    public class HCDGame
+    public class HcdGame
     {
         public const float ASTEROIDS_MIN_SPAWN_TIME = 5.0f;
         public const float ASTEROIDS_MAX_SPAWN_TIME = 10.0f;
