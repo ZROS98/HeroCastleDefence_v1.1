@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
@@ -61,4 +61,4 @@ public class Movement : MonoBehaviour
         
         transform.eulerAngles = new Vector3(pitch,yaw, 0.0f);
     }
-}
+}*/

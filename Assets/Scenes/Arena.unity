@@ -1319,7 +1319,8 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[10].m_Target
       value: 
-      objectReference: {fileID: 2068072956}
+      objectReference: {fileID: 5349307881218689074, guid: f901d04340570774b96afc50bda7988c,
+        type: 3}
     - target: {fileID: 1571585931528591821, guid: c5e1a65d149cdff48b1a49e0673db335,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[8].m_MethodName
@@ -1328,7 +1329,7 @@ PrefabInstance:
     - target: {fileID: 1571585931528591821, guid: c5e1a65d149cdff48b1a49e0673db335,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[10].m_MethodName
-      value: CreateCharacter
+      value: CharacterOnCube
       objectReference: {fileID: 0}
     - target: {fileID: 1571585931528591821, guid: c5e1a65d149cdff48b1a49e0673db335,
         type: 3}

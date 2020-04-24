@@ -10,24 +10,29 @@ public class PhotonPlayer : MonoBehaviourPunCallbacks
     public GameObject mainCamera;
     //private PhotonView _PV;
     private GameObject _photonAvatar;
+    private GameObject _empty;
 
 
     public void Awake()
     {
-         PhotonNetwork.Instantiate("Empty",
-                gameObject.transform.position, gameObject.transform.rotation, 0);
+        _empty = PhotonNetwork.Instantiate("Empty",
+                new Vector3 (20, 1, 70),  gameObject.transform.rotation, 0);
 
     }
-    public void CreateCharacter(GameObject myAvatar)
+   /* public void CreateCharacter(GameObject myAvatar)
     {
-        //_PV = GetComponent<PhotonView>();
-        int spawnPicker = Random.Range(0, GameSetup.GS.spawnPoints.Length);
-        //if (_PV.IsMine)
+        PhotonView _PV = GetComponent<PhotonView>();
+        //int spawnPicker = Random.Range(0, GameSetup.GS.spawnPoints.Length);
+        if (_PV.IsMine)
         {
             //_photonAvatar = PhotonNetwork.Instantiate(myAvatar.name,
             //    GameSetup.GS.spawnPoints[spawnPicker].position, GameSetup.GS.spawnPoints[spawnPicker].rotation, 0);
-       }
-        _photonAvatar.GetComponent<Movement>().chrCamera = mainCamera;
-        gameObject.GetComponent<TurnOffPlayerControl>().character = _photonAvatar;
-    }
+
+         GameObject p = PhotonNetwork.Instantiate(myAvatar.name, _empty.transform.position, _empty.transform.rotation);
+            p.transform.parent = _empty.transform;
+        
+        }
+       // _photonAvatar.GetComponent<Movement>().chrCamera = mainCamera;
+      //  gameObject.GetComponent<TurnOffPlayerControl>().character = _photonAvatar;
+    }*/
 }
