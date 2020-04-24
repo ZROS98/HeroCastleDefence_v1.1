@@ -10,7 +10,7 @@ public class ArenaOptions : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && _gameObject != null) 
         {
             bool isActive = _gameObject.activeSelf;
-            Screen.lockCursor = isActive;
+  //          Screen.lockCursor = isActive;
             _gameObject.SetActive(!isActive);
         }
     }

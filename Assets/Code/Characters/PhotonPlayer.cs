@@ -6,14 +6,14 @@ using UnityEngine;
 
 public class PhotonPlayer : MonoBehaviourPunCallbacks
 {
-    public GameObject myAvatar;
+    //public GameObject myAvatar;
     public GameObject mainCamera;
     //private PhotonView _PV;
     private GameObject _photonAvatar;
 
-    void Start()
+    
+    public void CreateCharacter(GameObject myAvatar)
     {
-        myAvatar = SelectedCharacter.Prefab;
        
         //_PV = GetComponent<PhotonView>();
         int spawnPicker = Random.Range(0, GameSetup.GS.spawnPoints.Length);
