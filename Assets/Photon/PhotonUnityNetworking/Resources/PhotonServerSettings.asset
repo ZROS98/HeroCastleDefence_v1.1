@@ -36,5 +36,7 @@ MonoBehaviour:
   - RespawnSpaceship
   - DestroyMob
   - DestroyObject
+  - CubeSpawn
+  - LoadArenaRPC
   DisableAutoOpenWizard: 1
   ShowSettings: 1

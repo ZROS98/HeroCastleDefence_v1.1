@@ -13,7 +13,7 @@ public class PhotonPlayer : MonoBehaviourPunCallbacks
     private GameObject _empty;
 
 
-    public void Awake()
+    public void Start()
     {
         _PV = gameObject.GetComponent<PhotonView>();
         _PV.RPC("CubeSpawn", RpcTarget.AllBuffered);
@@ -24,6 +24,10 @@ public class PhotonPlayer : MonoBehaviourPunCallbacks
     {
         _empty = PhotonNetwork.Instantiate("Empty",
             new Vector3(20, 1, 70), gameObject.transform.rotation, 0);
+
+        GameObject currentCharacter = PhotonNetwork.Instantiate(SelectedCharacter.Prefab.name, _empty.transform.position, _empty.transform.rotation);
+        currentCharacter.transform.SetParent(_empty.transform);
+
     }
     /* void Start()
      {

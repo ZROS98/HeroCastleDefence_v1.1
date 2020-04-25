@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
@@ -31,3 +31,4 @@ public class CodeForCube : MonoBehaviour
             p.transform.SetParent(_empty.transform);
     }
 }
+*/
