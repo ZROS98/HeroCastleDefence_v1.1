@@ -12,23 +12,30 @@ public class PhotonPlayer : MonoBehaviourPunCallbacks
     private GameObject _photonAvatar;
     private GameObject _empty;
 
+
     public void Awake()
     {
-        _empty = PhotonNetwork.Instantiate("Empty",
-                new Vector3(20, 1, 70), gameObject.transform.rotation, 0);
+        _PV = gameObject.GetComponent<PhotonView>();
+        _PV.RPC("CubeSpawn", RpcTarget.AllBuffered);
 
     }
-   /* void Start()
+    [PunRPC]
+    private void CubeSpawn()
     {
-        myAvatar = SelectedCharacter.Prefab;
-        _PV = GetComponent<PhotonView>();
-        int spawnPicker = Random.Range(0, GameSetup.GS.spawnPoints.Length);
-        if (_PV.IsMine)
-        {
-            _photonAvatar = PhotonNetwork.Instantiate(myAvatar.name,
-                GameSetup.GS.spawnPoints[spawnPicker].position, GameSetup.GS.spawnPoints[spawnPicker].rotation, 0);
-        }
-        _photonAvatar.GetComponent<Movement>().chrCamera = mainCamera;
-        gameObject.GetComponent<TurnOffPlayerControl>().character = _photonAvatar;
-    }*/
+        _empty = PhotonNetwork.Instantiate("Empty",
+            new Vector3(20, 1, 70), gameObject.transform.rotation, 0);
+    }
+    /* void Start()
+     {
+         myAvatar = SelectedCharacter.Prefab;
+         _PV = GetComponent<PhotonView>();
+         int spawnPicker = Random.Range(0, GameSetup.GS.spawnPoints.Length);
+         if (_PV.IsMine)
+         {
+             _photonAvatar = PhotonNetwork.Instantiate(myAvatar.name,
+                 GameSetup.GS.spawnPoints[spawnPicker].position, GameSetup.GS.spawnPoints[spawnPicker].rotation, 0);
+         }
+         _photonAvatar.GetComponent<Movement>().chrCamera = mainCamera;
+         gameObject.GetComponent<TurnOffPlayerControl>().character = _photonAvatar;
+     }*/
 }
