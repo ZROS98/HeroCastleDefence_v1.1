@@ -25,6 +25,7 @@
             <e p="CharacterSelect.cs" t="Include" />
             <e p="SelectedCharacter.cs" t="Include" />
           </e>
+          <e p="CodeForCube.cs" t="Include" />
           <e p="HCDGame.cs" t="Include" />
           <e p="Lobby" t="Include">
             <e p="LobbyMainPanel.cs" t="Include" />
@@ -41,6 +42,7 @@
             <e p="ArenaOptions.cs" t="Include" />
             <e p="HideOrShow.cs" t="Include" />
             <e p="SoundController.cs" t="Include" />
+            <e p="TurnOffPlayerControl.cs" t="Include" />
           </e>
           <e p="Photon" t="Include">
             <e p="GameManager.cs" t="Include" />
