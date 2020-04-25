@@ -10,8 +10,15 @@ public class PhotonPlayer : MonoBehaviourPunCallbacks
     public GameObject mainCamera;
     private PhotonView _PV;
     private GameObject _photonAvatar;
+    private GameObject _empty;
 
-    void Start()
+    public void Awake()
+    {
+        _empty = PhotonNetwork.Instantiate("Empty",
+                new Vector3(20, 1, 70), gameObject.transform.rotation, 0);
+
+    }
+   /* void Start()
     {
         myAvatar = SelectedCharacter.Prefab;
         _PV = GetComponent<PhotonView>();
@@ -23,5 +30,5 @@ public class PhotonPlayer : MonoBehaviourPunCallbacks
         }
         _photonAvatar.GetComponent<Movement>().chrCamera = mainCamera;
         gameObject.GetComponent<TurnOffPlayerControl>().character = _photonAvatar;
-    }
+    }*/
 }
