@@ -1,4 +1,4 @@
-﻿/*using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
 using UnityEngine;
@@ -22,7 +22,7 @@ public class Movement : MonoBehaviour
     void Start()
     {
         _photonView = GetComponent<PhotonView>();
-        Screen.lockCursor = true;
+        //Screen.lockCursor = true;
         chrCamera.transform.SetParent(gameObject.transform);
         chrCamera.transform.localPosition = new Vector3(0, 3, -20);
         _walkSound = GetComponent<WalkSound>();
@@ -61,4 +61,4 @@ public class Movement : MonoBehaviour
         
         transform.eulerAngles = new Vector3(pitch,yaw, 0.0f);
     }
-}*/
+}
