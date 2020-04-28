@@ -25,7 +25,7 @@ public class PhotonPlayer : MonoBehaviourPunCallbacks
             new Vector3(20, 1, 70), Quaternion.identity);
 
         currentCharacter.GetComponent<Movement>().chrCamera = mainCamera;
-        gameObject.GetComponent<TurnOffPlayerControl>().character = currentCharacter;
+        gameObject.GetComponent<TurnOffPlayerControl>().charactersArray.Add(currentCharacter);
 
     }
 }

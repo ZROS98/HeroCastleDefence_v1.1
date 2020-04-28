@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Photon.Pun;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +7,8 @@ public class TurnOffPlayerControl : MonoBehaviour
 {
     [SerializeField] private GameObject[] _panels;
     private Dictionary<GameObject, bool> _dictionaryPanels = new Dictionary<GameObject, bool>();
-    public GameObject character;//character witch owner the current gamer. Need to appoint from instantiate 
+    public List<GameObject> charactersArray;
+    private GameObject _character;
     private int _amountActivePanels;
     private Movement componentMovement;
     private ShootingMechanics componentShootingMechanics;
@@ -18,12 +20,20 @@ public class TurnOffPlayerControl : MonoBehaviour
             _dictionaryPanels.Add(panel, false);
             Debug.Log(_dictionaryPanels);
         }
-        componentMovement = character.GetComponent<Movement>();
-        componentShootingMechanics = character.GetComponentInChildren<ShootingMechanics>();
     }
 
     void Update()
     {
+        PhotonView _PV;
+        foreach (GameObject character in charactersArray)
+        {
+            if (character.GetComponent<PhotonView>().IsMine)
+            {
+                componentMovement = character.GetComponent<Movement>();
+                componentShootingMechanics = character.GetComponentInChildren<ShootingMechanics>();
+            }
+        }
+
         foreach (KeyValuePair<GameObject, bool> panel in _dictionaryPanels)
         {
             if (_dictionaryPanels[panel.Key] != panel.Key.active)
