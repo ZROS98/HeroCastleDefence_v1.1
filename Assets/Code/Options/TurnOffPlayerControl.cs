@@ -24,7 +24,6 @@ public class TurnOffPlayerControl : MonoBehaviour
 
     void Update()
     {
-        PhotonView _PV;
         foreach (GameObject character in charactersArray)
         {
             if (character.GetComponent<PhotonView>().IsMine)
