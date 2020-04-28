@@ -2472,6 +2472,7 @@ GameObject:
   - component: {fileID: 893194366}
   - component: {fileID: 893194365}
   - component: {fileID: 893194368}
+  - component: {fileID: 893194369}
   m_Layer: 5
   m_Name: CreateButton
   m_TagString: Untagged
@@ -2614,6 +2615,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabSelectedCharacter: {fileID: 132106997770699223, guid: df04f560aafd27b4cbf5833d6b25728a,
     type: 3}
+--- !u!114 &893194369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893194363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 0
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 0}
+  viewIdField: 4
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &903094838
 GameObject:
   m_ObjectHideFlags: 0
