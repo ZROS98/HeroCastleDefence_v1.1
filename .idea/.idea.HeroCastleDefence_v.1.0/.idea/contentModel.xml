@@ -35,18 +35,22 @@
           <e p="Mobs" t="Include">
             <e p="MobCreation.cs" t="Include" />
             <e p="MobInfo.cs" t="Include" />
+            <e p="MobNavMesh.cs" t="Include" />
           </e>
           <e p="Options" t="Include">
             <e p="ArenaMobBuyMenu.cs" t="Include" />
             <e p="ArenaOptions.cs" t="Include" />
             <e p="HideOrShow.cs" t="Include" />
             <e p="SoundController.cs" t="Include" />
+            <e p="TurnOffPlayerControl.cs" t="Include" />
           </e>
           <e p="Photon" t="Include">
             <e p="GameManager.cs" t="Include" />
             <e p="GameSetup.cs" t="Include" />
           </e>
-          <e p="WalkSound.cs" t="Include" />
+          <e p="Sounds" t="Include">
+            <e p="WalkSound.cs" t="Include" />
+          </e>
           <e p="Weapons" t="Include">
             <e p="DestroyProjectile.cs" t="Include" />
             <e p="Fireball.cs" t="Include" />
