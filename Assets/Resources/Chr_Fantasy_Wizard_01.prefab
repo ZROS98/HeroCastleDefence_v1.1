@@ -8612,6 +8612,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1878958760269221234}
   - component: {fileID: 3658184245204008675}
+  - component: {fileID: 7882489199487820347}
+  - component: {fileID: 5958598478743941260}
   m_Layer: 0
   m_Name: SkillSpawaner
   m_TagString: Untagged
@@ -8648,3 +8650,40 @@ MonoBehaviour:
   _projectile: {fileID: -7120604541273193383, guid: 22a5de6a93d20fa43931b532574ec893,
     type: 3}
   _projectileSpeed: 20
+--- !u!114 &7882489199487820347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5634621509874804715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 5958598478743941260}
+  viewIdField: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &5958598478743941260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5634621509874804715}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0

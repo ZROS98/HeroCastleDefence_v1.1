@@ -21,7 +21,7 @@ public class Movement : MonoBehaviour
         _PV = gameObject.GetComponent<PhotonView>();
         //Screen.lockCursor = true;
         chrCamera.transform.SetParent(gameObject.transform);
-        chrCamera.transform.localPosition = new Vector3(0, 3, -20);
+        chrCamera.transform.localPosition = new Vector3(0, 9, -16);
         _walkSound = GetComponent<WalkSound>();
         _rigidbody = GetComponent<Rigidbody>();
     }
