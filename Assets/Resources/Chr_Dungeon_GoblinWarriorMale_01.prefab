@@ -134,6 +134,8 @@ GameObject:
   - component: {fileID: 7668171575546638415}
   - component: {fileID: -7780394479420958576}
   - component: {fileID: 6931243084714985031}
+  - component: {fileID: 250174604902955540}
+  - component: {fileID: -446472065775509554}
   m_Layer: 0
   m_Name: Chr_Dungeon_GoblinWarriorMale_01
   m_TagString: Untagged
@@ -315,6 +317,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthPoint: 100
+--- !u!195 &250174604902955540
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009295489438026}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &-446472065775509554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009295489438026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 426217869c34c6b458c1b35c42360124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destination: {fileID: 8295098893368898525, guid: 8f823a7e0a61e6e40b84010c5555c936,
+    type: 3}
 --- !u!1 &1013694307220670
 GameObject:
   m_ObjectHideFlags: 0
