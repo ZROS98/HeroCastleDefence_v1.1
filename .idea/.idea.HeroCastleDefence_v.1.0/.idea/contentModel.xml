@@ -17,6 +17,7 @@
         </e>
         <e p="Code" t="Include">
           <e p="Characters" t="Include">
+            <e p="AddingTag.cs" t="Include" />
             <e p="Movement.cs" t="Include" />
             <e p="PhotonPlayer.cs" t="Include" />
             <e p="ShootingMechanics.cs" t="Include" />

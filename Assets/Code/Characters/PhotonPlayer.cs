@@ -16,7 +16,6 @@ public class PhotonPlayer : MonoBehaviourPunCallbacks
         {
             _PV.RPC("SpawnCharacter", RpcTarget.AllBuffered);
         }
-
     }
     [PunRPC]
     private void SpawnCharacter()
@@ -26,6 +25,5 @@ public class PhotonPlayer : MonoBehaviourPunCallbacks
 
         currentCharacter.GetComponent<Movement>().chrCamera = mainCamera;
         gameObject.GetComponent<TurnOffPlayerControl>().charactersArray.Add(currentCharacter);
-
     }
 }

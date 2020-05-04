@@ -7354,7 +7354,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d50b40874c33c0441a94d23a6f7157f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _destination: {fileID: 5511057704156255657, guid: 3926f99960dcc434ebc2aa3d9a7ea81d,
+  _destinationCastle: {fileID: 5511057704156255657, guid: 3926f99960dcc434ebc2aa3d9a7ea81d,
+    type: 3}
+  _destinationPlayer: {fileID: 6340172653460501525, guid: 26c88b00eb5276042a8c3bd56ff93a72,
     type: 3}
 --- !u!1 &1892427834730432
 GameObject:
