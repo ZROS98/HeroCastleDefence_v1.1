@@ -2115,6 +2115,7 @@ GameObject:
   - component: {fileID: 6145229601681918284}
   - component: {fileID: 5865387219900687727}
   - component: {fileID: 1322338779314381835}
+  - component: {fileID: 4975888238564049643}
   m_Layer: 0
   m_Name: Chr_Fantasy_Wizard_01
   m_TagString: Untagged
@@ -2426,6 +2427,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 245198cd114dc414b8ade7edb88b104c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4975888238564049643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132106997770699223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bc6aea67bc36804180dfea79045c0bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthPoint: 100
 --- !u!1 &132112712827074807
 GameObject:
   m_ObjectHideFlags: 0

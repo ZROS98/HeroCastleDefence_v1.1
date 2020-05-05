@@ -39,5 +39,6 @@ MonoBehaviour:
   - CubeSpawn
   - LoadArenaRPC
   - SpawnCharacter
+  - RIP
   DisableAutoOpenWizard: 1
   ShowSettings: 1
