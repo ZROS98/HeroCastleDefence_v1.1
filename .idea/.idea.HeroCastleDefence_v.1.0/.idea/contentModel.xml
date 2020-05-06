@@ -34,6 +34,7 @@
             <e p="RoomListEntry.cs" t="Include" />
           </e>
           <e p="Mobs" t="Include">
+            <e p="MobAnimations.cs" t="Include" />
             <e p="MobCreation.cs" t="Include" />
             <e p="MobInfo.cs" t="Include" />
             <e p="MobNavMesh.cs" t="Include" />
