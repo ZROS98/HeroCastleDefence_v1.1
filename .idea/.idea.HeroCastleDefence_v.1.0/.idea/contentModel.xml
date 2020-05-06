@@ -16,8 +16,12 @@
           </e>
         </e>
         <e p="Code" t="Include">
+          <e p="BuildStatement" t="Include">
+            <e p="MainCastleInfo.cs" t="Include" />
+          </e>
           <e p="Characters" t="Include">
             <e p="AddingTag.cs" t="Include" />
+            <e p="CharacterInfo.cs" t="Include" />
             <e p="Movement.cs" t="Include" />
             <e p="PhotonPlayer.cs" t="Include" />
             <e p="ShootingMechanics.cs" t="Include" />
@@ -25,6 +29,9 @@
           <e p="CharacterSelection" t="Include">
             <e p="CharacterSelect.cs" t="Include" />
             <e p="SelectedCharacter.cs" t="Include" />
+          </e>
+          <e p="DamageSystem" t="Include">
+            <e p="DamageSystem.cs" t="Include" />
           </e>
           <e p="HCDGame.cs" t="Include" />
           <e p="Lobby" t="Include">
@@ -35,6 +42,7 @@
           </e>
           <e p="Mobs" t="Include">
             <e p="MobAnimations.cs" t="Include" />
+            <e p="MobAttack.cs" t="Include" />
             <e p="MobCreation.cs" t="Include" />
             <e p="MobInfo.cs" t="Include" />
             <e p="MobNavMesh.cs" t="Include" />
@@ -54,8 +62,10 @@
             <e p="WalkSound.cs" t="Include" />
           </e>
           <e p="Weapons" t="Include">
-            <e p="DestroyProjectile.cs" t="Include" />
-            <e p="Fireball.cs" t="Include" />
+            <e p="CharacterWeapon" t="Include">
+              <e p="DestroyProjectile.cs" t="Include" />
+              <e p="Fireball.cs" t="Include" />
+            </e>
             <e p="Weapon.cs" t="Include" />
             <e p="WeaponInfo.cs" t="Include" />
           </e>
