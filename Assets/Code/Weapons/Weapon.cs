@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.ShaderGraph.Internal;
 using UnityEngine;
 
 
@@ -8,4 +9,6 @@ public class Weapon : ScriptableObject
 {
     public string name;
     public int damage;
+    public float range;
+    public float speed;
 }

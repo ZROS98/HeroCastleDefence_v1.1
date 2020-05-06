@@ -5016,3 +5016,4 @@ MonoBehaviour:
   weapon: {fileID: 11400000, guid: dbb7d9436922f7744a12cc425d6d4d22, type: 2}
   name: Fireball
   damage: 55
+  range: 0

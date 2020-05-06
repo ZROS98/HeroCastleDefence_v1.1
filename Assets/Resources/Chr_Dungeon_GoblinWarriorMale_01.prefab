@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: -7780394479420958576}
   - component: {fileID: 6931243084714985031}
   - component: {fileID: 8703372832678224284}
-  - component: {fileID: -2655945203122411212}
   m_Layer: 0
   m_Name: Chr_Dungeon_GoblinWarriorMale_01
   m_TagString: Untagged
@@ -251,7 +250,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 96
   m_CollisionDetection: 0
 --- !u!136 &-7426824668037681410
 CapsuleCollider:
@@ -339,22 +338,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &-2655945203122411212
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1009295489438026}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d50b40874c33c0441a94d23a6f7157f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _destinationCastle: {fileID: 5511057704156255657, guid: 3926f99960dcc434ebc2aa3d9a7ea81d,
-    type: 3}
-  _destinationPlayer: {fileID: 6340172653460501525, guid: 26c88b00eb5276042a8c3bd56ff93a72,
-    type: 3}
 --- !u!1 &1013694307220670
 GameObject:
   m_ObjectHideFlags: 0
