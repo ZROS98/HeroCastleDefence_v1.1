@@ -7856,10 +7856,10 @@ MonoBehaviour:
   _animator: {fileID: 95865715334774026}
   _attackName: Attack
   _attackPosition: {x: 0.319, y: 0.029, z: -0.063}
-  _attackRotation: {x: -0.6568666, y: -0.62976116, z: -0.08762172, w: 0.4052772}
+  _attackRotation: {x: 220.05, y: 211.7, z: 80.859}
   _runName: Run
   _runPosition: {x: 0.295, y: 0.031, z: 0.122}
-  _runRotation: {x: -0.6866744, y: -0.7117651, z: -0.02620181, w: 0.14554068}
+  _runRotation: {x: 193.72, y: 190.15, z: 86.729}
 --- !u!1 &1917845403887816
 GameObject:
   m_ObjectHideFlags: 0
