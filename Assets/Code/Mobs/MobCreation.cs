@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class MobCreation : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject spawnPoint;
+    [SerializeField] private GameObject spawnPoint;
     private GameObject _varMob;
+    
 
     public void CreateMob(GameObject selectedMob)
     {

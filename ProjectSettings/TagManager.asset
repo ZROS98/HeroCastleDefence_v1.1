@@ -8,6 +8,7 @@ TagManager:
   - Empty
   - Player1
   - Player2
+  - MobWeapon
   layers:
   - Default
   - TransparentFX

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Axe
   m_EditorClassIdentifier: 
   name: Axe
-  damage: 55
-  range: 3
+  damage: 10
+  range: 5
+  delay: 2

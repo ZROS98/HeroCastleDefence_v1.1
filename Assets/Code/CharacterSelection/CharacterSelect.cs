@@ -26,5 +26,5 @@ public class CharacterSelect : MonoBehaviour
         SelectedCharacter.Prefab = prefabSelectedCharacter;
         SceneManager.LoadScene(2);
     }
-
+    
 }

@@ -70,6 +70,12 @@
             <e p="WeaponInfo.cs" t="Include" />
           </e>
         </e>
+        <e p="Fortress Gate_Free" t="Include">
+          <e p="readme.txt" t="Include" />
+        </e>
+        <e p="FreeDungeon" t="Include">
+          <e p="freeDungeon_ReadMe.txt" t="Include" />
+        </e>
         <e p="Photon" t="Include">
           <e p="PhotonChat" t="Include">
             <e p="Code" t="Include">
@@ -414,6 +420,7 @@
             </e>
           </e>
         </e>
+        <e p="UpdateInterface.cs" t="Include" />
       </e>
       <e p="HeroCastleDefence_v.1.0.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

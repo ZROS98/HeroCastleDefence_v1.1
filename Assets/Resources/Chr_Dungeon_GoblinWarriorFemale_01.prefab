@@ -7729,6 +7729,7 @@ GameObject:
   - component: {fileID: -9076212729376528552}
   - component: {fileID: 7501953201496856237}
   - component: {fileID: 1573170014907049067}
+  - component: {fileID: -4495640841460587690}
   m_Layer: 0
   m_Name: Chr_Dungeon_GoblinWarriorFemale_01
   m_TagString: Untagged
@@ -7824,7 +7825,7 @@ Animator:
   m_Controller: {fileID: 0}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -7909,6 +7910,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36cff6c033992cf4d822bb56ecc321e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 0}
+  _weapon: {fileID: 0}
+  name: 
   _healthPoint: 100
 --- !u!195 &7501953201496856237
 NavMeshAgent:
@@ -7941,13 +7945,28 @@ MonoBehaviour:
   m_GameObject: {fileID: 1895674993587318}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d50b40874c33c0441a94d23a6f7157f1, type: 3}
+  m_Script: {fileID: 11500000, guid: 61c570c373d61524da84576d7692ad91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _destinationCastle: {fileID: 5511057704156255657, guid: 3926f99960dcc434ebc2aa3d9a7ea81d,
-    type: 3}
-  _destinationPlayer: {fileID: 6340172653460501525, guid: 26c88b00eb5276042a8c3bd56ff93a72,
-    type: 3}
+  _destinationCastle: {fileID: 0}
+  _destinationPlayer: {fileID: 0}
+--- !u!114 &-4495640841460587690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895674993587318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dd8df2e2e09464abc78689b452d27b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
+  name: 
+  damage: 0
+  range: 0
+  delay: 0
 --- !u!1 &1897705530450376
 GameObject:
   m_ObjectHideFlags: 0

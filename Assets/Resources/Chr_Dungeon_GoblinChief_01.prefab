@@ -7618,6 +7618,9 @@ GameObject:
   - component: {fileID: -6608052631946348992}
   - component: {fileID: -4814482868158968744}
   - component: {fileID: 2430793265710548415}
+  - component: {fileID: 4571305807188835620}
+  - component: {fileID: 3945310934784674320}
+  - component: {fileID: -1799893520866396834}
   m_Layer: 0
   m_Name: Chr_Dungeon_GoblinChief_01
   m_TagString: Untagged
@@ -7713,7 +7716,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 184dbf8c591f724468e8190ad6e9f514, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -7844,6 +7847,55 @@ MonoBehaviour:
   _runName: Run
   _runPosition: {x: 0.295, y: 0.031, z: 0.122}
   _runRotation: {x: 193.72, y: 190.15, z: 86.729}
+--- !u!114 &4571305807188835620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906022184173130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf241ec8e4bf40a429ac72b9098db7a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weapon: {fileID: 11400000, guid: 3d04f5739c62dbd4f95d703f8da9b317, type: 2}
+  enemyCharacter: {fileID: 0}
+  animator: {fileID: 95865715334774026}
+--- !u!114 &3945310934784674320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906022184173130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61c570c373d61524da84576d7692ad91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _targetCastle1: {fileID: 7356630439900913204, guid: 73cc141fab6b5284daa78b628d615228,
+    type: 3}
+  _targetCastle2: {fileID: 4710540773920458067, guid: a47bf74234970c042945da41e98a2cbc,
+    type: 3}
+  _targetPlayer: {fileID: 0}
+--- !u!114 &-1799893520866396834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906022184173130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dd8df2e2e09464abc78689b452d27b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 11400000, guid: 3d04f5739c62dbd4f95d703f8da9b317, type: 2}
+  name: Axe
+  damage: 10
+  range: 5
+  delay: 2
 --- !u!1 &1917845403887816
 GameObject:
   m_ObjectHideFlags: 0
@@ -8530,6 +8582,20 @@ SkinnedMeshRenderer:
     m_Center: {x: 0.000000059604645, y: 1.0704031, z: 0.00852561}
     m_Extent: {x: 1.0664115, y: 1.130099, z: 0.6294543}
   m_DirtyAABB: 0
+--- !u!136 &341426012929555803
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721820733562485675}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.31470343
+  m_Height: 1.0279604
+  m_Direction: 1
+  m_Center: {x: 0.00000010310004, y: -0.0029588365, z: 0.064423345}
 --- !u!1001 &1720618873818272091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8540,6 +8606,10 @@ PrefabInstance:
     - target: {fileID: 1688207647419120, guid: 9e7134bd16b21cc4a8551794a16703c4, type: 3}
       propertyPath: m_Name
       value: Prop_Axe_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1688207647419120, guid: 9e7134bd16b21cc4a8551794a16703c4, type: 3}
+      propertyPath: m_TagString
+      value: MobWeapon
       objectReference: {fileID: 0}
     - target: {fileID: 4792935863598470, guid: 9e7134bd16b21cc4a8551794a16703c4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8587,6 +8657,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e7134bd16b21cc4a8551794a16703c4, type: 3}
+--- !u!1 &1721820733562485675 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1688207647419120, guid: 9e7134bd16b21cc4a8551794a16703c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1720618873818272091}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1725400485211532509 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4792935863598470, guid: 9e7134bd16b21cc4a8551794a16703c4,

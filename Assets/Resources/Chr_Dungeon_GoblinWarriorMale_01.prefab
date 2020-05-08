@@ -135,6 +135,8 @@ GameObject:
   - component: {fileID: -7780394479420958576}
   - component: {fileID: 6931243084714985031}
   - component: {fileID: 8703372832678224284}
+  - component: {fileID: 5667128826154467614}
+  - component: {fileID: -6745757389888742273}
   m_Layer: 0
   m_Name: Chr_Dungeon_GoblinWarriorMale_01
   m_TagString: Untagged
@@ -230,7 +232,7 @@ Animator:
   m_Controller: {fileID: 0}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -315,6 +317,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36cff6c033992cf4d822bb56ecc321e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 0}
+  _weapon: {fileID: 0}
+  name: 
   _healthPoint: 100
 --- !u!195 &8703372832678224284
 NavMeshAgent:
@@ -338,6 +343,37 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &5667128826154467614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009295489438026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61c570c373d61524da84576d7692ad91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _destinationCastle: {fileID: 0}
+  _destinationPlayer: {fileID: 0}
+--- !u!114 &-6745757389888742273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009295489438026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dd8df2e2e09464abc78689b452d27b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
+  name: 
+  damage: 0
+  range: 0
+  delay: 0
 --- !u!1 &1013694307220670
 GameObject:
   m_ObjectHideFlags: 0

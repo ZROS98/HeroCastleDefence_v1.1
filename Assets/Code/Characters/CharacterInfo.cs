@@ -1,14 +1,27 @@
-﻿using Photon.Pun;
+﻿using System;
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterInfo : MonoBehaviour
 {
+
     public int _healthPoint = 100;
 
+
+    public GameObject SliderButton;
+
+    private void ChangeValueSlider()
+    {
+        var Slider = SliderButton.GetComponent<Slider>();
+        Slider.value = _healthPoint;
+    }
+    
     private void Update()
     {
+        ChangeValueSlider();
         if (_healthPoint < 1)
         {
             PhotonView.Get(this).RPC("RIP", RpcTarget.All);
@@ -18,21 +31,32 @@ public class CharacterInfo : MonoBehaviour
     [PunRPC]
     private void RIP()
     {
+        gameObject.GetComponent<Animator>().Play("Death");
         //Show DeathAnimation and use cooldown on characters respawn.
     }
 
-    private void TakedDamage(int damage)
+    private void TookDamage(int damage)
     {
-        _healthPoint -= damage;
+        Debug.Log(damage);
+        _healthPoint = _healthPoint - damage;
     }
-
-    private void OnCollisionEnter(Collision collision)
+    
+    
+    
+    private void OnTriggerEnter(Collider collider)
     {
-        if (collision.gameObject.CompareTag("MobWeapon")) //&& mob (collision) has AttackAnimationIsOn
+        if (collider.CompareTag("MobWeapon")) //&& mob (collision) has AttackAnimationIsOn
         {
-            TakedDamage(collision.gameObject.GetComponent<WeaponInfo>().damage);
+            Debug.Log(collider.transform.root.name);
+            
+            Animator animator = collider.transform.root.GetComponentInParent<Animator>();
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+            {
+                Debug.Log(555);
+                TookDamage(collider.transform.root.GetComponent<WeaponInfo>().damage);    
+                Debug.Log("123" + collider.transform.root.GetComponent<WeaponInfo>().damage);
+            }
+            
         }
     }
-
-
 }

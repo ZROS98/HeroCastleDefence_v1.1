@@ -9,6 +9,6 @@ public class WeaponInfo : MonoBehaviour
     public string name;
     public int damage;
     public float range;
-    public float speed;
+    public float delay;
 
 }
