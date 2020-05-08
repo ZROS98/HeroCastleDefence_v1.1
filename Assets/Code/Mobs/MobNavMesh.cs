@@ -35,12 +35,10 @@ public class MobNavMesh : MonoBehaviourPun
         {
             _targetPlayer = player2.transform;
             _mobAttack.enemyCharacter = player2;
-           // _targetCastle = _targetCastle2;
         }else if (_PV.Owner == photonViewPlayer2.Owner)
         {
             _targetPlayer = player1.transform;
             _mobAttack.enemyCharacter = player1;
-           // _targetCastle = _targetCastle1;
         }
     }
 

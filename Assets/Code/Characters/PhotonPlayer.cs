@@ -26,7 +26,7 @@ public class PhotonPlayer : MonoBehaviourPunCallbacks
     {
         GameObject currentCharacter = PhotonNetwork.Instantiate(SelectedCharacter.Prefab.name,
             new Vector3(25,1,85), Quaternion.identity);
-        
+
 
         currentCharacter.GetComponent<Movement>().chrCamera = mainCamera;
         gameObject.GetComponent<TurnOffPlayerControl>().charactersArray.Add(currentCharacter);
