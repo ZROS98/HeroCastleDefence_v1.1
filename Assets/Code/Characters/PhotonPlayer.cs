@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using Photon.Pun;
+﻿using Photon.Pun;
 using UnityEngine;
 
 public class PhotonPlayer : MonoBehaviourPunCallbacks
@@ -14,23 +10,31 @@ public class PhotonPlayer : MonoBehaviourPunCallbacks
     
     public void Start()
     {
+        PhotonNetwork.AutomaticallySyncScene = true;
         _PV = gameObject.GetComponent<PhotonView>();
-        if (_PV.IsMine)
-        {
-            _PV.RPC("SpawnCharacter", RpcTarget.AllBuffered);
-        }
+        //_PV.RPC("SpawnCharacter", RpcTarget.AllBuffered);
+        SpawnCharacter();
     }
 
-    [PunRPC]
+    //[PunRPC]
     private void SpawnCharacter() //do it once
     {
+        /* GameObject currentCharacter = PhotonNetwork.Instantiate(SelectedCharacter.Prefab.name,
+             new Vector3(25,1,85), Quaternion.identity);
+
+
+         currentCharacter.GetComponent<Movement>().chrCamera = mainCamera;
+         gameObject.GetComponent<TurnOffPlayerControl>().charactersArray.Add(currentCharacter);
+         currentCharacter.GetComponent<CharacterInfo>().SliderButton = SliderButton;*/
+
         GameObject currentCharacter = PhotonNetwork.Instantiate(SelectedCharacter.Prefab.name,
-            new Vector3(25,1,85), Quaternion.identity);
+            new Vector3(25, 1, 85), Quaternion.identity);
 
 
         currentCharacter.GetComponent<Movement>().chrCamera = mainCamera;
         gameObject.GetComponent<TurnOffPlayerControl>().charactersArray.Add(currentCharacter);
         currentCharacter.GetComponent<CharacterInfo>().SliderButton = SliderButton;
+
     }
     
 }
