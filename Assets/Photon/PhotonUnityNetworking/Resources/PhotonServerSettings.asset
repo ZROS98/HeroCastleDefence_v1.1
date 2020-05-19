@@ -30,15 +30,14 @@ MonoBehaviour:
   StartInOfflineMode: 0
   RpcList:
   - ClickRpc
+  - DestroyMob
+  - DestroyObject
   - DestroyRpc
   - DestroySpaceship
   - Fire
-  - RespawnSpaceship
-  - DestroyMob
-  - DestroyObject
-  - CubeSpawn
   - LoadArenaRPC
-  - SpawnCharacter
+  - RespawnSpaceship
   - RIP
+  - SpawnCharacter
   DisableAutoOpenWizard: 1
   ShowSettings: 1
