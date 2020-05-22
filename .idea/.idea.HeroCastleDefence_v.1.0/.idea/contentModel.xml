@@ -16,6 +16,7 @@
           </e>
         </e>
         <e p="Code" t="Include">
+          <e p="AvatarMeshToResource.cs" t="Include" />
           <e p="BuildStatement" t="Include">
             <e p="MainCastleInfo.cs" t="Include" />
           </e>
@@ -28,6 +29,7 @@
           </e>
           <e p="CharacterSelection" t="Include">
             <e p="CharacterSelect.cs" t="Include" />
+            <e p="LoadArenaScene.cs" t="Include" />
             <e p="SelectedCharacter.cs" t="Include" />
           </e>
           <e p="DamageSystem" t="Include">
@@ -61,6 +63,7 @@
           <e p="Sounds" t="Include">
             <e p="WalkSound.cs" t="Include" />
           </e>
+          <e p="UpdateInterface.cs" t="Include" />
           <e p="Weapons" t="Include">
             <e p="CharacterWeapon" t="Include">
               <e p="DestroyProjectile.cs" t="Include" />
@@ -69,12 +72,6 @@
             <e p="Weapon.cs" t="Include" />
             <e p="WeaponInfo.cs" t="Include" />
           </e>
-        </e>
-        <e p="Fortress Gate_Free" t="Include">
-          <e p="readme.txt" t="Include" />
-        </e>
-        <e p="FreeDungeon" t="Include">
-          <e p="freeDungeon_ReadMe.txt" t="Include" />
         </e>
         <e p="Photon" t="Include">
           <e p="PhotonChat" t="Include">
@@ -420,7 +417,16 @@
             </e>
           </e>
         </e>
-        <e p="UpdateInterface.cs" t="Include" />
+        <e p="Prefabs" t="Include">
+          <e p="Arena" t="Include">
+            <e p="Fortress Gate_Free" t="Include">
+              <e p="readme.txt" t="Include" />
+            </e>
+            <e p="FreeDungeon" t="Include">
+              <e p="freeDungeon_ReadMe.txt" t="Include" />
+            </e>
+          </e>
+        </e>
       </e>
       <e p="HeroCastleDefence_v.1.0.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
