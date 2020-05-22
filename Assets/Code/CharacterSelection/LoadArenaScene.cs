@@ -10,6 +10,5 @@ public class LoadArenaScene : MonoBehaviour
     {
         PhotonNetwork.AutomaticallySyncScene = false;
         SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
-       // PhotonNetwork.LoadLevel("Arena");
     }
 }
