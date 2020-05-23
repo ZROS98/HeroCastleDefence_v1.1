@@ -29,9 +29,10 @@ public class LoadArenaScene : MonoBehaviour
     {
         while (true)
         {
-            if (_bothPlayersIsReady())
+            if (BothPlayersIsReady())
             {
                 LoadArena();
+                
             }
 
             yield return new WaitForSeconds(_secondsToCreation);
@@ -39,14 +40,14 @@ public class LoadArenaScene : MonoBehaviour
         }
     }
 
-    private bool _bothPlayersIsReady()
+    private bool BothPlayersIsReady()
     {
-        var thisPlayerIsReady = PhotonNetwork.LocalPlayer.CustomProperties["PlayerIsReady"];
+        bool thisPlayerIsReady = (bool) PhotonNetwork.LocalPlayer.CustomProperties["PlayerIsReady"];
+        bool enemyPlayerIsReady;
 
-        var enemyPlayerIsReady = new object();
         if (PhotonNetwork.PlayerList.Length > 1)
         {
-            enemyPlayerIsReady = PhotonNetwork.PlayerListOthers[0].CustomProperties["PlayerIsReady"];
+            enemyPlayerIsReady = (bool) PhotonNetwork.PlayerListOthers[0].CustomProperties["PlayerIsReady"];
         }
         else
         {
@@ -55,7 +56,7 @@ public class LoadArenaScene : MonoBehaviour
         }
 
 
-        if (thisPlayerIsReady == enemyPlayerIsReady == true)
+        if (enemyPlayerIsReady==true && thisPlayerIsReady == true) 
         {
             return true;
         }
