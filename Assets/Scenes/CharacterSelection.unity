@@ -1000,13 +1000,12 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 439931425}
-        m_MethodName: SetMyAvatarPictures
-        m_Mode: 2
+        m_MethodName: SetMyAvatarPicturesNumber
+        m_Mode: 3
         m_Arguments:
-          m_ObjectArgument: {fileID: 21300000, guid: 3476b8f5cb24d4b4d845c69eb8cb3788,
-            type: 3}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
-          m_IntArgument: 0
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1202,9 +1201,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f55a327040773c43b18fc9c497db2dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _avatarsPictureArray:
+  - {fileID: 21300000, guid: 3476b8f5cb24d4b4d845c69eb8cb3788, type: 3}
   _photonView: {fileID: 439931423}
   _imageForEnemyAvatar: {fileID: 762222639}
-  myAvatarForEnemyPlayer: {fileID: 0}
+  myAvatarNumberForEnemyPlayer: 0
 --- !u!1 &444360285
 GameObject:
   m_ObjectHideFlags: 0
