@@ -24,12 +24,12 @@ public class CharacterInfo : MonoBehaviour
         ChangeValueSlider();
         if (_healthPoint < 1)
         {
-            PhotonView.Get(this).RPC("RIP", RpcTarget.All);
+            PhotonView.Get(this).RPC("DeathRPC", RpcTarget.All);
         }
     }
 
     [PunRPC]
-    private void RIP()
+    private void DeathRPC()
     {
         gameObject.GetComponent<Animator>().Play("Death");
         //Show DeathAnimation and use cooldown on characters respawn.
@@ -46,17 +46,12 @@ public class CharacterInfo : MonoBehaviour
     private void OnTriggerEnter(Collider collider)
     {
         if (collider.CompareTag("MobWeapon")) //&& mob (collision) has AttackAnimationIsOn
-        {
-            Debug.Log(collider.transform.root.name);
-            
+        {          
             Animator animator = collider.transform.root.GetComponentInParent<Animator>();
             if (animator.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
             {
-                Debug.Log(555);
                 TookDamage(collider.transform.root.GetComponent<WeaponInfo>().damage);    
-                Debug.Log("123" + collider.transform.root.GetComponent<WeaponInfo>().damage);
-            }
-            
+            }         
         }
     }
 }

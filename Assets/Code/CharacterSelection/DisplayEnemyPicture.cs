@@ -32,6 +32,6 @@ public class DisplayEnemyPicture : MonoBehaviour
     [PunRPC]
     private void SetForEnemyAvatarsPictureRPC()
     {
-        _imageForEnemyAvatar.sprite = (Sprite) PhotonNetwork.PlayerListOthers[0].CustomProperties["EnemyPictureProperties"];
+        _imageForEnemyAvatar.sprite = (Sprite)PhotonNetwork.PlayerListOthers[0].CustomProperties["EnemyPictureProperties"];
     }
 }
