@@ -13,8 +13,11 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
 
     public void Start()
     {
-        _PV = gameObject.GetComponent<PhotonView>();
-        _PV.RPC("SpawnCharacter", RpcTarget.AllBuffered);
+        if (PhotonNetwork.IsMasterClient)
+        {
+            _PV = gameObject.GetComponent<PhotonView>();
+            _PV.RPC("SpawnCharacter", RpcTarget.AllBuffered);
+        }
     }
 
     [PunRPC]
