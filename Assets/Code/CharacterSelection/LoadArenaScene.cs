@@ -1,12 +1,12 @@
 ﻿using Photon.Pun;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LoadArenaScene : MonoBehaviour
 {
     [SerializeField] private float _secondsToCreation;
+    [SerializeField] private PhotonView _photonView;
 
     public void CreateCharacter()
     {
@@ -15,8 +15,14 @@ public class LoadArenaScene : MonoBehaviour
 
     private void LoadArena()
     {
+        _photonView.RPC("LoadArenaRPC", RpcTarget.MasterClient);
+    }
+
+    [PunRPC]
+    private void LoadArenaRPC()
+    {
         PhotonNetwork.AutomaticallySyncScene = true;
-        SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
+        SceneManager.LoadScene(2);
     }
 
     IEnumerator Timer()
