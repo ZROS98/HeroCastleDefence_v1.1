@@ -9,8 +9,8 @@ public class DisplayEnemyPicture : MonoBehaviour
 {
     [SerializeField] private PhotonView _photonView;
     private Hashtable _hash = new Hashtable();
-    private Image _imageForEnemyAvatar;
-    public Image myAvatarForEnemyPlayer;
+    [SerializeField] private Image _imageForEnemyAvatar;
+    public Sprite myAvatarForEnemyPlayer;
     private void Start()
     {
         _hash.Add("EnemyPictureProperties", myAvatarForEnemyPlayer);
@@ -32,6 +32,6 @@ public class DisplayEnemyPicture : MonoBehaviour
     [PunRPC]
     private void SetForEnemyAvatarsPictureRPC()
     {
-        _imageForEnemyAvatar = (Image) PhotonNetwork.PlayerListOthers[0].CustomProperties["EnemyPictureProperties"];
+        _imageForEnemyAvatar.sprite = (Sprite) PhotonNetwork.PlayerListOthers[0].CustomProperties["EnemyPictureProperties"];
     }
 }

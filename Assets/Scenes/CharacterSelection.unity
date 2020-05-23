@@ -1202,7 +1202,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f55a327040773c43b18fc9c497db2dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _photonView: {fileID: 0}
+  _photonView: {fileID: 439931423}
+  _imageForEnemyAvatar: {fileID: 762222639}
   myAvatarForEnemyPlayer: {fileID: 0}
 --- !u!1 &444360285
 GameObject:
