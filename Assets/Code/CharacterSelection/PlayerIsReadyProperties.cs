@@ -2,19 +2,19 @@
 using UnityEngine;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 
-public class PlayerIsReady : MonoBehaviour
+public class PlayerIsReadyProperties : MonoBehaviour
 {
     private Hashtable _hash = new Hashtable();
 
     void Start()
     {
-        _hash.Add("PlayerIsReady", false);
+        _hash.Add("PlayerIsReadyProperties", false);
         PhotonNetwork.SetPlayerCustomProperties(_hash);
     }
 
     public void SetPlayerIsReadyPropertiesTrue()
     {
-        _hash["PlayerIsReady"] = true;
+        _hash["PlayerIsReadyProperties"] = true;
         PhotonNetwork.SetPlayerCustomProperties(_hash);
     }
 }

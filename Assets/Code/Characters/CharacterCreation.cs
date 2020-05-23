@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CharacterCreation : MonoBehaviourPunCallbacks
 {
-    private PhotonView _PV;
+    [SerializeField] private PhotonView _PV;
     [SerializeField] private Transform[] _spawnPoints;
 
 
@@ -15,7 +15,6 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.IsMasterClient)
         {
-            _PV = gameObject.GetComponent<PhotonView>();
             _PV.RPC("SpawnCharacter", RpcTarget.AllBuffered);
         }
     }
