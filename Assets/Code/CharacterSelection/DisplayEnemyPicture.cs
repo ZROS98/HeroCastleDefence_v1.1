@@ -1,6 +1,4 @@
 ﻿using Photon.Pun;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
@@ -9,8 +7,8 @@ public class DisplayEnemyPicture : MonoBehaviour
 {
     [SerializeField] Sprite[] _avatarsPictureArray;
     [SerializeField] private PhotonView _photonView;
-    private Hashtable _hash = new Hashtable();
     [SerializeField] private Image _imageForEnemyAvatar;
+    private Hashtable _hash = new Hashtable();
     public int myAvatarNumberForEnemyPlayer;
 
     private void Start()
