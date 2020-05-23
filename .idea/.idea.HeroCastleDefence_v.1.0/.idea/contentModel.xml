@@ -16,6 +16,11 @@
           </e>
         </e>
         <e p="Code" t="Include">
+          <e p="Arena" t="Include">
+            <e p="Interface" t="Include">
+              <e p="HealthBar.cs" t="Include" />
+            </e>
+          </e>
           <e p="AvatarMeshToResource.cs" t="Include" />
           <e p="BuildStatement" t="Include">
             <e p="MainCastleInfo.cs" t="Include" />
@@ -28,9 +33,11 @@
           </e>
           <e p="CharacterSelection" t="Include">
             <e p="CharacterSelect.cs" t="Include" />
+            <e p="DisplayEnemyPicture.cs" t="Include" />
             <e p="LoadArenaScene.cs" t="Include" />
-            <e p="PlayerIsReady.cs" t="Include" />
+            <e p="PlayerIsReadyProperties.cs" t="Include" />
             <e p="SelectedCharacter.cs" t="Include" />
+            <e p="TimeToLoadArenaScene.cs" t="Include" />
           </e>
           <e p="DamageSystem" t="Include">
             <e p="DamageSystem.cs" t="Include" />
