@@ -40,5 +40,6 @@ MonoBehaviour:
   - RIP
   - SpawnCharacter
   - StartTimerRPC
-  DisableAutoOpenWizard: 0
+  - SetForEnemyAvatarsPictureRPC
+  DisableAutoOpenWizard: 1
   ShowSettings: 0

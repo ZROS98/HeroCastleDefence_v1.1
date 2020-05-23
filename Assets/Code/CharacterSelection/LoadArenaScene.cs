@@ -41,14 +41,14 @@ public class LoadArenaScene : MonoBehaviour
 
     private bool BothPlayersIsReady()
     {
-        Debug.Log("thisPlayerIsReady =" + PhotonNetwork.LocalPlayer.CustomProperties["PlayerIsReady"]);
-        bool thisPlayerIsReady = (bool) PhotonNetwork.LocalPlayer.CustomProperties["PlayerIsReady"];
+        Debug.Log("thisPlayerIsReady =" + PhotonNetwork.LocalPlayer.CustomProperties["PlayerIsReadyProperties"]);
+        bool thisPlayerIsReady = (bool) PhotonNetwork.LocalPlayer.CustomProperties["PlayerIsReadyProperties"];
         bool enemyPlayerIsReady = false;
 
         if (PhotonNetwork.PlayerList.Length > 1)
         {
-            Debug.Log("enemyPlayerIsReady =" + PhotonNetwork.PlayerListOthers[0].CustomProperties["PlayerIsReady"]);
-            enemyPlayerIsReady = (bool) PhotonNetwork.PlayerListOthers[0].CustomProperties["PlayerIsReady"];
+            Debug.Log("enemyPlayerIsReady =" + PhotonNetwork.PlayerListOthers[0].CustomProperties["PlayerIsReadyProperties"]);
+            enemyPlayerIsReady = (bool) PhotonNetwork.PlayerListOthers[0].CustomProperties["PlayerIsReadyProperties"];
         }
         else
         {
