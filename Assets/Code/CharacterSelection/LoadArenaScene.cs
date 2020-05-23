@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LoadArenaScene : MonoBehaviour
 {
-    [SerializeField] private float _secondsToCreation;
+    public float secondsToCreation;
     [SerializeField] private PhotonView _photonView;
 
     public void CreateCharacter()
@@ -29,33 +29,36 @@ public class LoadArenaScene : MonoBehaviour
     {
         while (true)
         {
-            if (_bothPlayersIsReady())
+            if (BothPlayersIsReady())
             {
                 LoadArena();
             }
 
-            yield return new WaitForSeconds(_secondsToCreation);
+            yield return new WaitForSeconds(secondsToCreation);
             LoadArena();
         }
     }
 
-    private bool _bothPlayersIsReady()
+    private bool BothPlayersIsReady()
     {
-        var thisPlayerIsReady = PhotonNetwork.LocalPlayer.CustomProperties["PlayerIsReady"];
+        Debug.Log("thisPlayerIsReady =" + PhotonNetwork.LocalPlayer.CustomProperties["PlayerIsReady"]);
+        bool thisPlayerIsReady = (bool) PhotonNetwork.LocalPlayer.CustomProperties["PlayerIsReady"];
+        bool enemyPlayerIsReady = false;
 
-        var enemyPlayerIsReady = new object();
         if (PhotonNetwork.PlayerList.Length > 1)
         {
-            enemyPlayerIsReady = PhotonNetwork.PlayerListOthers[0].CustomProperties["PlayerIsReady"];
+            Debug.Log("enemyPlayerIsReady =" + PhotonNetwork.PlayerListOthers[0].CustomProperties["PlayerIsReady"]);
+            enemyPlayerIsReady = (bool) PhotonNetwork.PlayerListOthers[0].CustomProperties["PlayerIsReady"];
         }
         else
         {
-            enemyPlayerIsReady = false;
             Debug.Log("Second player does not exist");
+            enemyPlayerIsReady = false;
+            LoadArena();
         }
 
 
-        if (thisPlayerIsReady == enemyPlayerIsReady == true)
+        if (enemyPlayerIsReady == true && thisPlayerIsReady == true)
         {
             return true;
         }

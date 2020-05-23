@@ -1080,6 +1080,7 @@ GameObject:
   - component: {fileID: 439931421}
   - component: {fileID: 439931422}
   - component: {fileID: 439931423}
+  - component: {fileID: 439931424}
   m_Layer: 0
   m_Name: SceneSetup
   m_TagString: Untagged
@@ -1125,7 +1126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9555ca17e9adf64ea4b43a84e7b4224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _secondsToCreation: 5
+  secondsToCreation: 15
   _photonView: {fileID: 439931423}
 --- !u!114 &439931422
 MonoBehaviour:
@@ -1161,6 +1162,20 @@ MonoBehaviour:
   viewIdField: 1
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &439931424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439931418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f27a24364f15a3419c541c70f93c122, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _loadArenaScene: {fileID: 439931421}
+  _timerText: {fileID: 1798728028}
 --- !u!1 &444360285
 GameObject:
   m_ObjectHideFlags: 0
@@ -2943,6 +2958,17 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 439931421}
         m_MethodName: CreateCharacter
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 439931424}
+        m_MethodName: StartTimer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
