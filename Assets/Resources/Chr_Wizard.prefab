@@ -601,6 +601,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _capsuleCollider: {fileID: 954627132366467129}
+  _Holder_ThirdPersonCameraTransform: {fileID: 8046869136246377358}
+  cinemachineFreeLook: {fileID: 0}
   mainCameraTransform: {fileID: 0}
 --- !u!1 &132115340227565673
 GameObject:

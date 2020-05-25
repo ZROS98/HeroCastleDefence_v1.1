@@ -10,7 +10,6 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
     [SerializeField] private Transform _mainCameraTransform;
     [SerializeField] private CinemachineFreeLook _cinemachineFreeLook;
     private GameObject _currentCharacter;
-    private const int ChildIndexNumber_Holder_ThirdPersonCamera = 2;
 
     public void Start()
     {
