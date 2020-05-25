@@ -462,6 +462,7 @@
             <e p="EmojiOne Attribution.txt" t="Include" />
           </e>
         </e>
+        <e p="ThirdPersonMovement.cs" t="Include" />
       </e>
       <e p="HeroCastleDefence_v.1.0.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
