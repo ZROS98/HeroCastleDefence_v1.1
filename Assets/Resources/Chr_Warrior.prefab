@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _characterController: {fileID: 7637541277168111093}
-  mainCamera: {fileID: 0}
+  mainCameraTransform: {fileID: 0}
 --- !u!1 &5682444290630811978
 GameObject:
   m_ObjectHideFlags: 0

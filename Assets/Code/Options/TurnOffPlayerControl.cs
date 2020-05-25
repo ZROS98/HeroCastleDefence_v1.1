@@ -10,7 +10,7 @@ public class TurnOffPlayerControl : MonoBehaviour
     public List<GameObject> charactersArray;
     private GameObject _character;
     private int _amountActivePanels;
-    private Movement componentMovement;
+    //private Movement componentMovement;
     private ShootingMechanics componentShootingMechanics;
 
     void Start()
@@ -28,7 +28,7 @@ public class TurnOffPlayerControl : MonoBehaviour
         {
             if (character.GetComponent<PhotonView>().IsMine)
             {
-                componentMovement = character.GetComponent<Movement>();
+               // componentMovement = character.GetComponent<Movement>();
                 componentShootingMechanics = character.GetComponentInChildren<ShootingMechanics>();
             }
         }
@@ -46,12 +46,12 @@ public class TurnOffPlayerControl : MonoBehaviour
         {
             if (panel.Value)
             {
-                componentMovement.enabled = false;
+           //     componentMovement.enabled = false;
                 componentShootingMechanics.enabled = false;
             }
             else
             {
-                componentMovement.enabled = true;
+          //      componentMovement.enabled = true;
                 componentShootingMechanics.enabled = true;
             }
         }
