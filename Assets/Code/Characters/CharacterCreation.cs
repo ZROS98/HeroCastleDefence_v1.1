@@ -1,5 +1,6 @@
 ﻿using Photon.Pun;
 using UnityEngine;
+using Cinemachine;
 
 public class CharacterCreation : MonoBehaviourPunCallbacks
 {
@@ -7,7 +8,7 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
     [SerializeField] private Transform[] _spawnPoints;
 
     [SerializeField] private Transform _mainCameraTransform;
-    [SerializeField] private Cinemachine.CinemachineFreeLook _cinemachineFreeLook;
+    [SerializeField] private CinemachineFreeLook _cinemachineFreeLook;
     private GameObject _currentCharacter;
     private const int ChildIndexNumber_Holder_ThirdPersonCamera = 2;
 
@@ -17,8 +18,6 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
         {
             _PV.RPC("SpawnCharacter", RpcTarget.AllBuffered);
         }
-        _cinemachineFreeLook.LookAt = _currentCharacter.transform.GetChild(ChildIndexNumber_Holder_ThirdPersonCamera).transform;
-        _cinemachineFreeLook.Follow = _currentCharacter.transform.GetChild(ChildIndexNumber_Holder_ThirdPersonCamera).transform;
     }
 
     [PunRPC]
@@ -30,10 +29,9 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
         spawnPoint.position, Quaternion.identity);
 
 
-
-
-
-        _currentCharacter.GetComponent<ThirdPersonMovement>().mainCameraTransform = _mainCameraTransform;
+        ThirdPersonMovement thirdPersonMovement = _currentCharacter.GetComponent<ThirdPersonMovement>();
+        thirdPersonMovement.mainCameraTransform = _mainCameraTransform;
+        thirdPersonMovement.cinemachineFreeLook = _cinemachineFreeLook;
     }
 
 }
