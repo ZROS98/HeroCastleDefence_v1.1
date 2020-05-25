@@ -28,7 +28,6 @@
           <e p="Characters" t="Include">
             <e p="CharacterCreation.cs" t="Include" />
             <e p="CharacterInfo.cs" t="Include" />
-            <e p="Movement.cs" t="Include" />
             <e p="ShootingMechanics.cs" t="Include" />
             <e p="ThirdPersonMovement.cs" t="Include" />
           </e>
