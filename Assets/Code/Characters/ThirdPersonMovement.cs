@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class ThirdPersonMovement : MonoBehaviour
 {
-    [SerializeField] private CharacterController _characterController;
+    [SerializeField] private CapsuleCollider _capsuleCollider;
     public Transform mainCameraTransform;
 
     private const float speed = 6f;
@@ -21,12 +21,10 @@ public class ThirdPersonMovement : MonoBehaviour
         if (direction.magnitude >= 0.1f)
         {
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + mainCameraTransform.eulerAngles.y;
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity,
-                turnSmoothTime);
-            transform.rotation= Quaternion.Euler(0f,targetAngle,0f);
+            transform.rotation = Quaternion.Euler(0f,targetAngle,0f);
 
-            Vector3 movementDirection = Quaternion.Euler(0f, targetAngle,0f)*Vector3.forward;
-            _characterController.Move(movementDirection.normalized * speed * Time.deltaTime);
+            Vector3 movementDirection = Quaternion.Euler(0f, direction.y, 0f)*Vector3.forward;
+            _capsuleCollider.transform.Translate(movementDirection.normalized * speed * Time.deltaTime);
         }
     }
 }
