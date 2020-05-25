@@ -324,12 +324,13 @@ GameObject:
   - component: {fileID: 38145848572768631}
   - component: {fileID: 3533209790041736914}
   - component: {fileID: 2222327010260280678}
-  - component: {fileID: -1075465868566708855}
   - component: {fileID: -6329081147565453916}
   - component: {fileID: 954627132366467129}
   - component: {fileID: 6145229601681918284}
   - component: {fileID: 5865387219900687727}
   - component: {fileID: 4975888238564049643}
+  - component: {fileID: 8711637326003208147}
+  - component: {fileID: 771964758787648433}
   m_Layer: 0
   m_Name: Chr_Wizard
   m_TagString: Untagged
@@ -351,6 +352,7 @@ Transform:
   - {fileID: 134330116882087883}
   - {fileID: 134299252563369959}
   - {fileID: 1878958760269221234}
+  - {fileID: 8046869136246377358}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -410,22 +412,6 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
---- !u!114 &-1075465868566708855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 132106997770699223}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3c14bc83799a6047970e769c0f7e458, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chrCamera: {fileID: 0}
-  moveSpeed: 15
-  speedH: 2
-  speedV: 2
 --- !u!54 &-6329081147565453916
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -440,7 +426,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 116
   m_CollisionDetection: 0
 --- !u!136 &954627132366467129
 CapsuleCollider:
@@ -584,6 +570,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthPoint: 100
   SliderButton: {fileID: 0}
+--- !u!143 &8711637326003208147
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132106997770699223}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &771964758787648433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132106997770699223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1af85b6da27560e44920f9cbcd99ff20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterController: {fileID: 8711637326003208147}
+  mainCamera: {fileID: 0}
 --- !u!1 &132115340227565673
 GameObject:
   m_ObjectHideFlags: 0
@@ -1623,3 +1641,33 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
+--- !u!1 &8695515896875860049
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8046869136246377358}
+  m_Layer: 0
+  m_Name: Holder_ThirdPersonCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8046869136246377358
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8695515896875860049}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 127072647511769709}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
