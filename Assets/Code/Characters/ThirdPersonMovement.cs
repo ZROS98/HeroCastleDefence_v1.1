@@ -8,7 +8,7 @@ public class ThirdPersonMovement : MonoBehaviour
     [SerializeField] private CharacterController _characterController;
     public Transform mainCamera;
 
-    private float speed = 6f;
+    private float speed = 1f;
     private float turnSmoothTime = 0.0f;
     private float turnSmoothVelocity;
 
@@ -24,8 +24,10 @@ public class ThirdPersonMovement : MonoBehaviour
             float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity,
                 turnSmoothTime);
             transform.rotation= Quaternion.Euler(0f,targetAngle,0f);
-
             Vector3 movementDirection = Quaternion.Euler(0f, targetAngle,0f)*Vector3.forward;
+            //transform.Translate(movementDirection.normalized * speed * Time.deltaTime);
+
+
             _characterController.Move(movementDirection.normalized * speed * Time.deltaTime);
         }
     }
