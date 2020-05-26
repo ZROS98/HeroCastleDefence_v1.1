@@ -1,4 +1,5 @@
 ﻿using Photon.Pun;
+using Photon.Realtime;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -7,6 +8,12 @@ public class LoadArenaScene : MonoBehaviour
 {
     public float secondsToCreation;
     [SerializeField] private PhotonView _photonView;
+    private Player _anotherPlayer;
+
+    private void Start()
+    {
+        _anotherPlayer = PhotonNetwork.PlayerListOthers[0];
+    }
 
     public void CreateCharacter()
     {
@@ -41,14 +48,12 @@ public class LoadArenaScene : MonoBehaviour
 
     private bool BothPlayersIsReady()
     {
-        Debug.Log("thisPlayerIsReady =" + PhotonNetwork.LocalPlayer.CustomProperties["PlayerIsReadyProperties"]);
         bool thisPlayerIsReady = (bool) PhotonNetwork.LocalPlayer.CustomProperties["PlayerIsReadyProperties"];
         bool enemyPlayerIsReady = false;
 
         if (PhotonNetwork.PlayerList.Length > 1)
         {
-            Debug.Log("enemyPlayerIsReady =" + PhotonNetwork.PlayerListOthers[0].CustomProperties["PlayerIsReadyProperties"]);
-            enemyPlayerIsReady = (bool) PhotonNetwork.PlayerListOthers[0].CustomProperties["PlayerIsReadyProperties"];
+            enemyPlayerIsReady = (bool) _anotherPlayer.CustomProperties["PlayerIsReadyProperties"];
         }
         else
         {
