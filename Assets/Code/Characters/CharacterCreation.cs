@@ -20,7 +20,7 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    private void SpawnCharacter() //do it once
+    private void SpawnCharacter()
     {
         Transform spawnPoint = (PhotonNetwork.IsMasterClient ? _spawnPoints[0] : _spawnPoints[1]);
 
