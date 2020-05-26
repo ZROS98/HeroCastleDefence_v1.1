@@ -43,5 +43,6 @@ MonoBehaviour:
   - SetForEnemyAvatarsPictureRPC
   - DeathRPC
   - SetAvatarNumberForEnemyPicturePropertiesRPC
+  - CreateMobRPC
   DisableAutoOpenWizard: 1
   ShowSettings: 1
