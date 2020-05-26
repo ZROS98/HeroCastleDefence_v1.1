@@ -325,7 +325,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48634189}
-  m_LocalRotation: {x: 0.057012167, y: -0.02803614, z: 0.0033434252, w: 0.99797416}
+  m_LocalRotation: {x: 0.057011914, y: -0.028040817, z: 0.0033991423, w: 0.99797386}
   m_LocalPosition: {x: 21.69109, y: 4, z: 28.169998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5011,7 +5011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adefdb2cbeb52de40b47203f40a0baaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _photonView: {fileID: 0}
+  _photonView: {fileID: 2068072957}
   _spawnPointsTransform:
   - {fileID: 1160770538059961695}
   - {fileID: 553823385}
