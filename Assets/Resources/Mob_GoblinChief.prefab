@@ -1193,7 +1193,6 @@ GameObject:
   - component: {fileID: -6608052631946348992}
   - component: {fileID: -4814482868158968744}
   - component: {fileID: 2430793265710548415}
-  - component: {fileID: 4571305807188835620}
   - component: {fileID: 3945310934784674320}
   - component: {fileID: -1799893520866396834}
   m_Layer: 0
@@ -1363,21 +1362,6 @@ MonoBehaviour:
   _runName: Run
   _runPosition: {x: 0.295, y: 0.031, z: 0.122}
   _runRotation: {x: 193.72, y: 190.15, z: 86.729}
---- !u!114 &4571305807188835620
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906022184173130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf241ec8e4bf40a429ac72b9098db7a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _weapon: {fileID: 11400000, guid: 3d04f5739c62dbd4f95d703f8da9b317, type: 2}
-  enemyCharacter: {fileID: 0}
-  animator: {fileID: 95865715334774026}
 --- !u!114 &3945310934784674320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1390,11 +1374,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c570c373d61524da84576d7692ad91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetCastle1: {fileID: 7356630439900913204, guid: 73cc141fab6b5284daa78b628d615228,
-    type: 3}
-  _targetCastle2: {fileID: 4710540773920458067, guid: a47bf74234970c042945da41e98a2cbc,
-    type: 3}
-  _targetPlayer: {fileID: 0}
+  _navMeshAgent: {fileID: -4814482868158968744}
+  _photonView: {fileID: 5581754677597520103}
+  targetCharacterPosition: {x: 0, y: 0, z: 0}
+  targetCastlePosition: {x: 0, y: 0, z: 0}
 --- !u!114 &-1799893520866396834
 MonoBehaviour:
   m_ObjectHideFlags: 0
