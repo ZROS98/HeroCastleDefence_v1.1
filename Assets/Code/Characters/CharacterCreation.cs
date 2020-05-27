@@ -4,7 +4,7 @@ using Cinemachine;
 
 public class CharacterCreation : MonoBehaviourPunCallbacks
 {
-    [SerializeField] private PhotonView _PV;
+    [SerializeField] private PhotonView _photonView;
     [SerializeField] private Transform[] _spawnPoints;
 
     [SerializeField] private Transform _mainCameraTransform;
@@ -15,7 +15,7 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
     {
         if (PhotonNetwork.IsMasterClient)
         {
-            _PV.RPC("SpawnCharacter", RpcTarget.AllBuffered);
+            _photonView.RPC("SpawnCharacter", RpcTarget.AllBuffered);
         }
     }
 
