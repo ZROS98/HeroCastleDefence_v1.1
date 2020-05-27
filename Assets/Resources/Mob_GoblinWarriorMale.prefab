@@ -177,9 +177,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61c570c373d61524da84576d7692ad91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _targetCastle1: {fileID: 0}
-  _targetCastle2: {fileID: 0}
-  _targetPlayer: {fileID: 0}
+  _navMeshAgent: {fileID: 0}
+  _photonView: {fileID: 0}
+  targetCharacterTransform: {fileID: 0}
+  targetCastlePosition: {x: 0, y: 0, z: 0}
 --- !u!114 &-6745757389888742273
 MonoBehaviour:
   m_ObjectHideFlags: 0

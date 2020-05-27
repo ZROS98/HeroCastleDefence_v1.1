@@ -5,8 +5,8 @@ using Photon.Pun;
 public class ThirdPersonMovement : MonoBehaviour
 {
     [SerializeField] private CapsuleCollider _capsuleCollider;
-    [SerializeField] private Transform _Holder_ThirdPersonCameraTransform;
-    [SerializeField] private PhotonView _View;
+    [SerializeField] private Transform _holder_ThirdPersonCameraTransform;
+    [SerializeField] private PhotonView _photonView;
     public CinemachineFreeLook cinemachineFreeLook;
     public Transform mainCameraTransform;
 
@@ -18,11 +18,11 @@ public class ThirdPersonMovement : MonoBehaviour
 
     private void Start()
     {
-        _IsLocalFlag = _View.IsMine;
+        _IsLocalFlag = _photonView.IsMine;
 
         if (!_IsLocalFlag) return;
-        cinemachineFreeLook.LookAt = _Holder_ThirdPersonCameraTransform;
-        cinemachineFreeLook.Follow = _Holder_ThirdPersonCameraTransform;
+        cinemachineFreeLook.LookAt = _holder_ThirdPersonCameraTransform;
+        cinemachineFreeLook.Follow = _holder_ThirdPersonCameraTransform;
 
     }
     private void Update()
