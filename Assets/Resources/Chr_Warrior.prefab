@@ -312,8 +312,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _capsuleCollider: {fileID: -5634358650251205275}
-  _Holder_ThirdPersonCameraTransform: {fileID: 1160785665798440003}
-  _View: {fileID: 4292569332387551890}
+  _holder_ThirdPersonCameraTransform: {fileID: 1160785665798440003}
+  _photonView: {fileID: 4292569332387551890}
   cinemachineFreeLook: {fileID: 0}
   mainCameraTransform: {fileID: 0}
 --- !u!1 &5682444290630811978
