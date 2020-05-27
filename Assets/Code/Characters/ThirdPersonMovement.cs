@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using Cinemachine;
+using Photon.Pun;
 
 public class ThirdPersonMovement : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
             Vector3 movementDirection = Quaternion.Euler(0f, direction.y, 0f)*Vector3.forward;
             _capsuleCollider.transform.Translate(movementDirection.normalized * speed * Time.deltaTime);
+            
         }
     }
 }
