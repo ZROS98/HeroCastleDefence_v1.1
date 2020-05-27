@@ -10,6 +10,7 @@ public class MobNavMesh : MonoBehaviourPun
     [SerializeField] private NavMeshAgent _navMeshAgent;
     [SerializeField] private PhotonView _photonView;
     private float _distanceDifference;
+    private const int _agrOnPlayerDistance = 10;
     public Transform targetCharacterTransform;
     public Vector3 targetCastlePosition;
 
@@ -17,14 +18,13 @@ public class MobNavMesh : MonoBehaviourPun
     {
         Vector3 targetCharacterPosition = targetCharacterTransform.position;
         _distanceDifference = Vector3.Distance(targetCharacterPosition, transform.position);
-        if (_distanceDifference <= 10)
+
+        if (_distanceDifference <= _agrOnPlayerDistance)
         {
-            Debug.Log("Current target is Player");
             _navMeshAgent.SetDestination(targetCharacterPosition);
         }
         else
         {
-            Debug.Log("Current target is castle");
             _navMeshAgent.SetDestination(targetCastlePosition);
         }
     }  
