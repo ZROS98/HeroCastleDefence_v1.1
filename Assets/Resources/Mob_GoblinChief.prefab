@@ -1376,7 +1376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _navMeshAgent: {fileID: -4814482868158968744}
   _photonView: {fileID: 5581754677597520103}
-  targetCharacterPosition: {x: 0, y: 0, z: 0}
+  targetCharacterTransform: {fileID: 0}
   targetCastlePosition: {x: 0, y: 0, z: 0}
 --- !u!114 &-1799893520866396834
 MonoBehaviour:
