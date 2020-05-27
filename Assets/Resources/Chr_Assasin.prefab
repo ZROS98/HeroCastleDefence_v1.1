@@ -470,6 +470,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _capsuleCollider: {fileID: 8806064661801314772}
   _Holder_ThirdPersonCameraTransform: {fileID: 1620257031043738075}
+  _View: {fileID: 3455175326993181957}
   cinemachineFreeLook: {fileID: 0}
   mainCameraTransform: {fileID: 0}
 --- !u!1 &3583113763543964794
