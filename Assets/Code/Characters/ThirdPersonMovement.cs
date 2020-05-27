@@ -18,10 +18,11 @@ public class ThirdPersonMovement : MonoBehaviour
 
     private void Start()
     {
+        _IsLocalFlag = _View.IsMine;
+
+        if (!_IsLocalFlag) return;
         cinemachineFreeLook.LookAt = _Holder_ThirdPersonCameraTransform;
         cinemachineFreeLook.Follow = _Holder_ThirdPersonCameraTransform;
-
-        _IsLocalFlag = _View.IsMine;
 
     }
     private void Update()
