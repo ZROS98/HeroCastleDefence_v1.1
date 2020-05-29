@@ -42,6 +42,9 @@
           <e p="DamageSystem" t="Include">
             <e p="DamageSystem.cs" t="Include" />
           </e>
+          <e p="FromYouTube" t="Include">
+            <e p="Interactable.cs" t="Include" />
+          </e>
           <e p="HCDGame.cs" t="Include" />
           <e p="Lobby" t="Include">
             <e p="LobbyMainPanel.cs" t="Include" />
