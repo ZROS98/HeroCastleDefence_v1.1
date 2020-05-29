@@ -19,14 +19,15 @@ public class ThirdPersonMovement : MonoBehaviour
     private void Start()
     {
         _IsLocalFlag = _photonView.IsMine;
-
-        if (!_IsLocalFlag) return;
+        if (!_IsLocalFlag) enabled = false; //new idea. Is it have the right to live if satisfies the conditions?
+        if (!_IsLocalFlag) return; //old idea
         cinemachineFreeLook.LookAt = _holder_ThirdPersonCameraTransform;
         cinemachineFreeLook.Follow = _holder_ThirdPersonCameraTransform;
 
     }
     private void Update()
     {
+
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         
