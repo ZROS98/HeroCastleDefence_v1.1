@@ -328,6 +328,8 @@ GameObject:
   - component: {fileID: 8806064661801314772}
   - component: {fileID: 6002237534172371702}
   - component: {fileID: 7197253431871155027}
+  - component: {fileID: -6065226256725854447}
+  - component: {fileID: 2373371997059486120}
   m_Layer: 0
   m_Name: Chr_Assasin
   m_TagString: Player
@@ -473,6 +475,37 @@ MonoBehaviour:
   _photonView: {fileID: 3455175326993181957}
   cinemachineFreeLook: {fileID: 0}
   mainCameraTransform: {fileID: 0}
+--- !u!114 &-6065226256725854447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3583085599487280542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a2787dab734d4043bf94650fb491256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  damage:
+    baseValue: 5
+  armor:
+    baseValue: 0
+--- !u!114 &2373371997059486120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3583085599487280542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdd6b51b9a8d0d3408211c5b48cddc7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSpeed: 1
+  attackDelay: 0.6
 --- !u!1 &3583113763543964794
 GameObject:
   m_ObjectHideFlags: 0
