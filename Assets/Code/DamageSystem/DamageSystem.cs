@@ -1,45 +1,39 @@
-﻿/*using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//this class located on a weapon
+//this class located on a mob
 public class DamageSystem : MonoBehaviour
 {
     [SerializeField] private Weapon _weapon;
-    private bool attackMobs = false;
+    public bool attackAnimationIsActive = false; //filling from animations event
+    private bool _scriptHolderIsMob = false;
     void Start()
     {
-        if(!this.CompareTag("Mob"))
+        if(CompareTag("Mob"))
         {
-            attackMobs = true;
+            _scriptHolderIsMob = true;
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        bool isAttackAnimation = false; //
-        //isAttackAnimation = this.Animation.name("Attack");
-        if (isAttackAnimation)
+        if (attackAnimationIsActive)
         {
-            if (attackMobs)
+            if (_scriptHolderIsMob)
             {
-                if (other.CompareTag("Mob"))
+                if (other.TryGetComponent(out CharacterInfo characterInfo))
                 {
-                    other.GetComponent<MobInfo>()._healthPoint -= _weapon.damage;
-                }
-                else if (other.CompareTag("Player1") || other.CompareTag("Player2"))
-                {
-                    other.GetComponent<CharacterInfo>().-= _weapon.damage;
+                    characterInfo._healthPoint -= _weapon.damage;
                 }
             }
-            else
+            else 
             {
-                if (!other.CompareTag("Mob"))
+                if (other.TryGetComponent(out MobInfo mobInfo))
                 {
-                    //damage
+                    mobInfo._healthPoint -= _weapon.damage;
                 }
             }
         }
     }
 }
-*/

@@ -1195,10 +1195,7 @@ GameObject:
   - component: {fileID: 2430793265710548415}
   - component: {fileID: 3945310934784674320}
   - component: {fileID: -1799893520866396834}
-  - component: {fileID: 4175022504004998007}
-  - component: {fileID: -2404658708968763393}
-  - component: {fileID: 6112311757210140661}
-  - component: {fileID: -1145171347773093533}
+  - component: {fileID: -3407799205878214781}
   m_Layer: 0
   m_Name: Mob_GoblinChief
   m_TagString: Untagged
@@ -1399,7 +1396,7 @@ MonoBehaviour:
   damage: 10
   range: 5
   delay: 2
---- !u!114 &4175022504004998007
+--- !u!114 &-3407799205878214781
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1408,55 +1405,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1906022184173130}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 322d379efa38fba4c93b9d8965c78aa3, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fff94e99b285aa4295cba126ad0b38e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 10
---- !u!114 &-2404658708968763393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906022184173130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a50b4f918802a2546b05afe546fe58b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  radius: 3
-  interactionTransform: {fileID: 0}
---- !u!114 &6112311757210140661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906022184173130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdd6b51b9a8d0d3408211c5b48cddc7e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackSpeed: 1
-  attackDelay: 0.6
---- !u!114 &-1145171347773093533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906022184173130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93bbce465e9bc6d4bb595734eeafd5af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  damage:
-    baseValue: 5
-  armor:
-    baseValue: 0
+  _weapon: {fileID: 11400000, guid: 3d04f5739c62dbd4f95d703f8da9b317, type: 2}
+  attackAnimationIsActive: 0
 --- !u!1 &1930077169355358
 GameObject:
   m_ObjectHideFlags: 0
