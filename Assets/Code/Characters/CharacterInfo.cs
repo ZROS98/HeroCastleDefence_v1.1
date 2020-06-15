@@ -11,7 +11,7 @@ public class CharacterInfo : MonoBehaviour
     public int _healthPoint = 100;
 
 
-    public GameObject SliderButton;
+    /*public GameObject SliderButton;
 
     private void ChangeValueSlider()
     {
@@ -53,5 +53,5 @@ public class CharacterInfo : MonoBehaviour
                 TookDamage(collider.transform.root.GetComponent<WeaponInfo>().damage);    
             }         
         }
-    }
+    }*/
 }
