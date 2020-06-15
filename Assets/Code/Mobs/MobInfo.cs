@@ -1,11 +1,21 @@
-﻿using Photon.Pun;
+﻿using System;
+using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MobInfo : MonoBehaviour
 {
+    [SerializeField] private Animator _animator;
+    [SerializeField] private Transform _weapon;
+    [SerializeField] private string name;
+    
     public int _healthPoint = 100;
+
+    private void Awake()
+    {
+        
+    }
 
     private void Update()
     {
@@ -28,7 +38,7 @@ public class MobInfo : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Weapon"))
+        if (collision.gameObject.CompareTag("Weapon")) //&& character (collision) has AttackAnimationIsOn
         {
             TakedDamage(collision.gameObject.GetComponent<WeaponInfo>().damage);
         }
