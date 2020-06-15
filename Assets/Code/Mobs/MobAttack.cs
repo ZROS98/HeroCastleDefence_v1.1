@@ -1,44 +1,44 @@
-﻿using System;
+﻿using Photon.Pun;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MobAttack : MonoBehaviour
 {
-    [SerializeField] private Weapon _weapon; 
-    public GameObject enemyCharacter;
+    [SerializeField] private Weapon _weapon;
+    [SerializeField] private PhotonView _photonView;
+    public GameObject targetCharacter;
     public Animator animator;
+
+    private void Awake()
+    {
+        if (!_photonView.IsMine) enabled = false;
+    }
 
     private void Start()
     {
-        animator = enemyCharacter.GetComponent<Animator>();
-        
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        float distanceToCharacter = Vector3.Distance(enemyCharacter.transform.position, transform.position);
+        float distanceToCharacter = Vector3.Distance(targetCharacter.transform.position, transform.position);
 
-        if (distanceToCharacter <= _weapon.range)
+        if (distanceToCharacter <= _weapon.range && !IsInvoking())
         {
-            //attacks animation is ON. It's meaning than Coroutine should calls AttackAnimation every _weapon.delay
-            StartCoroutine(" StartAnimation", true);
-            StartCoroutine(StartAnimation(true));
+            //attacks animation is ON. Should make a normal delay instead 1f
+            InvokeRepeating("StartAnimation", 0f, 1f);
         }
         else
         {
-            //attacks animation is OFF. It's meaning Coroutine should be OFF
-            StartCoroutine("StartAnimation", false);
+            CancelInvoke();
         }
-        
-        IEnumerator StartAnimation(bool animationIsActive)
-        {
-            while (animationIsActive)
-            {
-                yield return new  WaitForSeconds(_weapon.delay);
-                Debug.Log("Courotine Works");
-                animator.Play("Attack");   
-            }
-        }
+    }
+
+    private void StartAnimation()
+    {
+         Debug.Log("Invoke Works = mob attacking now");
+         animator.Play("Attack");
     }
 }

@@ -9,7 +9,7 @@ public class MobCreation : MonoBehaviour
     private Vector3 _spawnPointPosition;
     private Vector3 _targetCastlePosition;
     private GameObject _mob;
-    public Transform targetCharacterTransform;
+    public GameObject targetCharacter;
 
     private void Start()
     {
@@ -32,6 +32,8 @@ public class MobCreation : MonoBehaviour
 
         MobNavMesh mobNavMesh = _mob.GetComponent<MobNavMesh>();
         mobNavMesh.targetCastlePosition = _targetCastlePosition;
-        mobNavMesh.targetCharacterTransform = targetCharacterTransform;
+        mobNavMesh.targetCharacterTransform = targetCharacter.transform;
+        MobAttack mobAttack = _mob.GetComponent<MobAttack>();
+        mobAttack.targetCharacter = targetCharacter;
     }
 }

@@ -171,6 +171,7 @@ GameObject:
   - component: {fileID: -5634358650251205275}
   - component: {fileID: 7637541277168111093}
   - component: {fileID: -6507677394393384644}
+  - component: {fileID: 3134213913919199086}
   m_Layer: 0
   m_Name: Chr_Warrior
   m_TagString: Player
@@ -316,6 +317,19 @@ MonoBehaviour:
   _photonView: {fileID: 4292569332387551890}
   cinemachineFreeLook: {fileID: 0}
   mainCameraTransform: {fileID: 0}
+--- !u!114 &3134213913919199086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5682434098739292252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bc6aea67bc36804180dfea79045c0bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthPoint: 100
 --- !u!1 &5682444290630811978
 GameObject:
   m_ObjectHideFlags: 0
