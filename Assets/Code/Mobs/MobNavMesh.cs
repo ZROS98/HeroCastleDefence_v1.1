@@ -14,6 +14,11 @@ public class MobNavMesh : MonoBehaviourPun
     public Transform targetCharacterTransform;
     public Vector3 targetCastlePosition;
 
+    private void Awake()
+    {
+        if (!_photonView.IsMine) enabled = false;
+    }
+
     private void Update()
     {
         Vector3 targetCharacterPosition = targetCharacterTransform.position;

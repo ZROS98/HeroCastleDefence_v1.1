@@ -14,17 +14,17 @@ public class ThirdPersonMovement : MonoBehaviour
     private const float turnSmoothTime = 0.0f;
     private float turnSmoothVelocity;
 
-    private bool _IsLocalFlag;
+    private void Awake()
+    {
+        if (!_photonView.IsMine) enabled = false;
+    }
 
     private void Start()
     {
-        _IsLocalFlag = _photonView.IsMine;
-
-        if (!_IsLocalFlag) return;
         cinemachineFreeLook.LookAt = _holder_ThirdPersonCameraTransform;
         cinemachineFreeLook.Follow = _holder_ThirdPersonCameraTransform;
-
     }
+
     private void Update()
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
@@ -33,16 +33,11 @@ public class ThirdPersonMovement : MonoBehaviour
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
         if (direction.magnitude >= 0.1f)
         {
-            // shitty but should work
-            //Camera.main is shitty better use something that will inform about main camera that cannot be null
-            // in example Game.MainCamera
-            var camera = _IsLocalFlag ? mainCameraTransform : Camera.main.transform;
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + camera.eulerAngles.y;
+            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + mainCameraTransform.eulerAngles.y;
             transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
 
             Vector3 movementDirection = Quaternion.Euler(0f, direction.y, 0f)*Vector3.forward;
-            _capsuleCollider.transform.Translate(movementDirection.normalized * speed * Time.deltaTime);
-            
+            _capsuleCollider.transform.Translate(movementDirection.normalized * speed * Time.deltaTime);          
         }
     }
 }

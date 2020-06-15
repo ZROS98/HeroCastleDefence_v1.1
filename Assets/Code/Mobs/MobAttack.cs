@@ -6,18 +6,18 @@ using UnityEngine;
 public class MobAttack : MonoBehaviour
 {
     [SerializeField] private Weapon _weapon; 
-    public GameObject enemyCharacter;
+    public GameObject targetCharacter;
     public Animator animator;
 
     private void Start()
     {
-        animator = enemyCharacter.GetComponent<Animator>();
+        animator = targetCharacter.GetComponent<Animator>();
         
     }
 
     void Update()
     {
-        float distanceToCharacter = Vector3.Distance(enemyCharacter.transform.position, transform.position);
+        float distanceToCharacter = Vector3.Distance(targetCharacter.transform.position, transform.position);
 
         if (distanceToCharacter <= _weapon.range)
         {
