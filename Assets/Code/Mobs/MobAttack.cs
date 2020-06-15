@@ -25,26 +25,21 @@ public class MobAttack : MonoBehaviour
     {
         float distanceToCharacter = Vector3.Distance(targetCharacter.transform.position, transform.position);
 
-        if (distanceToCharacter <= _weapon.range)
+        if (distanceToCharacter <= _weapon.range && !IsInvoking())
         {
             //attacks animation is ON. It's meaning than Coroutine should calls AttackAnimation every _weapon.delay
-            StartCoroutine(" StartAnimation", true);
-            StartCoroutine(StartAnimation(true));
+            InvokeRepeating("StartAnimation", 0f, 1f);
         }
         else
         {
             //attacks animation is OFF. It's meaning Coroutine should be OFF
-            StartCoroutine("StartAnimation", false);
+            CancelInvoke();
         }
-        
-        IEnumerator StartAnimation(bool animationIsActive)
-        {
-            while (animationIsActive)
-            {
-                yield return new  WaitForSeconds(_weapon.delay);
-                Debug.Log("Courotine Works");
-                animator.Play("Attack");   
-            }
-        }
+    }
+
+    private void StartAnimation()
+    {
+         Debug.Log("Invoke Works = mob attacking now");
+         animator.Play("Attack");
     }
 }
