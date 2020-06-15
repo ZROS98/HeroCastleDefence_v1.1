@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -12,22 +13,23 @@ public class DamageSystem : MonoBehaviour
     {
         if(CompareTag("Mob"))
         {
-            Debug.Log("1");
             _scriptHolderIsMob = true;
         }
+    }
+
+    private void SetAttackAnimationIsActive(int eventValue)
+    {
+        attackAnimationIsActive = eventValue == 1 ? true : false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (attackAnimationIsActive)
         {
-            Debug.Log("2");
             if (_scriptHolderIsMob)
             {
-                Debug.Log("3");
                 if (other.TryGetComponent(out CharacterInfo characterInfo))
                 {
-                    Debug.Log("4");
                     characterInfo._healthPoint -= _weapon.damage;
                 }
             }
@@ -35,7 +37,6 @@ public class DamageSystem : MonoBehaviour
             {
                 if (other.TryGetComponent(out MobInfo mobInfo))
                 {
-                    Debug.Log("5");
                     mobInfo._healthPoint -= _weapon.damage;
                 }
             }

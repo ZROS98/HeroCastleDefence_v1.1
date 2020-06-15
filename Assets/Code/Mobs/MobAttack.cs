@@ -18,7 +18,7 @@ public class MobAttack : MonoBehaviour
 
     private void Start()
     {
-        animator = targetCharacter.GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -27,12 +27,11 @@ public class MobAttack : MonoBehaviour
 
         if (distanceToCharacter <= _weapon.range && !IsInvoking())
         {
-            //attacks animation is ON. It's meaning than Coroutine should calls AttackAnimation every _weapon.delay
+            //attacks animation is ON. Should make a normal delay instead 1f
             InvokeRepeating("StartAnimation", 0f, 1f);
         }
         else
         {
-            //attacks animation is OFF. It's meaning Coroutine should be OFF
             CancelInvoke();
         }
     }
