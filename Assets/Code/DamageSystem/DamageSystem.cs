@@ -32,6 +32,10 @@ public class DamageSystem : MonoBehaviour
                 {
                     characterInfo._healthPoint -= _weapon.damage;
                 }
+                else if (other.TryGetComponent(out MainCastleInfo mainCastleInfo))
+                {
+                    mainCastleInfo.TakeDamage(_weapon.damage);
+                }
             }
             else 
             {

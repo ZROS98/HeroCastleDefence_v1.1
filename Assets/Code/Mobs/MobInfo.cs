@@ -31,18 +31,9 @@ public class MobInfo : MonoBehaviour
         PhotonNetwork.Destroy(gameObject);
     }
 
-    private void TakedDamage(int damage)
+    private void TakeDamage(int damage)
     {
         _healthPoint -= damage;
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Weapon")) //&& character (collision) has AttackAnimationIsOn
-        {
-            TakedDamage(collision.gameObject.GetComponent<WeaponInfo>().damage);
-        }
-    }
-
 
 }

@@ -35,5 +35,6 @@ public class MobCreation : MonoBehaviour
         mobNavMesh.targetCharacterTransform = targetCharacter.transform;
         MobAttack mobAttack = _mob.GetComponent<MobAttack>();
         mobAttack.targetCharacter = targetCharacter;
+        mobAttack.targetCastlePosition = _targetCastlePosition;
     }
 }
