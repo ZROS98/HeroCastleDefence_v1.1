@@ -261,7 +261,7 @@ public class LobbyMainPanel : MonoBehaviourPunCallbacks
             PhotonNetwork.CurrentRoom.IsOpen = false;
             PhotonNetwork.CurrentRoom.IsVisible = false;
 
-            PhotonNetwork.LoadLevel("Arena"); // Lvl select
+            PhotonNetwork.LoadLevel("CharacterSelection");
         }
 
         #endregion
