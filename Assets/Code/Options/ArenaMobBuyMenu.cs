@@ -10,7 +10,7 @@ public class ArenaMobBuyMenu : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.B) && _gameObject != null) 
         {
             bool isActive = _gameObject.activeSelf;
-      //      Screen.lockCursor = isActive;
+            Screen.lockCursor = isActive;
             _gameObject.SetActive(!isActive);
         }
     }
