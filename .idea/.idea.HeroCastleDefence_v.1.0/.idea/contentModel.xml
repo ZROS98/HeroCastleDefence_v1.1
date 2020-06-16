@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Progrmaming\Git_Folder\HeroCastleDefence_v.1.0" t="IncludeRecursive">
@@ -26,6 +26,7 @@
             <e p="MainCastleInfo.cs" t="Include" />
           </e>
           <e p="Characters" t="Include">
+            <e p="CharacterAnimations.cs" t="Include" />
             <e p="CharacterCreation.cs" t="Include" />
             <e p="CharacterInfo.cs" t="Include" />
             <e p="ShootingMechanics.cs" t="Include" />
@@ -41,6 +42,20 @@
           </e>
           <e p="DamageSystem" t="Include">
             <e p="DamageSystem.cs" t="Include" />
+            <e p="DefeatController.cs" t="Include" />
+          </e>
+          <e p="FromYouTube" t="Include">
+            <e p="CharacterCombat.cs" t="Include" />
+            <e p="CharacterStats.cs" t="Include" />
+            <e p="Enemy.cs" t="Include" />
+            <e p="EnemyController.cs" t="Include" />
+            <e p="EnemyStats.cs" t="Include" />
+            <e p="Interactable.cs" t="Include" />
+            <e p="PlayerController.cs" t="Include" />
+            <e p="PlayerManager.cs" t="Include" />
+            <e p="PlayerMotor.cs" t="Include" />
+            <e p="PlayerStats.cs" t="Include" />
+            <e p="Stat.cs" t="Include" />
           </e>
           <e p="HCDGame.cs" t="Include" />
           <e p="Lobby" t="Include">

@@ -329,6 +329,7 @@ GameObject:
   - component: {fileID: 6002237534172371702}
   - component: {fileID: 7197253431871155027}
   - component: {fileID: -3113107488827293264}
+  - component: {fileID: 6770557312516321009}
   m_Layer: 0
   m_Name: Chr_Assasin
   m_TagString: Player
@@ -487,6 +488,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _healthPoint: 100
+--- !u!114 &6770557312516321009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3583085599487280542}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e147cb427a8e47d4b893a296d1ebba03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weapon: {fileID: 0}
+  _animator: {fileID: 3525647906727186254}
+  _idleName: 
+  _idlePosition: {x: 0, y: 0, z: 0}
+  _idleRotation: {x: 0, y: 0, z: 0}
+  _attackName: 
+  _attackPosition: {x: 0, y: 0, z: 0}
+  _attackRotation: {x: 0, y: 0, z: 0}
+  _runName: 
+  _runPosition: {x: 0, y: 0, z: 0}
+  _runRotation: {x: 0, y: 0, z: 0}
 --- !u!1 &3583113763543964794
 GameObject:
   m_ObjectHideFlags: 0
