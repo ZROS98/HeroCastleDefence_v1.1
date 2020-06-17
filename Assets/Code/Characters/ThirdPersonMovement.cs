@@ -32,7 +32,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     private void Update()
     {
-        if (stopMovement) return;
+        if (_stopMovement) return;
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         
