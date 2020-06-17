@@ -329,6 +329,7 @@ GameObject:
   - component: {fileID: 7197253431871155027}
   - component: {fileID: -3113107488827293264}
   - component: {fileID: 6770557312516321009}
+  - component: {fileID: 8554185991452589501}
   m_Layer: 0
   m_Name: Chr_Assasin
   m_TagString: Player
@@ -492,6 +493,20 @@ MonoBehaviour:
   _runName: Run
   _runPosition: {x: 0.131, y: 0.047, z: 0.131}
   _runRotation: {x: 261.657, y: -156.455, z: 104.535}
+--- !u!114 &8554185991452589501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3583085599487280542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c404a2a26a2864e92e32b6f75f377c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 3525647906727186254}
+  _rigidbody: {fileID: -3236163055710623304}
 --- !u!1 &3583113763543964794
 GameObject:
   m_ObjectHideFlags: 0

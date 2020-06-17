@@ -18,7 +18,7 @@ public class CharacterAnimation : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !_attackAnimationIsActive)
         {
-            _animator.Play("SwordAttack");
+            _animator.Play("Attack");
         }
         else if (!_attackAnimationIsActive && previousFrame == transform.position)
         {

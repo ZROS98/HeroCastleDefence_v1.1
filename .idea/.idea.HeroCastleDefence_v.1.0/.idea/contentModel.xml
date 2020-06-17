@@ -26,9 +26,10 @@
             <e p="MainCastleInfo.cs" t="Include" />
           </e>
           <e p="Characters" t="Include">
-            <e p="CharacterAnimations.cs" t="Include" />
+            <e p="CharacterAnimation.cs" t="Include" />
             <e p="CharacterCreation.cs" t="Include" />
             <e p="CharacterInfo.cs" t="Include" />
+            <e p="CharacterWeaponTransform.cs" t="Include" />
             <e p="ShootingMechanics.cs" t="Include" />
             <e p="ThirdPersonMovement.cs" t="Include" />
           </e>
@@ -44,19 +45,6 @@
             <e p="DamageSystem.cs" t="Include" />
             <e p="DefeatController.cs" t="Include" />
           </e>
-          <e p="FromYouTube" t="Include">
-            <e p="CharacterCombat.cs" t="Include" />
-            <e p="CharacterStats.cs" t="Include" />
-            <e p="Enemy.cs" t="Include" />
-            <e p="EnemyController.cs" t="Include" />
-            <e p="EnemyStats.cs" t="Include" />
-            <e p="Interactable.cs" t="Include" />
-            <e p="PlayerController.cs" t="Include" />
-            <e p="PlayerManager.cs" t="Include" />
-            <e p="PlayerMotor.cs" t="Include" />
-            <e p="PlayerStats.cs" t="Include" />
-            <e p="Stat.cs" t="Include" />
-          </e>
           <e p="HCDGame.cs" t="Include" />
           <e p="Lobby" t="Include">
             <e p="LobbyMainPanel.cs" t="Include" />
@@ -65,11 +53,11 @@
             <e p="RoomListEntry.cs" t="Include" />
           </e>
           <e p="Mobs" t="Include">
-            <e p="MobAnimations.cs" t="Include" />
             <e p="MobAttack.cs" t="Include" />
             <e p="MobCreation.cs" t="Include" />
             <e p="MobInfo.cs" t="Include" />
             <e p="MobNavMesh.cs" t="Include" />
+            <e p="MobWeaponAnimation.cs" t="Include" />
           </e>
           <e p="Options" t="Include">
             <e p="ArenaMobBuyMenu.cs" t="Include" />

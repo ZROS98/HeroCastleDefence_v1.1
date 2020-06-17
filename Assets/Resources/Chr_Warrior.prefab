@@ -360,15 +360,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weapon: {fileID: 0}
   _animator: {fileID: 0}
-  _idleName: 
-  _idlePosition: {x: 0, y: 0, z: 0}
-  _idleRotation: {x: 0, y: 0, z: 0}
-  _attackName: 
-  _attackPosition: {x: 0, y: 0, z: 0}
-  _attackRotation: {x: 0, y: 0, z: 0}
-  _runName: 
-  _runPosition: {x: 0, y: 0, z: 0}
-  _runRotation: {x: 0, y: 0, z: 0}
+  _idleName: Idle
+  _idlePosition: {x: 0.105, y: 0.02, z: 0.123}
+  _idleRotation: {x: 254.918, y: -82.76801, z: 43.437}
+  _attackName: Attack
+  _attackPosition: {x: 0.105, y: 0.02, z: 0.123}
+  _attackRotation: {x: 296.73, y: -54.442, z: 4.167}
+  _runName: Run
+  _runPosition: {x: 0.105, y: 0.02, z: 0.123}
+  _runRotation: {x: 217.392, y: -49.28601, z: -2.357971}
 --- !u!1 &5682444290630811978
 GameObject:
   m_ObjectHideFlags: 0
