@@ -1425,9 +1425,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weapon: {fileID: 11400000, guid: 3d04f5739c62dbd4f95d703f8da9b317, type: 2}
   _photonView: {fileID: 5581754677597520103}
+  animator: {fileID: 95865715334774026}
   targetCharacter: {fileID: 0}
   targetCastlePosition: {x: 0, y: 0, z: 0}
-  animator: {fileID: 95865715334774026}
 --- !u!1 &1930077169355358
 GameObject:
   m_ObjectHideFlags: 0

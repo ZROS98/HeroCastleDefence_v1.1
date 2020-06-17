@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterAnimations : MonoBehaviour
+public class CharacterWeaponTransform : MonoBehaviour
 {
     [SerializeField] private Transform _weapon;
 
