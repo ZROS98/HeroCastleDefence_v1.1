@@ -8,18 +8,13 @@ public class MobAttack : MonoBehaviour
 {
     [SerializeField] private Weapon _weapon;
     [SerializeField] private PhotonView _photonView;
+    [SerializeField] private Animator animator;
     public GameObject targetCharacter;
     public Vector3 targetCastlePosition;
-    public Animator animator;
 
     private void Awake()
     {
         if (!_photonView.IsMine) enabled = false;
-    }
-
-    private void Start()
-    {
-        animator = GetComponent<Animator>();
     }
 
     void Update()
