@@ -6,24 +6,28 @@ public class CharacterAnimation : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
     [SerializeField] private Rigidbody _rigidbody;
-    public bool attackAnimationIsActive = false;
+    private bool _attackAnimationIsActive = false;
+    private Vector3 previousFrame;
+
+    private void SetAttackAnimationIsActive(int eventValue)
+    {
+        _attackAnimationIsActive = eventValue == 1 ? true : false;
+    }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !attackAnimationIsActive)
+        if (Input.GetMouseButtonDown(0) && !_attackAnimationIsActive)
         {
-            _rigidbody.constraints = RigidbodyConstraints.FreezePosition;
-            _animator.Play("Attack");
+            _animator.Play("SwordAttack");
         }
-        else if (!attackAnimationIsActive && _rigidbody.velocity == new Vector3(0f, 0f, 0f))
+        else if (!_attackAnimationIsActive && previousFrame == transform.position)
         {
-            _rigidbody.constraints = RigidbodyConstraints.FreezePositionY;
             _animator.Play("Idle");
         }
-        else if (!attackAnimationIsActive && _rigidbody.velocity != new Vector3(0f, 0f, 0f))
+        else if (!_attackAnimationIsActive && previousFrame != transform.position)
         {
-            _rigidbody.constraints = RigidbodyConstraints.FreezePositionY;
             _animator.Play("Run");
         }
+        previousFrame = transform.position;
     }
 }
