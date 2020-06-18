@@ -118006,7 +118006,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: SetAttackAnimationIsActive
+    functionName: SetActionAnimationIsActive
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
@@ -118027,7 +118027,7 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 3.3
-    functionName: SetAttackAnimationIsActive
+    functionName: SetActionAnimationIsActive
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
