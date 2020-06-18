@@ -1318,9 +1318,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36cff6c033992cf4d822bb56ecc321e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _photonView: {fileID: 5581754677597520103}
   _animator: {fileID: 95865715334774026}
   _weapon: {fileID: 0}
   name: 
+  _healthPoint: 100
 --- !u!195 &-4814482868158968744
 NavMeshAgent:
   m_ObjectHideFlags: 0

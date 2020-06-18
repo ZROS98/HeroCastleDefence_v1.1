@@ -12,7 +12,7 @@ public class CharacterInfo : MonoBehaviour
     [SerializeField] private CharacterAnimation _characterAnimation;
     public List<GameObject> mobList = new List<GameObject>();
     public Transform spawnPoint;
-    private int _healthPoint = 100;
+    public int _healthPoint = 100;
     private const int _respawnTime = 8;
     private bool _alreadyDead = false;
 

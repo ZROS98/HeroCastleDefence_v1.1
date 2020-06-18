@@ -26,6 +26,7 @@ public class DamageSystem : MonoBehaviour
     {
         if (attackAnimationIsActive)
         {
+            Debug.Log(gameObject + " 1");
             if (_scriptHolderIsMob)
             {
                 if (other.TryGetComponent(out CharacterInfo characterInfo))
@@ -39,9 +40,11 @@ public class DamageSystem : MonoBehaviour
             }
             else 
             {
+                Debug.Log(gameObject + " 2 //" + other.gameObject);
                 if (other.TryGetComponent(out MobInfo mobInfo))
                 {
                     mobInfo.TakeDamage(_weapon.damage);
+                    Debug.Log(gameObject + " 3");
                 }
             }
         }
