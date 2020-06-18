@@ -470,9 +470,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bc6aea67bc36804180dfea79045c0bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 0}
-  _thirdPersonMovement: {fileID: 0}
-  _characterAnimation: {fileID: 0}
+  _animator: {fileID: 3525647906727186254}
+  _thirdPersonMovement: {fileID: 7197253431871155027}
+  _characterAnimation: {fileID: 8554185991452589501}
   mobList: []
   spawnPoint: {fileID: 0}
 --- !u!114 &6770557312516321009
