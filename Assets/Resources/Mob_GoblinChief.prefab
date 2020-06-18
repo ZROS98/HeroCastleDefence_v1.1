@@ -1321,7 +1321,6 @@ MonoBehaviour:
   _animator: {fileID: 95865715334774026}
   _weapon: {fileID: 0}
   name: 
-  _healthPoint: 100
 --- !u!195 &-4814482868158968744
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1378,6 +1377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _navMeshAgent: {fileID: -4814482868158968744}
   _photonView: {fileID: 5581754677597520103}
+  stopChasingPlayer: 0
   targetCharacterTransform: {fileID: 0}
   targetCastlePosition: {x: 0, y: 0, z: 0}
 --- !u!114 &-1799893520866396834
@@ -1426,6 +1426,7 @@ MonoBehaviour:
   _weapon: {fileID: 11400000, guid: 3d04f5739c62dbd4f95d703f8da9b317, type: 2}
   _photonView: {fileID: 5581754677597520103}
   animator: {fileID: 95865715334774026}
+  stopAttackingPlayer: 0
   targetCharacter: {fileID: 0}
   targetCastlePosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1930077169355358
