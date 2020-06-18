@@ -10,30 +10,16 @@ public class MobInfo : MonoBehaviour
     [SerializeField] private Transform _weapon;
     [SerializeField] private string name;
     
-    public int _healthPoint = 100;
+    private int _healthPoint = 100;
 
-    private void Awake()
-    {
-        
-    }
-
-    private void Update()
-    {
-        if (_healthPoint<1)
-        {
-            PhotonView.Get(this).RPC("DestroyMob", RpcTarget.All);
-        }
-    }
-
-    [PunRPC]
-    private void DestroyMob()
-    {
-        PhotonNetwork.Destroy(gameObject);
-    }
-
-    private void TakeDamage(int damage)
+    public void TakeDamage(int damage)
     {
         _healthPoint -= damage;
+
+        if (_healthPoint <= 0)
+        {
+            PhotonNetwork.Destroy(gameObject);
+        }
     }
 
 }

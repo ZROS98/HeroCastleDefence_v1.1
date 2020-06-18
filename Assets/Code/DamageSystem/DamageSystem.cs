@@ -41,7 +41,7 @@ public class DamageSystem : MonoBehaviour
             {
                 if (other.TryGetComponent(out MobInfo mobInfo))
                 {
-                    mobInfo._healthPoint -= _weapon.damage;
+                    mobInfo.TakeDamage(_weapon.damage);
                 }
             }
         }
