@@ -345,6 +345,7 @@ GameObject:
   - component: {fileID: 6770557312516321009}
   - component: {fileID: 8554185991452589501}
   - component: {fileID: 1581968065731594996}
+  - component: {fileID: -4904947155306367579}
   m_Layer: 0
   m_Name: Chr_Assasin
   m_TagString: Player
@@ -485,7 +486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bc6aea67bc36804180dfea79045c0bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthBar: {fileID: 0}
+  _healthBar: {fileID: -4904947155306367579}
   _animator: {fileID: 3525647906727186254}
   _thirdPersonMovement: {fileID: 7197253431871155027}
   _characterAnimation: {fileID: 8554185991452589501}
@@ -544,6 +545,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weapon: {fileID: 11400000, guid: dcc7556a41ca03f4d822aa025cfbe687, type: 2}
   attackAnimationIsActive: 0
+--- !u!114 &-4904947155306367579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3583085599487280542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5591df9a169339449a47a464e25c3dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 0}
 --- !u!1 &3583113763543964794
 GameObject:
   m_ObjectHideFlags: 0
