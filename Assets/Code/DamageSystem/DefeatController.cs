@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class DefeatController : MonoBehaviour
 {
+    [SerializeField] private TMPro.TextMeshProUGUI _textDefeat;
     [SerializeField] private PhotonView _photonView;
     private bool _gameOver = false;
 
@@ -12,6 +13,7 @@ public class DefeatController : MonoBehaviour
     {
         if (!_gameOver)
         {
+            _textDefeat.text = "You loss";
             Debug.Log("You loss");
             _gameOver = true;
             _photonView.RPC("Win", RpcTarget.Others);
@@ -21,6 +23,7 @@ public class DefeatController : MonoBehaviour
     [PunRPC]
     public void Win()
     {
+        _textDefeat.text = "You win";
         Debug.Log("You win");
         _gameOver = true;
     }

@@ -175,6 +175,7 @@ GameObject:
   - component: {fileID: -276682394863718703}
   - component: {fileID: -6418731964768924982}
   - component: {fileID: -4014825313017950058}
+  - component: {fileID: -1315673871380989110}
   m_Layer: 0
   m_Name: Chr_Warrior
   m_TagString: Player
@@ -333,6 +334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bc6aea67bc36804180dfea79045c0bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _healthBar: {fileID: -1315673871380989110}
   _animator: {fileID: 5731104665664843776}
   _thirdPersonMovement: {fileID: -6507677394393384644}
   _characterAnimation: {fileID: -276682394863718703}
@@ -391,6 +393,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _weapon: {fileID: 11400000, guid: d311015baf65c1742b5780de16358c33, type: 2}
   attackAnimationIsActive: 0
+--- !u!114 &-1315673871380989110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5682434098739292252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5591df9a169339449a47a464e25c3dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 0}
 --- !u!1 &5682444290630811978
 GameObject:
   m_ObjectHideFlags: 0
@@ -1604,15 +1619,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b51c1ac56d74dea4780d54225834c595, type: 3}
---- !u!1 &6305563151556055313 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1871691174411856, guid: b51c1ac56d74dea4780d54225834c595,
-    type: 3}
-  m_PrefabInstance: {fileID: 6307143995698900801}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6311771443720783247 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4662633486641870, guid: b51c1ac56d74dea4780d54225834c595,
+    type: 3}
+  m_PrefabInstance: {fileID: 6307143995698900801}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6305563151556055313 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1871691174411856, guid: b51c1ac56d74dea4780d54225834c595,
     type: 3}
   m_PrefabInstance: {fileID: 6307143995698900801}
   m_PrefabAsset: {fileID: 0}

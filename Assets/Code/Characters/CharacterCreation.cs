@@ -1,9 +1,12 @@
 ﻿using Photon.Pun;
 using UnityEngine;
 using Cinemachine;
+using UnityEngine.UI;
 
 public class CharacterCreation : MonoBehaviourPunCallbacks
 {
+    [SerializeField] private Slider _slider;
+
     [SerializeField] private PhotonView _photonView;
     [SerializeField] private Transform[] _spawnPoints;
 
@@ -36,6 +39,9 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
 
         CharacterInfo characterInfo = _currentCharacter.GetComponent<CharacterInfo>();
         characterInfo.spawnPoint = spawnPoint;
+
+        HealthBar healthBar = _currentCharacter.GetComponent<HealthBar>();
+        healthBar.slider = _slider;
     }
 
 }

@@ -485,6 +485,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bc6aea67bc36804180dfea79045c0bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _healthBar: {fileID: 0}
   _animator: {fileID: 3525647906727186254}
   _thirdPersonMovement: {fileID: 7197253431871155027}
   _characterAnimation: {fileID: 8554185991452589501}

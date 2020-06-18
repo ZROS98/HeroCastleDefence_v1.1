@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class CharacterInfo : MonoBehaviour
 {
+    [SerializeField] private HealthBar _healthBar;
     [SerializeField] private Animator _animator;
     [SerializeField] private ThirdPersonMovement _thirdPersonMovement;
     [SerializeField] private CharacterAnimation _characterAnimation;
@@ -19,6 +20,8 @@ public class CharacterInfo : MonoBehaviour
     public void TakeDamage(int damage)
     {
         _healthPoint = _healthPoint - damage;
+
+        _healthBar.ChangeHealthBar(_healthPoint);
         if (_healthPoint <= 0) Death();
     }
 
@@ -50,6 +53,7 @@ public class CharacterInfo : MonoBehaviour
         yield return new WaitForSeconds(_respawnTime);
         transform.position = spawnPoint.position;
         _healthPoint = 100;
+        _healthBar.ChangeHealthBar(_healthPoint);
         _thirdPersonMovement.stopMovement = false;
         _alreadyDead = false;
         _characterAnimation.dontChangeAnimation = false;
