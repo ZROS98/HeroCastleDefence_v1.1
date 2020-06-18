@@ -6,25 +6,29 @@ public class CharacterAnimation : MonoBehaviour
 {
     [SerializeField] private Animator _animator;
     [SerializeField] private Rigidbody _rigidbody;
-    private bool _attackAnimationIsActive = false;
+    private bool _actionAnimationIsActive = false;
     private Vector3 previousFrame;
+    public bool dontChangeAnimation = false;
+    
 
-    private void SetAttackAnimationIsActive(int eventValue)
+    private void SetActionAnimationIsActive(int eventValue)
     {
-        _attackAnimationIsActive = eventValue == 1 ? true : false;
+        _actionAnimationIsActive = eventValue == 1 ? true : false;
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) && !_attackAnimationIsActive)
+        if (dontChangeAnimation) return;
+
+        if (Input.GetMouseButtonDown(0) && !_actionAnimationIsActive)
         {
             _animator.Play("Attack");
         }
-        else if (!_attackAnimationIsActive && previousFrame == transform.position)
+        else if (!_actionAnimationIsActive && previousFrame == transform.position)
         {
             _animator.Play("Idle");
         }
-        else if (!_attackAnimationIsActive && previousFrame != transform.position)
+        else if (!_actionAnimationIsActive && previousFrame != transform.position)
         {
             _animator.Play("Run");
         }

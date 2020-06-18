@@ -9,6 +9,7 @@ public class MobAttack : MonoBehaviour
     [SerializeField] private Weapon _weapon;
     [SerializeField] private PhotonView _photonView;
     [SerializeField] private Animator animator;
+    public bool stopAttackingPlayer = false;
     public GameObject targetCharacter;
     public Vector3 targetCastlePosition;
 
@@ -19,6 +20,8 @@ public class MobAttack : MonoBehaviour
 
     void Update()
     {
+        if (stopAttackingPlayer) return;
+
         float distanceToCharacter = Vector3.Distance(targetCharacter.transform.position, transform.position);
         float distanceToMainCastle = Vector3.Distance(targetCastlePosition, transform.position);
 

@@ -6,7 +6,7 @@ using UnityEngine;
 public class MainCastleInfo : MonoBehaviour
 {
     [SerializeField] private DefeatController _defeatController; 
-    private int _healthPoint = 100;
+    private int _healthPoint = 500;
 
     public void TakeDamage(int damage)
     {

@@ -319,6 +319,7 @@ MonoBehaviour:
   _photonView: {fileID: 4292569332387551890}
   cinemachineFreeLook: {fileID: 0}
   mainCameraTransform: {fileID: 0}
+  stopMovement: 0
 --- !u!114 &3134213913919199086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,7 +332,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bc6aea67bc36804180dfea79045c0bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthPoint: 100
+  _animator: {fileID: 5731104665664843776}
+  _thirdPersonMovement: {fileID: -6507677394393384644}
+  _characterAnimation: {fileID: -276682394863718703}
+  mobList: []
+  spawnPoint: {fileID: 0}
 --- !u!114 &-276682394863718703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,6 +351,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animator: {fileID: 5731104665664843776}
   _rigidbody: {fileID: 8072456564086212706}
+  dontChangeAnimation: 0
 --- !u!114 &-6418731964768924982
 MonoBehaviour:
   m_ObjectHideFlags: 0

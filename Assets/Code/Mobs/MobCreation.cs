@@ -1,4 +1,5 @@
 ﻿using Photon.Pun;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class MobCreation : MonoBehaviour
@@ -36,5 +37,9 @@ public class MobCreation : MonoBehaviour
         MobAttack mobAttack = _mob.GetComponent<MobAttack>();
         mobAttack.targetCharacter = targetCharacter;
         mobAttack.targetCastlePosition = _targetCastlePosition;
+
+        
+        CharacterInfo targetInfo = targetCharacter.GetComponent<CharacterInfo>();
+        targetInfo.mobList.Add(_mob);
     }
 }

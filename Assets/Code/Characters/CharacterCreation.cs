@@ -33,6 +33,9 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
         thirdPersonMovement.cinemachineFreeLook = _cinemachineFreeLook;
         MobCreation mobCreation = gameObject.GetComponent<MobCreation>();
         mobCreation.targetCharacter = _currentCharacter;
+
+        CharacterInfo characterInfo = _currentCharacter.GetComponent<CharacterInfo>();
+        characterInfo.spawnPoint = spawnPoint;
     }
 
 }
