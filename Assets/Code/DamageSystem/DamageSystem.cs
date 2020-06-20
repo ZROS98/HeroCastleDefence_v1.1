@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-//this class located on a mob
+//this class located on a mobs and character
 public class DamageSystem : MonoBehaviour
 {
     [SerializeField] private Weapon _weapon;
@@ -26,7 +26,6 @@ public class DamageSystem : MonoBehaviour
     {
         if (attackAnimationIsActive)
         {
-            Debug.Log(gameObject + " 1");
             if (_scriptHolderIsMob)
             {
                 if (other.TryGetComponent(out CharacterInfo characterInfo))
@@ -40,11 +39,9 @@ public class DamageSystem : MonoBehaviour
             }
             else 
             {
-                Debug.Log(gameObject + " 2 //" + other.gameObject);
                 if (other.TryGetComponent(out MobInfo mobInfo))
                 {
                     mobInfo.TakeDamage(_weapon.damage);
-                    Debug.Log(gameObject + " 3");
                 }
             }
         }
