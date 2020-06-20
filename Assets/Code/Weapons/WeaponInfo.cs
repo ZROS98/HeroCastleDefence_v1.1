@@ -14,9 +14,9 @@ public class WeaponInfo : MonoBehaviour
     private void Start()
     {
         name = _weapon.name;
-        damage = _weapon.damage;
-        range = _weapon.range;
-        attackSpeed = _weapon.attackSpeed;
+        ChangeDamage(_weapon.damage);
+        ChangeRange(_weapon.range);
+        ChangeAttackSpeed(_weapon.attackSpeed);
     }
 
     public void ChangeDamage(int newDamage)
