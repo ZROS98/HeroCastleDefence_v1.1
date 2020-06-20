@@ -17,6 +17,6 @@ public class UpdateInterface : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _hpSlider.value = _characterInfo._healthPoint / 100;
+      //  _hpSlider.value = _characterInfo._healthPoint / 100;
     }
 }

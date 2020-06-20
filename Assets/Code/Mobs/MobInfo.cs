@@ -6,43 +6,27 @@ using UnityEngine;
 
 public class MobInfo : MonoBehaviour
 {
+    [SerializeField] private PhotonView _photonView;
     [SerializeField] private Animator _animator;
     [SerializeField] private Transform _weapon;
     [SerializeField] private string name;
     
     public int _healthPoint = 100;
 
-    private void Awake()
+    public void TakeDamage(int damage)
     {
-        
-    }
+        _healthPoint -= damage;
 
-    private void Update()
-    {
-        if (_healthPoint<1)
+        if (_healthPoint <= 0)
         {
-            PhotonView.Get(this).RPC("DestroyMob", RpcTarget.All);
+            _photonView.RPC("DestroyRPC", RpcTarget.AllBuffered);
         }
     }
 
     [PunRPC]
-    private void DestroyMob()
+    private void DestroyRPC()
     {
         PhotonNetwork.Destroy(gameObject);
     }
-
-    private void TakedDamage(int damage)
-    {
-        _healthPoint -= damage;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Weapon")) //&& character (collision) has AttackAnimationIsOn
-        {
-            TakedDamage(collision.gameObject.GetComponent<WeaponInfo>().damage);
-        }
-    }
-
 
 }

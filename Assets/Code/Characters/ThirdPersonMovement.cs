@@ -9,11 +9,16 @@ public class ThirdPersonMovement : MonoBehaviour
     [SerializeField] private PhotonView _photonView;
     public CinemachineFreeLook cinemachineFreeLook;
     public Transform mainCameraTransform;
+    public bool stopMovement = false;
 
     private const float speed = 6f;
     private const float turnSmoothTime = 0.0f;
     private float turnSmoothVelocity;
 
+    private void SetStopMovement(int eventValue)
+    {
+        stopMovement = eventValue == 1 ? true : false;
+    }
     private void Awake()
     {
         if (!_photonView.IsMine) enabled = false;
@@ -27,6 +32,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     private void Update()
     {
+        if (stopMovement) return;
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
         

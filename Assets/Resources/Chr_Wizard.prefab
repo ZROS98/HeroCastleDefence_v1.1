@@ -332,6 +332,7 @@ GameObject:
   - component: {fileID: 8711637326003208147}
   - component: {fileID: 771964758787648433}
   - component: {fileID: -5745324315311228066}
+  - component: {fileID: 5253955134782319648}
   m_Layer: 0
   m_Name: Chr_Wizard
   m_TagString: Player
@@ -569,6 +570,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bc6aea67bc36804180dfea79045c0bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 0}
+  _thirdPersonMovement: {fileID: 0}
+  _characterAnimation: {fileID: 0}
+  mobList: []
+  spawnPoint: {fileID: 0}
   _healthPoint: 100
 --- !u!143 &8711637326003208147
 CharacterController:
@@ -605,6 +611,7 @@ MonoBehaviour:
   _photonView: {fileID: 3533209790041736914}
   cinemachineFreeLook: {fileID: 0}
   mainCameraTransform: {fileID: 0}
+  stopMovement: 0
 --- !u!114 &-5745324315311228066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -617,7 +624,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bc6aea67bc36804180dfea79045c0bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _animator: {fileID: 0}
+  _thirdPersonMovement: {fileID: 0}
+  _characterAnimation: {fileID: 0}
+  mobList: []
+  spawnPoint: {fileID: 0}
   _healthPoint: 100
+--- !u!114 &5253955134782319648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132106997770699223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fff94e99b285aa4295cba126ad0b38e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _weapon: {fileID: 0}
+  attackAnimationIsActive: 0
 --- !u!1 &132115340227565673
 GameObject:
   m_ObjectHideFlags: 0

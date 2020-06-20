@@ -26,18 +26,25 @@ public class DamageSystem : MonoBehaviour
     {
         if (attackAnimationIsActive)
         {
+            Debug.Log(gameObject + " 1");
             if (_scriptHolderIsMob)
             {
                 if (other.TryGetComponent(out CharacterInfo characterInfo))
                 {
-                    characterInfo._healthPoint -= _weapon.damage;
+                    characterInfo.TakeDamage(_weapon.damage);
+                }
+                else if (other.TryGetComponent(out MainCastleInfo mainCastleInfo))
+                {
+                    mainCastleInfo.TakeDamage(_weapon.damage);
                 }
             }
             else 
             {
+                Debug.Log(gameObject + " 2 //" + other.gameObject);
                 if (other.TryGetComponent(out MobInfo mobInfo))
                 {
-                    mobInfo._healthPoint -= _weapon.damage;
+                    mobInfo.TakeDamage(_weapon.damage);
+                    Debug.Log(gameObject + " 3");
                 }
             }
         }
