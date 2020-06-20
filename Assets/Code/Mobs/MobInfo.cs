@@ -19,7 +19,8 @@ public class MobInfo : MonoBehaviour
 
         if (_healthPoint <= 0)
         {
-            _photonView.RPC("DestroyRPC", RpcTarget.AllBuffered);
+            // _photonView.RPC("DestroyRPC", RpcTarget.AllBuffered);
+            PhotonNetwork.Destroy(gameObject);
         }
     }
 
