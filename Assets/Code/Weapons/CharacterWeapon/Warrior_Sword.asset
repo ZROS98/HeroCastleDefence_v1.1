@@ -15,4 +15,4 @@ MonoBehaviour:
   name: Default_Sword
   damage: 34
   range: 1000
-  attackSpeed: 3
+  attackSpeed: 1

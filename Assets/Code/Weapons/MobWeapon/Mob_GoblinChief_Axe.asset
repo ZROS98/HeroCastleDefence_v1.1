@@ -15,4 +15,4 @@ MonoBehaviour:
   name: DefaultMob_Axe
   damage: 10
   range: 5
-  attackSpeed: 0
+  attackSpeed: 1

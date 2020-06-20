@@ -573,7 +573,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _characterAnimation: {fileID: 8554185991452589501}
   _weapon: {fileID: 11400000, guid: dcc7556a41ca03f4d822aa025cfbe687, type: 2}
-  name: 
   damage: 0
   range: 0
   attackSpeed: 0

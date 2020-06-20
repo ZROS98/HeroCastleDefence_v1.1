@@ -15,4 +15,4 @@ MonoBehaviour:
   name: Default_Sai
   damage: 34
   range: 5
-  attackSpeed: 3
+  attackSpeed: 1
