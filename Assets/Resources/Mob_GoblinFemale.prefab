@@ -328,9 +328,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36cff6c033992cf4d822bb56ecc321e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animator: {fileID: 0}
-  _weapon: {fileID: 0}
-  name: 
   _healthPoint: 100
 --- !u!195 &7588289450290072101
 NavMeshAgent:
@@ -368,6 +365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _navMeshAgent: {fileID: 0}
   _photonView: {fileID: 0}
+  stopChasingPlayer: 0
   targetCharacterTransform: {fileID: 0}
   targetCastlePosition: {x: 0, y: 0, z: 0}
 --- !u!114 &4049862622496737664
@@ -382,11 +380,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 27dd8df2e2e09464abc78689b452d27b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 0}
+  _characterAnimation: {fileID: 0}
+  _weapon: {fileID: 11400000, guid: 3d04f5739c62dbd4f95d703f8da9b317, type: 2}
   name: 
   damage: 0
   range: 0
-  delay: 0
+  attackSpeed: 0
 --- !u!1 &1161636833253870
 GameObject:
   m_ObjectHideFlags: 0
