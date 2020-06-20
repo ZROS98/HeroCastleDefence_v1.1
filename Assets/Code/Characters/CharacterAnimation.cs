@@ -8,12 +8,16 @@ public class CharacterAnimation : MonoBehaviour
     [SerializeField] private Rigidbody _rigidbody;
     private bool _actionAnimationIsActive = false;
     private Vector3 previousFrame;
-    public bool dontChangeAnimation = false;
-    
+    public bool dontChangeAnimation = false;  
 
     private void SetActionAnimationIsActive(int eventValue)
     {
         _actionAnimationIsActive = eventValue == 1 ? true : false;
+    }
+
+    public void ChangeAttackSpeed(float newAttackSpeed)
+    {
+        _animator.SetFloat("AttackSpeed", newAttackSpeed);
     }
 
     void Update()

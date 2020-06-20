@@ -7,5 +7,5 @@ public class Weapon : ScriptableObject
     public string name;
     public int damage;
     public float range;
-    public float delay;
+    public float attackSpeed;
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 //this class located on a mobs and character
 public class DamageSystem : MonoBehaviour
 {
-    [SerializeField] private Weapon _weapon;
+    [SerializeField] private WeaponInfo _weaponInfo;
     public bool attackAnimationIsActive = false; //filling from animations event
     private bool _scriptHolderIsMob = false;
     void Start()
@@ -30,18 +30,18 @@ public class DamageSystem : MonoBehaviour
             {
                 if (other.TryGetComponent(out CharacterInfo characterInfo))
                 {
-                    characterInfo.TakeDamage(_weapon.damage);
+                    characterInfo.TakeDamage(_weaponInfo.damage);
                 }
                 else if (other.TryGetComponent(out MainCastleInfo mainCastleInfo))
                 {
-                    mainCastleInfo.TakeDamage(_weapon.damage);
+                    mainCastleInfo.TakeDamage(_weaponInfo.damage);
                 }
             }
             else 
             {
                 if (other.TryGetComponent(out MobInfo mobInfo))
                 {
-                    mobInfo.TakeDamage(_weapon.damage);
+                    mobInfo.TakeDamage(_weaponInfo.damage);
                 }
             }
         }

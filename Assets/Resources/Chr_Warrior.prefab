@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: -6418731964768924982}
   - component: {fileID: -4014825313017950058}
   - component: {fileID: -1315673871380989110}
+  - component: {fileID: 4464231255101688636}
   m_Layer: 0
   m_Name: Chr_Warrior
   m_TagString: Player
@@ -338,9 +339,9 @@ MonoBehaviour:
   _animator: {fileID: 5731104665664843776}
   _thirdPersonMovement: {fileID: -6507677394393384644}
   _characterAnimation: {fileID: -276682394863718703}
+  _healthPoint: 100
   mobList: []
   spawnPoint: {fileID: 0}
-  _healthPoint: 100
 --- !u!114 &-276682394863718703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fff94e99b285aa4295cba126ad0b38e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weapon: {fileID: 11400000, guid: d311015baf65c1742b5780de16358c33, type: 2}
+  _weaponInfo: {fileID: 0}
   attackAnimationIsActive: 0
 --- !u!114 &-1315673871380989110
 MonoBehaviour:
@@ -406,6 +407,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
+--- !u!114 &4464231255101688636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5682434098739292252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dd8df2e2e09464abc78689b452d27b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterAnimation: {fileID: -276682394863718703}
+  _weapon: {fileID: 11400000, guid: d311015baf65c1742b5780de16358c33, type: 2}
+  name: 
+  damage: 0
+  range: 0
+  attackSpeed: 0
 --- !u!1 &5682444290630811978
 GameObject:
   m_ObjectHideFlags: 0

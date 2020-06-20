@@ -15,4 +15,4 @@ MonoBehaviour:
   name: Sword
   damage: 34
   range: 1000
-  delay: 2
+  attackSpeed: 3
