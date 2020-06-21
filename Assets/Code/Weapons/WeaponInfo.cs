@@ -4,11 +4,34 @@ using UnityEngine;
 
 public class WeaponInfo : MonoBehaviour
 {
-
-    public Weapon weapon;
-    public string name;
+    [SerializeField] private CharacterAnimation _characterAnimation;
+    [SerializeField] private Weapon _weapon;
     public int damage;
     public float range;
-    public float delay;
+    public float attackSpeed;
+
+    private void Start()
+    {
+        ChangeDamage(_weapon.damage);
+        ChangeRange(_weapon.range);
+        ChangeAttackSpeed(_weapon.attackSpeed);
+    }
+
+    public void ChangeDamage(int newDamage)
+    {
+        damage = newDamage;
+    }
+    public void ChangeRange(float newRange)
+    {
+        range = newRange;
+    }
+    public void ChangeAttackSpeed(float newAttackSpeed)
+    {
+        attackSpeed = newAttackSpeed;
+        if (_characterAnimation != null)
+        {
+            _characterAnimation.ChangeAttackSpeed(attackSpeed);
+        }
+    }
 
 }

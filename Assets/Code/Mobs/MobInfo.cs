@@ -6,12 +6,7 @@ using UnityEngine;
 
 public class MobInfo : MonoBehaviour
 {
-    [SerializeField] private PhotonView _photonView;
-    [SerializeField] private Animator _animator;
-    [SerializeField] private Transform _weapon;
-    [SerializeField] private string name;
-    
-    public int _healthPoint = 100;
+    [SerializeField] private int _healthPoint = 100;
 
     public void TakeDamage(int damage)
     {
@@ -19,14 +14,7 @@ public class MobInfo : MonoBehaviour
 
         if (_healthPoint <= 0)
         {
-            _photonView.RPC("DestroyRPC", RpcTarget.AllBuffered);
+            PhotonNetwork.Destroy(gameObject);
         }
     }
-
-    [PunRPC]
-    private void DestroyRPC()
-    {
-        PhotonNetwork.Destroy(gameObject);
-    }
-
 }

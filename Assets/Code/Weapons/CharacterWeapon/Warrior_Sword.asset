@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d9972a48dd5f404aa4c612b0b947c91, type: 3}
   m_Name: Warrior_Sword
   m_EditorClassIdentifier: 
-  name: Sword
+  name: Default_Sword
   damage: 34
   range: 1000
-  delay: 2
+  attackSpeed: 1

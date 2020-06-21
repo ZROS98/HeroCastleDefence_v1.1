@@ -1194,9 +1194,9 @@ GameObject:
   - component: {fileID: -4814482868158968744}
   - component: {fileID: 2430793265710548415}
   - component: {fileID: 3945310934784674320}
-  - component: {fileID: -1799893520866396834}
   - component: {fileID: -8814621067713521510}
   - component: {fileID: 5619235454197390315}
+  - component: {fileID: -5787467567689340953}
   m_Layer: 0
   m_Name: Mob_GoblinChief
   m_TagString: Mob
@@ -1318,10 +1318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36cff6c033992cf4d822bb56ecc321e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _photonView: {fileID: 5581754677597520103}
-  _animator: {fileID: 95865715334774026}
-  _weapon: {fileID: 0}
-  name: 
   _healthPoint: 100
 --- !u!195 &-4814482868158968744
 NavMeshAgent:
@@ -1382,23 +1378,6 @@ MonoBehaviour:
   stopChasingPlayer: 0
   targetCharacterTransform: {fileID: 0}
   targetCastlePosition: {x: 0, y: 0, z: 0}
---- !u!114 &-1799893520866396834
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1906022184173130}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27dd8df2e2e09464abc78689b452d27b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  weapon: {fileID: 11400000, guid: 3d04f5739c62dbd4f95d703f8da9b317, type: 2}
-  name: Axe
-  damage: 10
-  range: 5
-  delay: 2
 --- !u!114 &-8814621067713521510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1411,7 +1390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fff94e99b285aa4295cba126ad0b38e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weapon: {fileID: 11400000, guid: 3d04f5739c62dbd4f95d703f8da9b317, type: 2}
+  _weaponInfo: {fileID: -5787467567689340953}
   attackAnimationIsActive: 0
 --- !u!114 &5619235454197390315
 MonoBehaviour:
@@ -1425,12 +1404,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf241ec8e4bf40a429ac72b9098db7a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weapon: {fileID: 11400000, guid: 3d04f5739c62dbd4f95d703f8da9b317, type: 2}
+  _weaponInfo: {fileID: -5787467567689340953}
   _photonView: {fileID: 5581754677597520103}
   animator: {fileID: 95865715334774026}
   stopAttackingPlayer: 0
   targetCharacter: {fileID: 0}
   targetCastlePosition: {x: 0, y: 0, z: 0}
+--- !u!114 &-5787467567689340953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906022184173130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27dd8df2e2e09464abc78689b452d27b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterAnimation: {fileID: 0}
+  _weapon: {fileID: 11400000, guid: 3d04f5739c62dbd4f95d703f8da9b317, type: 2}
+  damage: 0
+  range: 0
+  attackSpeed: 0
 --- !u!1 &1930077169355358
 GameObject:
   m_ObjectHideFlags: 0
