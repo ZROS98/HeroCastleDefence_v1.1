@@ -24,12 +24,15 @@ public class AimCharacterToMob : MonoBehaviour
     {
         RaycastHit hit;
         Ray rayToMob = new Ray(transform.position, transform.TransformDirection(Vector3.forward));
+
         //Mathf.Infinity
         if (Physics.Raycast(rayToMob, out hit, 10000, _layerMask))
         {
             if (hit.collider.CompareTag("Mob"))
             {
-                PhotonNetwork.Destroy(hit.transform.gameObject);
+                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+                //PhotonNetwork.Destroy(hit.transform.gameObject);
+                Debug.Log(hit.transform.gameObject);
             }
         }
     }
