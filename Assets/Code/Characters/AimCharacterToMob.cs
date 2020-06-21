@@ -24,7 +24,7 @@ public class AimCharacterToMob : MonoBehaviour
         RaycastHit hit;
         Ray rayToMob = new Ray(transform.position, transform.TransformDirection(Vector3.forward));
 
-        if (Physics.Raycast(rayToMob, out hit, maxRaycastDistance, _layerMask))
+        if (Physics.Raycast(rayToMob, out hit, Mathf.Infinity, _layerMask))
         {
             if (hit.collider.CompareTag("Mob"))
             {

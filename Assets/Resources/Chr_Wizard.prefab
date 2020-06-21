@@ -333,6 +333,7 @@ GameObject:
   - component: {fileID: 771964758787648433}
   - component: {fileID: -5745324315311228066}
   - component: {fileID: 5253955134782319648}
+  - component: {fileID: 5019415415529327275}
   m_Layer: 0
   m_Name: Chr_Wizard
   m_TagString: Player
@@ -570,12 +571,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bc6aea67bc36804180dfea79045c0bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _healthBar: {fileID: 0}
   _animator: {fileID: 0}
   _thirdPersonMovement: {fileID: 0}
   _characterAnimation: {fileID: 0}
+  _healthPoint: 100
   mobList: []
   spawnPoint: {fileID: 0}
-  _healthPoint: 100
 --- !u!143 &8711637326003208147
 CharacterController:
   m_ObjectHideFlags: 0
@@ -624,12 +626,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bc6aea67bc36804180dfea79045c0bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _healthBar: {fileID: 0}
   _animator: {fileID: 0}
   _thirdPersonMovement: {fileID: 0}
   _characterAnimation: {fileID: 0}
+  _healthPoint: 100
   mobList: []
   spawnPoint: {fileID: 0}
-  _healthPoint: 100
 --- !u!114 &5253955134782319648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -642,8 +645,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fff94e99b285aa4295cba126ad0b38e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weapon: {fileID: 0}
+  _weaponInfo: {fileID: 0}
   attackAnimationIsActive: 0
+--- !u!114 &5019415415529327275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 132106997770699223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae6a259c39a07c419198be5db69bd02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _numberLayerCharacter: 9
 --- !u!1 &132115340227565673
 GameObject:
   m_ObjectHideFlags: 0
