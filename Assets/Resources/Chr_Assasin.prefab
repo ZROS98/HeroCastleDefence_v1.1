@@ -347,6 +347,7 @@ GameObject:
   - component: {fileID: 1581968065731594996}
   - component: {fileID: -4904947155306367579}
   - component: {fileID: 218065413875203308}
+  - component: {fileID: -8559913321377498421}
   m_Layer: 0
   m_Name: Chr_Assasin
   m_TagString: Player
@@ -576,6 +577,19 @@ MonoBehaviour:
   damage: 0
   range: 0
   attackSpeed: 0
+--- !u!114 &-8559913321377498421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3583085599487280542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ae6a259c39a07c419198be5db69bd02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _numberLayerCharacter: 9
 --- !u!1 &3583113763543964794
 GameObject:
   m_ObjectHideFlags: 0
