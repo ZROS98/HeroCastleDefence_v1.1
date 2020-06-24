@@ -13,9 +13,7 @@ public class AimCharacterToMob : MonoBehaviour
         {
             if (hit.transform.CompareTag("Mob"))
             {
-                Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-                Debug.Log(hit.transform.gameObject);
-                hit.transform.localScale = new Vector3(5, 5, 5);
+
             }
         }
     }

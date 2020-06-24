@@ -13,9 +13,19 @@ public class CharacterRespawnDeathController : MonoBehaviour
     public static CharacterRespawnDeathController current;
     public Transform spawnPoint;
 
-    void Start()
+    private void Awake()
+    {
+        current = this;
+    }
+
+    private void OnEnable()
     {
         CharacterHealthController.current.onTakeDamage += CheckForDeath;
+    }
+
+    private void OnDisable()
+    {
+        CharacterHealthController.current.onTakeDamage -= CheckForDeath;
     }
 
     /// <summary>
@@ -47,7 +57,7 @@ public class CharacterRespawnDeathController : MonoBehaviour
 
     private void CheckForDeath()
     {
-        if (CharacterHealthController.current.GetHealth() < 0 && !_alreadyDead)
+        if (CharacterHealthController.current.GetHealth() < 1 && !_alreadyDead)
         {
             Death();
         }

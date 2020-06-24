@@ -30,7 +30,7 @@ public class MobAttack : MonoBehaviour
 
     private void ChangeAttackStatus(bool lifeStatus)
     {
-        _stopAttack = lifeStatus ? true : false;
+        _stopAttack = !lifeStatus;
     }
 
     void Update()
