@@ -348,6 +348,8 @@ GameObject:
   - component: {fileID: -4904947155306367579}
   - component: {fileID: 218065413875203308}
   - component: {fileID: -8559913321377498421}
+  - component: {fileID: 1662657502128632135}
+  - component: {fileID: -3725165125868961843}
   m_Layer: 9
   m_Name: Chr_Assasin
   m_TagString: Player
@@ -488,13 +490,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bc6aea67bc36804180dfea79045c0bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthBar: {fileID: -4904947155306367579}
-  _animator: {fileID: 3525647906727186254}
-  _thirdPersonMovement: {fileID: 7197253431871155027}
-  _characterAnimation: {fileID: 8554185991452589501}
-  _healthPoint: 100
-  mobList: []
-  spawnPoint: {fileID: 0}
 --- !u!114 &6770557312516321009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,6 +585,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _numberLayerCharacter: 9
+--- !u!114 &1662657502128632135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3583085599487280542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8595b98c0d9476241abfae9643607cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthPoint: 100
+--- !u!114 &-3725165125868961843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3583085599487280542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6761fef3d097ff4d817a4ebeee6f0b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _animator: {fileID: 3525647906727186254}
+  _characterAnimation: {fileID: 8554185991452589501}
+  _thirdPersonMovement: {fileID: 7197253431871155027}
+  spawnPoint: {fileID: 0}
 --- !u!1 &3583113763543964794
 GameObject:
   m_ObjectHideFlags: 0
