@@ -37,9 +37,5 @@ public class MobCreation : MonoBehaviour
         MobAttack mobAttack = _mob.GetComponent<MobAttack>();
         mobAttack.targetCharacter = targetCharacter;
         mobAttack.targetCastlePosition = _targetCastlePosition;
-
-        
-        CharacterInfo targetInfo = targetCharacter.GetComponent<CharacterInfo>();
-        targetInfo.mobList.Add(_mob);
     }
 }
