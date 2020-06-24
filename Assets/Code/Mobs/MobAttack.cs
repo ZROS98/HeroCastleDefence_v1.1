@@ -9,7 +9,7 @@ public class MobAttack : MonoBehaviour
     [SerializeField] private WeaponInfo _weaponInfo;
     [SerializeField] private PhotonView _photonView;
     [SerializeField] private Animator animator;
-    public bool stopAttackingPlayer = false;
+    private bool _stopAttack = false;
     public GameObject targetCharacter;
     public Vector3 targetCastlePosition;
 
@@ -18,9 +18,24 @@ public class MobAttack : MonoBehaviour
         if (!_photonView.IsMine) enabled = false;
     }
 
+    private void OnEnable()
+    {
+        CharacterRespawnDeathController.current.LifeStatusChanged += ChangeAttackStatus;
+    }
+
+    private void OnDisable()
+    {
+        CharacterRespawnDeathController.current.LifeStatusChanged -= ChangeAttackStatus;
+    }
+
+    private void ChangeAttackStatus(bool lifeStatus)
+    {
+        _stopAttack = lifeStatus ? true : false;
+    }
+
     void Update()
     {
-        if (stopAttackingPlayer) return;
+        if (_stopAttack) return;
 
         float distanceToCharacter = Vector3.Distance(targetCharacter.transform.position, transform.position);
         float distanceToMainCastle = Vector3.Distance(targetCastlePosition, transform.position);

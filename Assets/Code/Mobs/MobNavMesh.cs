@@ -12,7 +12,6 @@ public class MobNavMesh : MonoBehaviourPun
     private float _distanceDifference;
     private const int _agrOnPlayerDistance = 10;
     private bool _stopMovement = false;
-    public bool stopChasingPlayer = false;
     public Transform targetCharacterTransform;
     public Vector3 targetCastlePosition;
 
@@ -26,6 +25,25 @@ public class MobNavMesh : MonoBehaviourPun
         if (!_photonView.IsMine) enabled = false;
     }
 
+    private void OnEnable()
+    {
+        CharacterRespawnDeathController.current.LifeStatusChanged += ChangeTarget;
+    }
+
+    private void OnDisable()
+    {
+        CharacterRespawnDeathController.current.LifeStatusChanged -= ChangeTarget;
+    }
+
+    private void ChangeTarget(bool lifeStatus)
+    {
+        if (lifeStatus)
+        {
+            _navMeshAgent.SetDestination(targetCharacterTransform.position);
+        }
+        else _navMeshAgent.SetDestination(targetCastlePosition);
+    }
+
     private void Update()
     {
         if (_stopMovement) return;
@@ -33,7 +51,7 @@ public class MobNavMesh : MonoBehaviourPun
         Vector3 targetCharacterPosition = targetCharacterTransform.position;
         _distanceDifference = Vector3.Distance(targetCharacterPosition, transform.position);
 
-        if (_distanceDifference <= _agrOnPlayerDistance && !stopChasingPlayer)
+        if (_distanceDifference <= _agrOnPlayerDistance)
         {
             _navMeshAgent.SetDestination(targetCharacterPosition);
         }

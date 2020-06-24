@@ -37,10 +37,10 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
         MobCreation mobCreation = gameObject.GetComponent<MobCreation>();
         mobCreation.targetCharacter = _currentCharacter;
 
-        CharacterInfo characterInfo = _currentCharacter.GetComponent<CharacterInfo>();
-        characterInfo.spawnPoint = spawnPoint;
+        CharacterRespawnDeathController characterRespawnDeathController = _currentCharacter.GetComponent<CharacterRespawnDeathController>();
+        characterRespawnDeathController.spawnPoint = spawnPoint;
 
-        HealthBar healthBar = _currentCharacter.GetComponent<HealthBar>();
+        ChangeSliderHealthBar healthBar = _currentCharacter.GetComponent<ChangeSliderHealthBar>();
         healthBar.slider = _slider;
     }
 
