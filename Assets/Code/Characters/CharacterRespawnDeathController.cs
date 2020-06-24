@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Photon.Pun;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterRespawnDeathController : MonoBehaviour
 {
+    [SerializeField] private PhotonView _photonView;
     [SerializeField] private Animator _animator;
     [SerializeField] private CharacterAnimation _characterAnimation;
     [SerializeField] private ThirdPersonMovement _thirdPersonMovement;
@@ -15,6 +17,7 @@ public class CharacterRespawnDeathController : MonoBehaviour
 
     private void Awake()
     {
+        if (!_photonView.IsMine) enabled = false;
         current = this;
     }
 
