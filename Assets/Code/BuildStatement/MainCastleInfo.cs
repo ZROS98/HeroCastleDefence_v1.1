@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MainCastleInfo : MonoBehaviour, IDamageHadler
+public class MainCastleInfo : MonoBehaviour, IDamageHandler
 {
     [SerializeField] private DefeatController _defeatController; 
     private int _healthPoint = 500;

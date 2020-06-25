@@ -27,12 +27,12 @@ public class MobNavMesh : MonoBehaviourPun
 
     private void OnEnable()
     {
-        CharacterRespawnDeathController.current.LifeStatusChanged += ChangeTarget;
+        EventManager.current.LifeStatusChanged += ChangeTarget;
     }
 
     private void OnDisable()
     {
-        CharacterRespawnDeathController.current.LifeStatusChanged -= ChangeTarget;
+        EventManager.current.LifeStatusChanged -= ChangeTarget;
     }
 
     private void ChangeTarget(bool lifeStatus)

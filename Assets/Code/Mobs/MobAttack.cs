@@ -20,12 +20,12 @@ public class MobAttack : MonoBehaviour
 
     private void OnEnable()
     {
-        CharacterRespawnDeathController.current.LifeStatusChanged += ChangeAttackStatus;
+        EventManager.current.LifeStatusChanged += ChangeAttackStatus;
     }
 
     private void OnDisable()
     {
-        CharacterRespawnDeathController.current.LifeStatusChanged -= ChangeAttackStatus;
+        EventManager.current.LifeStatusChanged -= ChangeAttackStatus;
     }
 
     private void ChangeAttackStatus(bool lifeStatus)

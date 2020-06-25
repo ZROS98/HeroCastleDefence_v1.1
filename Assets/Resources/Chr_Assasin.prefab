@@ -610,6 +610,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6761fef3d097ff4d817a4ebeee6f0b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _photonView: {fileID: 3455175326993181957}
   _animator: {fileID: 3525647906727186254}
   _characterAnimation: {fileID: 8554185991452589501}
   _thirdPersonMovement: {fileID: 7197253431871155027}

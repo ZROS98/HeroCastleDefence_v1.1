@@ -413,6 +413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8595b98c0d9476241abfae9643607cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _characterRespawnDeathController: {fileID: 3721630871312199617}
   _healthPoint: 100
 --- !u!114 &3721630871312199617
 MonoBehaviour:
@@ -426,6 +427,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6761fef3d097ff4d817a4ebeee6f0b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _characterHealthController: {fileID: 5789929520401838741}
+  _photonView: {fileID: 4292569332387551890}
   _animator: {fileID: 5731104665664843776}
   _characterAnimation: {fileID: -276682394863718703}
   _thirdPersonMovement: {fileID: -6507677394393384644}
