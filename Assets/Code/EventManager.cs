@@ -16,12 +16,12 @@ public class EventManager : MonoBehaviour
     /// true = respawn. False = death
     /// </summary>
     public event Action<bool> LifeStatusChanged;
-    private void OnLifeStatusDeath()
+    public void OnLifeStatusDeath()
     {
         LifeStatusChanged?.Invoke(false);
     }
 
-    private void OnLifeStatusRespawn()
+    public void OnLifeStatusRespawn()
     {
         LifeStatusChanged?.Invoke(true);
     }
