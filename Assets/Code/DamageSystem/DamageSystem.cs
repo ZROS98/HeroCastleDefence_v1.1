@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IDamageHadler
+public interface IDamageHandler
 {
     void TakeDamage(int damage);
 }
@@ -22,7 +22,7 @@ public class DamageSystem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (attackAnimationIsActive && other.TryGetComponent(out IDamageHadler damageHadler))
+        if (attackAnimationIsActive && other.TryGetComponent(out IDamageHandler damageHadler))
         {
             damageHadler.TakeDamage(_weaponInfo.damage);
         }

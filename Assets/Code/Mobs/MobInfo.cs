@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MobInfo : MonoBehaviour, IDamageHadler
+public class MobInfo : MonoBehaviour, IDamageHandler
 {
     [SerializeField] private int _healthPoint = 100;
 
