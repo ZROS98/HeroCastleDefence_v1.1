@@ -540,7 +540,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fff94e99b285aa4295cba126ad0b38e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponInfo: {fileID: 218065413875203308}
+  _weapon: {fileID: 11400000, guid: dcc7556a41ca03f4d822aa025cfbe687, type: 2}
   attackAnimationIsActive: 0
 --- !u!114 &-4904947155306367579
 MonoBehaviour:
@@ -597,6 +597,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8595b98c0d9476241abfae9643607cb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _characterRespawnDeathController: {fileID: 0}
   _healthPoint: 100
 --- !u!114 &-3725165125868961843
 MonoBehaviour:
@@ -610,6 +611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6761fef3d097ff4d817a4ebeee6f0b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _characterHealthController: {fileID: 0}
   _photonView: {fileID: 3455175326993181957}
   _animator: {fileID: 3525647906727186254}
   _characterAnimation: {fileID: 8554185991452589501}
