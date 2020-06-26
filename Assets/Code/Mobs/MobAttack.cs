@@ -31,6 +31,7 @@ public class MobAttack : MonoBehaviour
     private void ChangeAttackStatus(bool lifeStatus)
     {
         _stopAttack = !lifeStatus;
+        Debug.Log("Debug from Event. Lifestatus: "+lifeStatus);
     }
 
     void Update()
