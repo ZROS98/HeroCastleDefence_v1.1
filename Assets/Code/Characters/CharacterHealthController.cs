@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterHealthController : MonoBehaviour, IDamageHandler
+public class CharacterHealthController : MonoBehaviour
 {
 
     [SerializeField] private CharacterRespawnDeathController _characterRespawnDeathController;

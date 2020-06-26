@@ -3,17 +3,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IDamageHandler
-{
-    void TakeDamage(int damage);
-}
-
-//this class located on a mobs and character
+//this class located on a mob
 public class DamageSystem : MonoBehaviour
 {
-    [SerializeField] private WeaponInfo _weaponInfo;
+    [SerializeField] private Weapon _weapon;
     public bool attackAnimationIsActive = false; //filling from animations event
     private bool _scriptHolderIsMob = false;
+    void Start()
+    {
+        if(CompareTag("Mob"))
+        {
+            _scriptHolderIsMob = true;
+        }
+    }
 
     private void SetAttackAnimationIsActive(int eventValue)
     {
@@ -22,11 +24,26 @@ public class DamageSystem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (attackAnimationIsActive && other.TryGetComponent(out IDamageHandler damageHadler))
+        if (attackAnimationIsActive)
         {
-            damageHadler.TakeDamage(_weaponInfo.damage);
+            if (_scriptHolderIsMob)
+            {
+                if (other.TryGetComponent(out CharacterHealthController characterHealthController))
+                {
+                    characterHealthController.TakeDamage(_weapon.damage);
+                }
+                else if (other.TryGetComponent(out MainCastleInfo mainCastleInfo))
+                {
+                    mainCastleInfo.TakeDamage(_weapon.damage);
+                }
+            }
+            else 
+            {
+                if (other.TryGetComponent(out MobInfo mobInfo))
+                {
+                    mobInfo.TakeDamage(_weapon.damage);
+                }
+            }
         }
     }
-
 }
-
