@@ -31,12 +31,15 @@ public class MobAttack : MonoBehaviour
     private void ChangeAttackStatus(bool lifeStatus)
     {
         _stopAttack = !lifeStatus;
-        Debug.Log("Debug from Event. Lifestatus: "+lifeStatus);
     }
 
     void Update()
     {
-        if (_stopAttack) return;
+        if (_stopAttack)
+        {
+            CancelInvoke();
+            return;
+        }
 
         float distanceToCharacter = Vector3.Distance(targetCharacter.transform.position, transform.position);
         float distanceToMainCastle = Vector3.Distance(targetCastlePosition, transform.position);
