@@ -18,11 +18,13 @@
         <e p="Code" t="Include">
           <e p="Arena" t="Include">
             <e p="Interface" t="Include">
-              <e p="HealthBar.cs" t="Include" />
+              <e p="ChangeSliderHealthBar.cs" t="Include" />
               <e p="OwnPicture.cs" t="Include" />
             </e>
           </e>
-          <e p="AvatarMeshToResource.cs" t="Include" />
+          <e p="BrokedScripts" t="Include">
+            <e p="DamageSystem_With_Interface.cs" t="Include" />
+          </e>
           <e p="BuildStatement" t="Include">
             <e p="MainCastleInfo.cs" t="Include" />
           </e>
@@ -30,8 +32,13 @@
             <e p="AimCharacterToMob.cs" t="Include" />
             <e p="CharacterAnimation.cs" t="Include" />
             <e p="CharacterCreation.cs" t="Include" />
+            <e p="CharacterHealthController.cs" t="Include" />
             <e p="CharacterInfo.cs" t="Include" />
+            <e p="CharacterRespawnDeathController.cs" t="Include" />
             <e p="CharacterWeaponTransform.cs" t="Include" />
+            <e p="Interface" t="Include">
+              <e p="CharacterHealthBarController.cs" t="Include" />
+            </e>
             <e p="ShootingMechanics.cs" t="Include" />
             <e p="ThirdPersonMovement.cs" t="Include" />
           </e>
@@ -47,8 +54,9 @@
             <e p="DamageSystem.cs" t="Include" />
             <e p="DefeatController.cs" t="Include" />
           </e>
-          <e p="HCDGame.cs" t="Include" />
+          <e p="EventManager.cs" t="Include" />
           <e p="Lobby" t="Include">
+            <e p="AvatarMeshToResource.cs" t="Include" />
             <e p="LobbyMainPanel.cs" t="Include" />
             <e p="LobbyTopPanel.cs" t="Include" />
             <e p="PlayerListEntry.cs" t="Include" />
@@ -57,6 +65,7 @@
           <e p="Mobs" t="Include">
             <e p="MobAttack.cs" t="Include" />
             <e p="MobCreation.cs" t="Include" />
+            <e p="MobHighlightingOnAim.cs" t="Include" />
             <e p="MobInfo.cs" t="Include" />
             <e p="MobNavMesh.cs" t="Include" />
             <e p="MobWeaponAnimation.cs" t="Include" />
@@ -76,7 +85,6 @@
           <e p="Sounds" t="Include">
             <e p="WalkSound.cs" t="Include" />
           </e>
-          <e p="UpdateInterface.cs" t="Include" />
           <e p="Weapons" t="Include">
             <e p="CharacterWeapon" t="Include">
               <e p="DestroyProjectile.cs" t="Include" />

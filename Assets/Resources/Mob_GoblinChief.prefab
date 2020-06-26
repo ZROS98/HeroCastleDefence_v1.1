@@ -203,7 +203,7 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: cfa67b50fba35b84a831fb244716447a, type: 2}
+  - {fileID: 2100000, guid: 5ec5815f62a0d37488d95601e3f0129f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1197,6 +1197,7 @@ GameObject:
   - component: {fileID: -8814621067713521510}
   - component: {fileID: 5619235454197390315}
   - component: {fileID: -5787467567689340953}
+  - component: {fileID: 577308542902426986}
   m_Layer: 0
   m_Name: Mob_GoblinChief
   m_TagString: Mob
@@ -1426,6 +1427,23 @@ MonoBehaviour:
   damage: 0
   range: 0
   attackSpeed: 0
+--- !u!114 &577308542902426986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906022184173130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab2088a2652c7f04aada5ab1075d668b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _materialWithHighlight: {fileID: 2100000, guid: cfa67b50fba35b84a831fb244716447a,
+    type: 2}
+  _defaultMaterial: {fileID: 2100000, guid: 5ec5815f62a0d37488d95601e3f0129f, type: 2}
+  _renderer: {fileID: 137137939692012134}
+  _circle: {fileID: 2903659278535866588}
 --- !u!1 &1930077169355358
 GameObject:
   m_ObjectHideFlags: 0
@@ -1671,15 +1689,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9e7134bd16b21cc4a8551794a16703c4, type: 3}
---- !u!4 &1725400485211532509 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4792935863598470, guid: 9e7134bd16b21cc4a8551794a16703c4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1720618873818272091}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1721820733562485675 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1688207647419120, guid: 9e7134bd16b21cc4a8551794a16703c4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1720618873818272091}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1725400485211532509 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4792935863598470, guid: 9e7134bd16b21cc4a8551794a16703c4,
     type: 3}
   m_PrefabInstance: {fileID: 1720618873818272091}
   m_PrefabAsset: {fileID: 0}
