@@ -17,10 +17,10 @@ public class AimCharacterToMob : MonoBehaviour
         Debug.DrawRay(_rayPosition, transform.forward * 200,Color.red);
         if (Physics.Raycast(rayToMob, out RaycastHit hit, Mathf.Infinity, _layerMask))
         {
-           
             if (hit.transform.CompareTag("Mob"))
             {
                 EventManager.current.OnMobHighlightingTurnOn();
+                Debug.Log(123);
             }
 
             if (previousObject != hit.transform.gameObject)
