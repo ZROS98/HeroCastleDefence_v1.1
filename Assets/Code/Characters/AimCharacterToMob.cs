@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class AimCharacterToMob : MonoBehaviour
 {
-    [SerializeField] private int _numberLayerCharacter = 9;
+    [SerializeField] private LayerMask _layerMask;
     private const int maxRaycastDistance = 100;
     private GameObject previousObject;
     private Vector3 _rayPosition;
@@ -13,9 +13,9 @@ public class AimCharacterToMob : MonoBehaviour
     {
         _rayPosition = transform.position;
         _rayPosition.y = transform.position.y + 1;
-        OnDrawGizmos();
-        Ray rayToMob = new Ray(_rayPosition, transform.TransformDirection(Vector3.forward));
-        if (Physics.Raycast(rayToMob, out RaycastHit hit, Mathf.Infinity, _numberLayerCharacter))
+        Ray rayToMob = new Ray(_rayPosition, transform.forward);
+        Debug.DrawRay(_rayPosition, transform.forward * 200,Color.red);
+        if (Physics.Raycast(rayToMob, out RaycastHit hit, Mathf.Infinity, _layerMask))
         {
            
             if (hit.transform.CompareTag("Mob"))
@@ -29,12 +29,5 @@ public class AimCharacterToMob : MonoBehaviour
             }
             previousObject = hit.transform.gameObject;
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.magenta;
-        Vector3 direction = transform.TransformDirection(Vector3.forward) * 100;
-        Gizmos.DrawLine(_rayPosition, direction);
     }
 }

@@ -401,6 +401,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _numberLayerCharacter: 9
+  _layer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &5789929520401838741
 MonoBehaviour:
   m_ObjectHideFlags: 0
