@@ -325,7 +325,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48634189}
-  m_LocalRotation: {x: 0.056994606, y: -0.028593551, z: 0.05640495, w: 0.99636966}
+  m_LocalRotation: {x: 0.0569952, y: -0.02858678, z: 0.0564217, w: 0.9963689}
   m_LocalPosition: {x: 21.69109, y: 4, z: 28.169998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -483,7 +483,7 @@ GameObject:
   - component: {fileID: 62778765}
   - component: {fileID: 62778764}
   - component: {fileID: 62778763}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Cube
   m_TagString: Mob
   m_Icon: {fileID: 0}

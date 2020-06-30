@@ -34,6 +34,7 @@ public class MobHighlightingOnAim : MonoBehaviour
 
     private void HighlightingChange(bool highlightingStatus, int mobEventID)
     {
+        Debug.Log("Status: "+highlightingStatus+", id:" + mobEventID);
         if (_mobPhotonViewID == mobEventID)
         {
             if (highlightingStatus)

@@ -29,11 +29,13 @@ public class AimCharacterToMob : MonoBehaviour
             if (hit.transform.CompareTag("Mob"))
             {
                 EventManager.current.OnMobHighlightingTurnOn(_mobPhotonViewID);
+                Debug.Log("call ON event");
             }
 
             if (previousObject != hit.transform.gameObject)
             {
                 EventManager.current.OnMobHighlightingTurnOff(_mobPhotonViewID);
+                Debug.Log("call OFF event");
             }
             previousObject = hit.transform.gameObject;
         }
