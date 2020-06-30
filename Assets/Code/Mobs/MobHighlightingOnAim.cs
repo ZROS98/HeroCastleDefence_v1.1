@@ -34,15 +34,18 @@ public class MobHighlightingOnAim : MonoBehaviour
 
     private void HighlightingChange(bool highlightingStatus, int mobEventID)
     {
-        if (highlightingStatus && _mobPhotonViewID == mobEventID) 
+        if (_mobPhotonViewID == mobEventID)
         {
-            _circle.SetActive(true);
-            _renderer.material = _materialWithHighlight;
-        }
-        else
-        {
-            _circle.SetActive(false);
-            _renderer.material = _defaultMaterial;
+            if (highlightingStatus)
+            {
+                _circle.SetActive(true);
+                _renderer.material = _materialWithHighlight;
+            }
+            else
+            {
+                _circle.SetActive(false);
+                _renderer.material = _defaultMaterial;
+            }
         }
     }
 
