@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AimCharacterToMob : MonoBehaviour
 {
-    [SerializeField] private LayerMask _layerMask;
     private const int maxRaycastDistance = 100;
     private GameObject previousObject;
     private Vector3 _rayPosition;
@@ -17,7 +16,7 @@ public class AimCharacterToMob : MonoBehaviour
 
         Debug.DrawRay(_rayPosition, transform.forward * 200,Color.red);
 
-        if (Physics.Raycast(rayToMob, out RaycastHit hit, Mathf.Infinity, _layerMask))
+        if (Physics.Raycast(rayToMob, out RaycastHit hit, Mathf.Infinity))
         {
             int mobPhotonViewID = hit.transform.GetComponent<PhotonView>().ViewID;
             if (hit.transform.CompareTag("Mob"))
