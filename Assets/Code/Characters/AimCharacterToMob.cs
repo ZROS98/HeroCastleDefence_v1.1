@@ -5,16 +5,9 @@ using UnityEngine;
 public class AimCharacterToMob : MonoBehaviour
 {
     [SerializeField] private LayerMask _layerMask;
-    [SerializeField] private PhotonView _photonView;
     private const int maxRaycastDistance = 100;
     private GameObject previousObject;
     private Vector3 _rayPosition;
-    private int _mobPhotonViewID;
-
-    private void Start()
-    {
-        _mobPhotonViewID = _photonView.ViewID;
-    }
 
     private void Update()
     {
@@ -26,15 +19,16 @@ public class AimCharacterToMob : MonoBehaviour
 
         if (Physics.Raycast(rayToMob, out RaycastHit hit, Mathf.Infinity, _layerMask))
         {
+            int mobPhotonViewID = hit.transform.GetComponent<PhotonView>().ViewID;
             if (hit.transform.CompareTag("Mob"))
             {
-                EventManager.current.OnMobHighlightingTurnOn(_mobPhotonViewID);
+                EventManager.current.OnMobHighlightingTurnOn(mobPhotonViewID);
                 Debug.Log("call ON event");
             }
 
             if (previousObject != hit.transform.gameObject)
             {
-                EventManager.current.OnMobHighlightingTurnOff(_mobPhotonViewID);
+                EventManager.current.OnMobHighlightingTurnOff(mobPhotonViewID);
                 Debug.Log("call OFF event");
             }
             previousObject = hit.transform.gameObject;
