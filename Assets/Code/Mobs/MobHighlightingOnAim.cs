@@ -1,20 +1,24 @@
-﻿using System;
+﻿using Photon.Pun;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MobHighlightingOnAim : MonoBehaviour
 {
+    [SerializeField] private PhotonView _photonView;
     [SerializeField] private Material _materialWithHighlight;
     [SerializeField] private Material _defaultMaterial;
     [SerializeField] private Renderer _renderer;
-
     [SerializeField] private GameObject _circle;
+    private int _mobPhotonViewID;
 
     //On Mob Destroy we also need to destroy Materials
     private void Start()
     {
         _circle.SetActive(false);
+        _mobPhotonViewID = _photonView.ViewID;
+
     }
 
     private void OnEnable()
@@ -28,10 +32,9 @@ public class MobHighlightingOnAim : MonoBehaviour
     }
 
 
-    private void HighlightingChange(bool highlightingStatus)
+    private void HighlightingChange(bool highlightingStatus, int mobEventID)
     {
-        Debug.Log(highlightingStatus + " = HS");
-        if (highlightingStatus) 
+        if (highlightingStatus && _mobPhotonViewID == mobEventID) 
         {
             _circle.SetActive(true);
             _renderer.material = _materialWithHighlight;

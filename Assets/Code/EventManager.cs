@@ -32,16 +32,16 @@ public class EventManager : MonoBehaviour
     /// <summary>
     /// true = turn On, false = turn Off
     /// </summary>
-    public event Action<bool> MobHighlightingStatusChanged;
+    public event Action<bool, int> MobHighlightingStatusChanged;
 
-    public void OnMobHighlightingTurnOn()
+    public void OnMobHighlightingTurnOn(int mobEventID)
     {
-        MobHighlightingStatusChanged?.Invoke(true);
+        MobHighlightingStatusChanged?.Invoke(true, mobEventID);
     }
 
-    public void OnMobHighlightingTurnOff()
+    public void OnMobHighlightingTurnOff(int mobEventID)
     {
-        MobHighlightingStatusChanged?.Invoke(false);
+        MobHighlightingStatusChanged?.Invoke(false, mobEventID);
     }
     #endregion
 }
