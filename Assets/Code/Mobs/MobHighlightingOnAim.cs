@@ -6,18 +6,17 @@ using UnityEngine;
 
 public class MobHighlightingOnAim : MonoBehaviour
 {
-    [SerializeField] private PhotonView _photonView;
     [SerializeField] private Material _materialWithHighlight;
     [SerializeField] private Material _defaultMaterial;
     [SerializeField] private Renderer _renderer;
     [SerializeField] private GameObject _circle;
-    private int _mobPhotonViewID;
+    private int _mobID;
 
     //On Mob Destroy we also need to destroy Materials
     private void Start()
     {
         _circle.SetActive(false);
-        _mobPhotonViewID = _photonView.ViewID;
+        _mobID = GetInstanceID();
 
     }
 
@@ -35,7 +34,7 @@ public class MobHighlightingOnAim : MonoBehaviour
     private void HighlightingChange(bool highlightingStatus, int mobEventID)
     {
         Debug.Log("Status: "+highlightingStatus+", id:" + mobEventID);
-        if (_mobPhotonViewID == mobEventID)
+        if (_mobID == mobEventID)
         {
             if (highlightingStatus)
             {

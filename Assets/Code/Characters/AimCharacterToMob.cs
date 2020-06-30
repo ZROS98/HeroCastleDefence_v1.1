@@ -18,16 +18,17 @@ public class AimCharacterToMob : MonoBehaviour
 
         if (Physics.Raycast(rayToMob, out RaycastHit hit, Mathf.Infinity))
         {
-            int mobPhotonViewID = hit.transform.GetComponent<PhotonView>().ViewID;
+            int mobID = hit.transform.GetInstanceID();          
+            
             if (hit.transform.CompareTag("Mob"))
             {
-                EventManager.current.OnMobHighlightingTurnOn(mobPhotonViewID);
+                EventManager.current.OnMobHighlightingTurnOn(mobID);
                 Debug.Log("call ON event");
             }
 
             if (previousObject != hit.transform.gameObject)
             {
-                EventManager.current.OnMobHighlightingTurnOff(mobPhotonViewID);
+                EventManager.current.OnMobHighlightingTurnOff(mobID);
                 Debug.Log("call OFF event");
             }
             previousObject = hit.transform.gameObject;

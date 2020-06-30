@@ -1439,7 +1439,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab2088a2652c7f04aada5ab1075d668b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _photonView: {fileID: 5581754677597520103}
   _materialWithHighlight: {fileID: 2100000, guid: cfa67b50fba35b84a831fb244716447a,
     type: 2}
   _defaultMaterial: {fileID: 2100000, guid: 5ec5815f62a0d37488d95601e3f0129f, type: 2}
