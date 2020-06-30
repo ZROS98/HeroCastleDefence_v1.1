@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class MobHighlightingOnAim : MonoBehaviour
 {
+    [SerializeField] private PhotonView _photonView;
     [SerializeField] private Material _materialWithHighlight;
     [SerializeField] private Material _defaultMaterial;
     [SerializeField] private Renderer _renderer;
@@ -16,7 +17,7 @@ public class MobHighlightingOnAim : MonoBehaviour
     private void Start()
     {
         _circle.SetActive(false);
-        _mobID = GetInstanceID();
+        _mobID = _photonView.ViewID;
 
     }
 
@@ -33,7 +34,6 @@ public class MobHighlightingOnAim : MonoBehaviour
 
     private void HighlightingChange(bool highlightingStatus, int mobEventID)
     {
-        Debug.Log("Status: "+highlightingStatus+", id:" + mobEventID);
         if (_mobID == mobEventID)
         {
             if (highlightingStatus)
@@ -48,5 +48,4 @@ public class MobHighlightingOnAim : MonoBehaviour
             }
         }
     }
-
 }

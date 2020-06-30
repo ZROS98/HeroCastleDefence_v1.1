@@ -6,6 +6,7 @@ public class AimCharacterToMob : MonoBehaviour
 {
     private const int maxRaycastDistance = 100;
     private GameObject previousObject;
+    private int _previousMobID;
     private Vector3 _rayPosition;
 
     private void Update()
@@ -18,19 +19,19 @@ public class AimCharacterToMob : MonoBehaviour
 
         if (Physics.Raycast(rayToMob, out RaycastHit hit, Mathf.Infinity))
         {
-            int mobID = hit.transform.GetInstanceID();          
-            
+            int mobID = 0;
             if (hit.transform.CompareTag("Mob"))
             {
+                Debug.Log("Name object's with tag Mob: " + hit.transform.gameObject.name);
+                mobID = hit.transform.GetComponent<PhotonView>().ViewID;
                 EventManager.current.OnMobHighlightingTurnOn(mobID);
-                Debug.Log("call ON event");
             }
 
-            if (previousObject != hit.transform.gameObject)
+            if (previousObject!=null && previousObject.CompareTag("Mob") && previousObject != hit.transform.gameObject)
             {
-                EventManager.current.OnMobHighlightingTurnOff(mobID);
-                Debug.Log("call OFF event");
+                EventManager.current.OnMobHighlightingTurnOff(_previousMobID);
             }
+            _previousMobID = mobID;
             previousObject = hit.transform.gameObject;
         }
     }
