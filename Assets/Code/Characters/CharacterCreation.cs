@@ -42,6 +42,9 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
 
         ChangeSliderHealthBar healthBar = _currentCharacter.GetComponent<ChangeSliderHealthBar>();
         healthBar.slider = _slider;
+
+        AimCharacterToMob aimCharacterToMob = _currentCharacter.GetComponent<AimCharacterToMob>();
+        aimCharacterToMob.cinemachineFreeLook = _cinemachineFreeLook;
     }
 
 }
