@@ -44,4 +44,15 @@ public class EventManager : MonoBehaviour
         MobHighlightingStatusChanged?.Invoke(false, mobEventID);
     }
     #endregion
+
+    #region CharacterAimChanged 
+
+    public event Action<Transform> CharacterAimChanged;
+
+    public void OnCharacterAimChanged(Transform mob)
+    {
+        CharacterAimChanged?.Invoke(mob);
+    }
+
+    #endregion
 }

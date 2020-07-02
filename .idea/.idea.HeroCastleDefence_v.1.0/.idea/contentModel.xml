@@ -31,6 +31,7 @@
           <e p="Characters" t="Include">
             <e p="AimCharacterToMob.cs" t="Include" />
             <e p="CharacterAnimation.cs" t="Include" />
+            <e p="CharacterAutoAim.cs" t="Include" />
             <e p="CharacterCreation.cs" t="Include" />
             <e p="CharacterHealthController.cs" t="Include" />
             <e p="CharacterInfo.cs" t="Include" />

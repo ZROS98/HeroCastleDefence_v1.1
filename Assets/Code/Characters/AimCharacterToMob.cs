@@ -6,6 +6,7 @@ using UnityEngine;
 public class AimCharacterToMob : MonoBehaviour
 {
     [SerializeField] private PhotonView _photonView;
+    [SerializeField] private CharacterAutoAim _characterAutoAim;
     private const int maxRaycastDistance = 100;
     private GameObject previousObject;
     private int _previousMobID;
@@ -35,7 +36,7 @@ public class AimCharacterToMob : MonoBehaviour
             int mobID = 0;
             if (hit.transform.CompareTag("Mob"))
             {
-                Debug.Log("Name object's with tag Mob: " + hit.transform.gameObject.name);
+                EventManager.current.OnCharacterAimChanged(hit.transform);
                 mobID = hit.transform.GetComponent<PhotonView>().ViewID;
                 EventManager.current.OnMobHighlightingTurnOn(mobID);
             }

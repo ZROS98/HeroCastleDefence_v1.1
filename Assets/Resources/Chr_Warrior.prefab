@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 426326054919859016}
   - component: {fileID: 5789929520401838741}
   - component: {fileID: 3721630871312199617}
+  - component: {fileID: 1712776910155951801}
   m_Layer: 9
   m_Name: Chr_Warrior
   m_TagString: Player
@@ -401,6 +402,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _photonView: {fileID: 4292569332387551890}
+  _characterAutoAim: {fileID: 0}
   cinemachineFreeLook: {fileID: 0}
 --- !u!114 &5789929520401838741
 MonoBehaviour:
@@ -434,6 +436,18 @@ MonoBehaviour:
   _characterAnimation: {fileID: -276682394863718703}
   _thirdPersonMovement: {fileID: -6507677394393384644}
   spawnPoint: {fileID: 0}
+--- !u!114 &1712776910155951801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5682434098739292252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f016b6d9c7c3f0f459842f7a8854614f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5682444290630811978
 GameObject:
   m_ObjectHideFlags: 0
