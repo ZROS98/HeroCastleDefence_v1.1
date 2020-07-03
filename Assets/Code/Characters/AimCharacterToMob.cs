@@ -7,7 +7,6 @@ public class AimCharacterToMob : MonoBehaviour
 {
     [SerializeField] private PhotonView _photonView;
     [SerializeField] private CharacterAutoAim _characterAutoAim;
-    private const int maxRaycastDistance = 100;
     private GameObject previousObject;
     private int _previousMobID;
     private Vector3 _rayPosition;

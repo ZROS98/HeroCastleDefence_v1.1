@@ -27,6 +27,7 @@
           </e>
           <e p="BuildStatement" t="Include">
             <e p="MainCastleInfo.cs" t="Include" />
+            <e p="ShopInteraction.cs" t="Include" />
           </e>
           <e p="Characters" t="Include">
             <e p="AimCharacterToMob.cs" t="Include" />

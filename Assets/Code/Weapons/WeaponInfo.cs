@@ -12,6 +12,7 @@ public class WeaponInfo : MonoBehaviour
 
     private void Start()
     {
+        Debug.Log(_weapon.damage);
         ChangeDamage(_weapon.damage);
         ChangeRange(_weapon.range);
         ChangeAttackSpeed(_weapon.attackSpeed);

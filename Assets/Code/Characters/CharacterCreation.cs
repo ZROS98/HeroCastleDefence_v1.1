@@ -45,6 +45,9 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
 
         AimCharacterToMob aimCharacterToMob = _currentCharacter.GetComponent<AimCharacterToMob>();
         aimCharacterToMob.cinemachineFreeLook = _cinemachineFreeLook;
+        
+        ShopInteraction shopInteraction = _currentCharacter.GetComponent<ShopInteraction>();
+        shopInteraction.cinemachineFreeLook = _cinemachineFreeLook;
     }
 
 }
