@@ -128,7 +128,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Color_Multiply: 10
+    - Color_Multiply: 0
     - Vector1_1CA83562: 5
     - Vector1_2F187F0B: 10
     - _AORemapMax: 1
