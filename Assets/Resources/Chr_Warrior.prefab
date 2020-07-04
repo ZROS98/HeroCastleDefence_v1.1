@@ -403,7 +403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _photonView: {fileID: 4292569332387551890}
-  _characterAutoAim: {fileID: 0}
+  _characterAutoAim: {fileID: 1712776910155951801}
   cinemachineFreeLook: {fileID: 0}
 --- !u!114 &5789929520401838741
 MonoBehaviour:
