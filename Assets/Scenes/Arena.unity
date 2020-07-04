@@ -402,7 +402,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48634189}
-  m_LocalRotation: {x: 0.056984626, y: -0.028687706, z: 0.061030395, w: 0.9960949}
+  m_LocalRotation: {x: 0.056982175, y: -0.028694198, z: 0.061184272, w: 0.99608546}
   m_LocalPosition: {x: 21.69109, y: 4, z: 28.169998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -669,6 +669,7 @@ GameObject:
   - component: {fileID: 201202335}
   - component: {fileID: 201202334}
   - component: {fileID: 201202333}
+  - component: {fileID: 201202337}
   m_Layer: 0
   m_Name: PotionShopL
   m_TagString: Shop
@@ -750,6 +751,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &201202337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201202332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60a1c8215f01fc4c9e0b4417b32a46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _material: {fileID: 2100000, guid: ae719e2085678034db2fc548feada570, type: 2}
 --- !u!1 &224311055
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,6 +941,7 @@ GameObject:
   - component: {fileID: 275797003}
   - component: {fileID: 275797002}
   - component: {fileID: 275797001}
+  - component: {fileID: 275797005}
   m_Layer: 0
   m_Name: WeapongShopL
   m_TagString: Shop
@@ -1008,6 +1023,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &275797005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275797000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60a1c8215f01fc4c9e0b4417b32a46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _material: {fileID: 2100000, guid: 1754ef510ca2c45488c2ffe814d95171, type: 2}
 --- !u!1 &362974662
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,6 +1279,7 @@ GameObject:
   - component: {fileID: 383447075}
   - component: {fileID: 383447074}
   - component: {fileID: 383447073}
+  - component: {fileID: 383447077}
   m_Layer: 0
   m_Name: PotionShopR
   m_TagString: Shop
@@ -1332,6 +1361,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &383447077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383447072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60a1c8215f01fc4c9e0b4417b32a46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _material: {fileID: 2100000, guid: ae719e2085678034db2fc548feada570, type: 2}
 --- !u!1 &449436987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1665,6 +1707,7 @@ GameObject:
   - component: {fileID: 534228692}
   - component: {fileID: 534228691}
   - component: {fileID: 534228690}
+  - component: {fileID: 534228694}
   m_Layer: 0
   m_Name: ArmorShopL
   m_TagString: Shop
@@ -1746,6 +1789,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &534228694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534228689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60a1c8215f01fc4c9e0b4417b32a46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _material: {fileID: 2100000, guid: 20f4645742405ce408a5b7dd5fb5f98c, type: 2}
 --- !u!1001 &553823383
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1883,6 +1939,7 @@ GameObject:
   - component: {fileID: 591204317}
   - component: {fileID: 591204316}
   - component: {fileID: 591204315}
+  - component: {fileID: 591204319}
   m_Layer: 0
   m_Name: ArmorShopR
   m_TagString: Shop
@@ -1964,6 +2021,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &591204319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591204314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60a1c8215f01fc4c9e0b4417b32a46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _material: {fileID: 2100000, guid: 20f4645742405ce408a5b7dd5fb5f98c, type: 2}
 --- !u!1 &624110287
 GameObject:
   m_ObjectHideFlags: 3
@@ -2353,6 +2423,7 @@ GameObject:
   - component: {fileID: 942153962}
   - component: {fileID: 942153961}
   - component: {fileID: 942153960}
+  - component: {fileID: 942153964}
   m_Layer: 0
   m_Name: WeapongShopR
   m_TagString: Shop
@@ -2434,6 +2505,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &942153964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942153959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e60a1c8215f01fc4c9e0b4417b32a46d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _material: {fileID: 2100000, guid: 1754ef510ca2c45488c2ffe814d95171, type: 2}
 --- !u!1 &957273153
 GameObject:
   m_ObjectHideFlags: 0

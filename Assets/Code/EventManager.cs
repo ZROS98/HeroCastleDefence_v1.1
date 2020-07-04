@@ -47,15 +47,4 @@ public class EventManager : MonoBehaviour
 
 //    #region ShopEvents
 //    #endregion
-
-    #region CharacterAimChanged 
-
-    public event Action<Transform> CharacterAimChanged;
-
-    public void OnCharacterAimChanged(Transform target)
-    {
-        CharacterAimChanged?.Invoke(target);
-    }
-
-    #endregion
 }

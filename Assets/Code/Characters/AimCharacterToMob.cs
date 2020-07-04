@@ -32,11 +32,11 @@ public class AimCharacterToMob : MonoBehaviour
 
         if (Physics.Raycast(rayToMob, out RaycastHit hit, Mathf.Infinity))
         {
-            if (hit.transform.CompareTag("Mob"))
+            if (hit.transform.CompareTag("Mob") && !_previousObjectIsMob)
             {
                 int mobID = hit.transform.GetComponent<PhotonView>().ViewID;
-                EventManager.current.OnCharacterAimChanged(hit.transform);
                 EventManager.current.OnMobHighlightingTurnOn(mobID);
+                _characterAutoAim.AimCharacterToTarget(hit.transform);
                 _previousObjectIsMob = true;
                 _previousMobID = mobID;
             }
