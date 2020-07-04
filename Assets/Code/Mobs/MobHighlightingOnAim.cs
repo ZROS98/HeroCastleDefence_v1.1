@@ -39,12 +39,14 @@ public class MobHighlightingOnAim : MonoBehaviour
             if (highlightingStatus)
             {
                 _circle.SetActive(true);
-                _renderer.material = _materialWithHighlight;
+                //_renderer.material = _materialWithHighlight;
+                _renderer.material.SetFloat("Color_Multiply",10);
             }
             else
             {
                 _circle.SetActive(false);
-                _renderer.material = _defaultMaterial;
+                //_renderer.material = _defaultMaterial;
+                _renderer.material.SetFloat("Color_Multiply",0);
             }
         }
     }
