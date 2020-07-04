@@ -46,28 +46,15 @@ public class EventManager : MonoBehaviour
     #endregion
 
 //    #region ShopEvents
-//
-//    public event Action<bool, int> ShopHighlightingStatusChanged;
-//
-//    public void OnShopHighlightingTurnOn(int shopEventID)
-//    {
-//        ShopHighlightingStatusChanged?.Invoke(true, shopEventID);
-//    }
-//    public void OnShopHighlightingTurnOff(int shopEventID)
-//    {
-//        ShopHighlightingStatusChanged?.Invoke(false, shopEventID);
-//    }
-//    
-//
 //    #endregion
 
     #region CharacterAimChanged 
 
     public event Action<Transform> CharacterAimChanged;
 
-    public void OnCharacterAimChanged(Transform mob)
+    public void OnCharacterAimChanged(Transform target)
     {
-        CharacterAimChanged?.Invoke(mob);
+        CharacterAimChanged?.Invoke(target);
     }
 
     #endregion

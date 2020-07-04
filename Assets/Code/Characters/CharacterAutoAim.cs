@@ -8,17 +8,20 @@ public class CharacterAutoAim : MonoBehaviour
     [SerializeField] private int _rotationSpeed = 5;
     private void OnEnable()
     {
-        EventManager.current.CharacterAimChanged += AimCharacterToMob;
+        EventManager.current.CharacterAimChanged += AimCharacterToTarget;
     }
 
     private void OnDisable()
     {
-        EventManager.current.CharacterAimChanged -= AimCharacterToMob;
+        EventManager.current.CharacterAimChanged -= AimCharacterToTarget;
     }
 
-    private void AimCharacterToMob(Transform mob)
+    private void AimCharacterToTarget(Transform target)
     {
-        Quaternion targetRotation = Quaternion.LookRotation(mob.position - transform.position);
+       /* Vector3 targetPosition = target.position;
+        targetPosition.y = 2;*/
+
+        Quaternion targetRotation = Quaternion.LookRotation(target.position - transform.position);
         transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, _rotationSpeed * Time.deltaTime);
     }
 }
