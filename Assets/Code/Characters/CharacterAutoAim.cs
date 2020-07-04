@@ -6,17 +6,8 @@ using UnityEngine;
 public class CharacterAutoAim : MonoBehaviour
 {
     [SerializeField] private int _rotationSpeed = 5;
-    private void OnEnable()
-    {
-        EventManager.current.CharacterAimChanged += AimCharacterToTarget;
-    }
 
-    private void OnDisable()
-    {
-        EventManager.current.CharacterAimChanged -= AimCharacterToTarget;
-    }
-
-    private void AimCharacterToTarget(Transform target)
+    public void AimCharacterToTarget(Transform target)
     {
        /* Vector3 targetPosition = target.position;
         targetPosition.y = 2;*/
