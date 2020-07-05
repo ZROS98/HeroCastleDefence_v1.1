@@ -12,7 +12,7 @@ public class ShopInteraction : MonoBehaviour
     [SerializeField] private int _distanceToShop = 5;
     private Material _previousShopMaterial;
     private ShopHighlightAndFocus _shopHighlightAndFocus;
-    private bool _previousObjectIsShop = false;
+    private GameObject _previousObject;
     private int _previousShopID;
     private Vector3 _rayPosition;
     public CinemachineFreeLook cinemachineFreeLook;
@@ -36,23 +36,23 @@ public class ShopInteraction : MonoBehaviour
 
         if (Physics.Raycast(rayToMob, out RaycastHit hit, _distanceToShop))
         {
-            Transform hitTransform = hit.transform;
-            if (hitTransform.CompareTag("Shop") && !_previousObjectIsShop)
+            GameObject hitObject = hit.transform.gameObject;
+            if (hitObject.CompareTag("Shop") && _previousObject == null)
             {
-                _shopHighlightAndFocus = hitTransform.GetComponent<ShopHighlightAndFocus>();
+                _shopHighlightAndFocus = hitObject.GetComponent<ShopHighlightAndFocus>();
                 _shopHighlightAndFocus.HighlightAndFocusOn(_characterAutoAim);
-                _previousObjectIsShop = true;
+                _previousObject = hitObject;
             }
-            else if (_previousObjectIsShop)
+            else if (_previousObject != null && _previousObject != hitObject)
             {
                 _shopHighlightAndFocus.HighlightOff();
-                _previousObjectIsShop = false;
+                _previousObject = null;
             }
         }
-        else if(_previousObjectIsShop)
+        else if(_previousObject != null)
         {
             _shopHighlightAndFocus.HighlightOff();
-            _previousObjectIsShop = false;
+            _previousObject = null;
         }       
     }
 }

@@ -8,7 +8,7 @@ public class AimCharacterToMob : MonoBehaviour
     [SerializeField] private PhotonView _photonView;
     [SerializeField] private CharacterAutoAim _characterAutoAim;
     private int _previousMobID;
-    private bool _previousObjectIsMob = false;
+    private GameObject _previousObject;
     private Vector3 _rayPosition;
     public CinemachineFreeLook cinemachineFreeLook;
     
@@ -32,24 +32,25 @@ public class AimCharacterToMob : MonoBehaviour
 
         if (Physics.Raycast(rayToMob, out RaycastHit hit, Mathf.Infinity))
         {
-            if (hit.transform.CompareTag("Mob") && !_previousObjectIsMob)
+            GameObject hitObject = hit.transform.gameObject;
+            if (hitObject.CompareTag("Mob") && _previousObject == null)
             {
-                int mobID = hit.transform.GetComponent<PhotonView>().ViewID;
+                int mobID = hitObject.GetComponent<PhotonView>().ViewID;
                 EventManager.current.OnMobHighlightingTurnOn(mobID);
-                _characterAutoAim.AimCharacterToTarget(hit.transform);
-                _previousObjectIsMob = true;
+                _characterAutoAim.AimCharacterToTarget(hitObject.transform);
+                _previousObject = hitObject;
                 _previousMobID = mobID;
             }
-            else if (_previousObjectIsMob)
+            else if (_previousObject != null && _previousObject != hitObject)
             {
                 EventManager.current.OnMobHighlightingTurnOff(_previousMobID);
-                _previousObjectIsMob = false;
+                _previousObject = null;
             }
         }
-        else if (_previousObjectIsMob)
+        else if (_previousObject != null)
         {
             EventManager.current.OnMobHighlightingTurnOff(_previousMobID);
-            _previousObjectIsMob = false;
+            _previousObject = null;
         }
     }
 }
