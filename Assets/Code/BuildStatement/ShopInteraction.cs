@@ -11,7 +11,7 @@ public class ShopInteraction : MonoBehaviour
     [SerializeField] private CharacterAutoAim _characterAutoAim;
     [SerializeField] private int _distanceToShop = 5;
     private Material _previousShopMaterial;
-    private ShopHighlightAndFocus _shopHighlightAndFocus;
+    private ShopInfo _shopInfo;
     private GameObject _previousObject;
     private int _previousShopID;
     private Vector3 _rayPosition;
@@ -39,19 +39,19 @@ public class ShopInteraction : MonoBehaviour
             GameObject hitObject = hit.transform.gameObject;
             if (hitObject.CompareTag("Shop") && _previousObject == null)
             {
-                _shopHighlightAndFocus = hitObject.GetComponent<ShopHighlightAndFocus>();
-                _shopHighlightAndFocus.HighlightAndFocusOn(_characterAutoAim);
+                _shopInfo = hitObject.GetComponent<ShopInfo>();
+                _shopInfo.SetShopInTarget(true, _characterAutoAim);
                 _previousObject = hitObject;
             }
             else if (_previousObject != null && _previousObject != hitObject)
             {
-                _shopHighlightAndFocus.HighlightOff();
+                _shopInfo.SetShopInTarget(false);
                 _previousObject = null;
             }
         }
         else if(_previousObject != null)
         {
-            _shopHighlightAndFocus.HighlightOff();
+            _shopInfo.SetShopInTarget(false);
             _previousObject = null;
         }       
     }
