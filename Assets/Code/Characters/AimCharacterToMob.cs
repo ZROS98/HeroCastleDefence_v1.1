@@ -7,6 +7,7 @@ public class AimCharacterToMob : MonoBehaviour
 {
     [SerializeField] private PhotonView _photonView;
     [SerializeField] private CharacterAutoAim _characterAutoAim;
+    [SerializeField] private LayerMask _layerMask;
     private int _previousMobID;
     private GameObject _previousObject;
     private Vector3 _rayPosition;
@@ -30,10 +31,10 @@ public class AimCharacterToMob : MonoBehaviour
 
         Debug.DrawRay(_rayPosition, cameraDirection * 200, Color.red);
 
-        if (Physics.Raycast(rayToMob, out RaycastHit hit, Mathf.Infinity))
+        if (Physics.Raycast(rayToMob, out RaycastHit hit, Mathf.Infinity, _layerMask))
         {
             GameObject hitObject = hit.transform.gameObject;
-            if (hitObject.CompareTag("Mob") && _previousObject == null)
+            if (_previousObject == null)
             {
                 int mobID = hitObject.GetComponent<PhotonView>().ViewID;
                 EventManager.current.OnMobHighlightingTurnOn(mobID);

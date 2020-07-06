@@ -404,6 +404,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _photonView: {fileID: 4292569332387551890}
   _characterAutoAim: {fileID: 1712776910155951801}
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 1024
   cinemachineFreeLook: {fileID: 0}
 --- !u!114 &5789929520401838741
 MonoBehaviour:
@@ -465,6 +468,9 @@ MonoBehaviour:
   _photonView: {fileID: 4292569332387551890}
   _characterAutoAim: {fileID: 1712776910155951801}
   _distanceToShop: 5
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 2048
   cinemachineFreeLook: {fileID: 0}
 --- !u!1 &5682444290630811978
 GameObject:
