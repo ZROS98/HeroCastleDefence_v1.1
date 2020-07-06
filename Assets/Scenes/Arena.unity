@@ -402,7 +402,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48634189}
-  m_LocalRotation: {x: 0.05695737, y: -0.02890606, z: 0.07054268, w: 0.99546176}
+  m_LocalRotation: {x: 0.056956947, y: -0.028935343, z: 0.0714471, w: 0.9953964}
   m_LocalPosition: {x: 21.69109, y: 4, z: 28.169998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -671,6 +671,9 @@ GameObject:
   - component: {fileID: 201202333}
   - component: {fileID: 201202337}
   - component: {fileID: 201202336}
+  - component: {fileID: 201202340}
+  - component: {fileID: 201202339}
+  - component: {fileID: 201202341}
   m_Layer: 0
   m_Name: PotionShopL
   m_TagString: Shop
@@ -758,7 +761,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e60a1c8215f01fc4c9e0b4417b32a46d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _material: {fileID: 2100000, guid: ae719e2085678034db2fc548feada570, type: 2}
+  _renderer: {fileID: 201202334}
 --- !u!224 &201202338
 RectTransform:
   m_ObjectHideFlags: 0
@@ -778,6 +781,46 @@ RectTransform:
   m_AnchoredPosition: {x: 28.649, y: -2.2}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &201202339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201202332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac822b226f29c647a829dda562c0377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shopHighlight: {fileID: 201202337}
+  _shopAimCharacter: {fileID: 201202340}
+  shopId: 3
+--- !u!114 &201202340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201202332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1cfe7eeff6f9864085b06143328b88f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &201202341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201202332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24ee2e5f2fa70444b99b3befec05b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panel: {fileID: 1591378951}
 --- !u!1 &213659495
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,6 +1117,9 @@ GameObject:
   - component: {fileID: 275797002}
   - component: {fileID: 275797001}
   - component: {fileID: 275797005}
+  - component: {fileID: 275797007}
+  - component: {fileID: 275797006}
+  - component: {fileID: 275797008}
   m_Layer: 0
   m_Name: WeapongShopL
   m_TagString: Shop
@@ -1167,7 +1213,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e60a1c8215f01fc4c9e0b4417b32a46d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _material: {fileID: 2100000, guid: 1754ef510ca2c45488c2ffe814d95171, type: 2}
+  _renderer: {fileID: 275797002}
+--- !u!114 &275797006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275797000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac822b226f29c647a829dda562c0377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shopHighlight: {fileID: 275797005}
+  _shopAimCharacter: {fileID: 275797007}
+  shopId: 1
+--- !u!114 &275797007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275797000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1cfe7eeff6f9864085b06143328b88f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &275797008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275797000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24ee2e5f2fa70444b99b3befec05b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panel: {fileID: 376058224}
 --- !u!1 &352483723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,6 +1574,9 @@ GameObject:
   - component: {fileID: 383447074}
   - component: {fileID: 383447073}
   - component: {fileID: 383447077}
+  - component: {fileID: 383447079}
+  - component: {fileID: 383447078}
+  - component: {fileID: 383447080}
   m_Layer: 0
   m_Name: PotionShopR
   m_TagString: Shop
@@ -1581,7 +1670,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e60a1c8215f01fc4c9e0b4417b32a46d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _material: {fileID: 2100000, guid: ae719e2085678034db2fc548feada570, type: 2}
+  _renderer: {fileID: 383447074}
+--- !u!114 &383447078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383447072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac822b226f29c647a829dda562c0377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shopHighlight: {fileID: 383447077}
+  _shopAimCharacter: {fileID: 383447079}
+  shopId: 6
+--- !u!114 &383447079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383447072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1cfe7eeff6f9864085b06143328b88f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &383447080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383447072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24ee2e5f2fa70444b99b3befec05b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panel: {fileID: 1591378951}
 --- !u!1 &449436987
 GameObject:
   m_ObjectHideFlags: 0
@@ -1916,6 +2045,9 @@ GameObject:
   - component: {fileID: 534228691}
   - component: {fileID: 534228690}
   - component: {fileID: 534228694}
+  - component: {fileID: 534228696}
+  - component: {fileID: 534228695}
+  - component: {fileID: 534228697}
   m_Layer: 0
   m_Name: ArmorShopL
   m_TagString: Shop
@@ -2009,7 +2141,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e60a1c8215f01fc4c9e0b4417b32a46d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _material: {fileID: 2100000, guid: 20f4645742405ce408a5b7dd5fb5f98c, type: 2}
+  _renderer: {fileID: 534228691}
+--- !u!114 &534228695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534228689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac822b226f29c647a829dda562c0377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shopHighlight: {fileID: 534228694}
+  _shopAimCharacter: {fileID: 534228696}
+  shopId: 2
+--- !u!114 &534228696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534228689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1cfe7eeff6f9864085b06143328b88f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &534228697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534228689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24ee2e5f2fa70444b99b3befec05b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panel: {fileID: 352483723}
 --- !u!1 &547998449
 GameObject:
   m_ObjectHideFlags: 0
@@ -2266,6 +2438,9 @@ GameObject:
   - component: {fileID: 591204316}
   - component: {fileID: 591204315}
   - component: {fileID: 591204319}
+  - component: {fileID: 591204321}
+  - component: {fileID: 591204320}
+  - component: {fileID: 591204322}
   m_Layer: 0
   m_Name: ArmorShopR
   m_TagString: Shop
@@ -2359,7 +2534,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e60a1c8215f01fc4c9e0b4417b32a46d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _material: {fileID: 2100000, guid: 20f4645742405ce408a5b7dd5fb5f98c, type: 2}
+  _renderer: {fileID: 591204316}
+--- !u!114 &591204320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591204314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac822b226f29c647a829dda562c0377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shopHighlight: {fileID: 591204319}
+  _shopAimCharacter: {fileID: 591204321}
+  shopId: 5
+--- !u!114 &591204321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591204314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1cfe7eeff6f9864085b06143328b88f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &591204322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591204314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24ee2e5f2fa70444b99b3befec05b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panel: {fileID: 352483723}
 --- !u!1 &624110287
 GameObject:
   m_ObjectHideFlags: 3
@@ -2829,6 +3044,9 @@ GameObject:
   - component: {fileID: 942153961}
   - component: {fileID: 942153960}
   - component: {fileID: 942153964}
+  - component: {fileID: 942153966}
+  - component: {fileID: 942153965}
+  - component: {fileID: 942153967}
   m_Layer: 0
   m_Name: WeapongShopR
   m_TagString: Shop
@@ -2922,7 +3140,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e60a1c8215f01fc4c9e0b4417b32a46d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _material: {fileID: 2100000, guid: 1754ef510ca2c45488c2ffe814d95171, type: 2}
+  _renderer: {fileID: 942153961}
+--- !u!114 &942153965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942153959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac822b226f29c647a829dda562c0377, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shopHighlight: {fileID: 942153964}
+  _shopAimCharacter: {fileID: 942153966}
+  shopId: 4
+--- !u!114 &942153966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942153959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1cfe7eeff6f9864085b06143328b88f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &942153967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942153959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e24ee2e5f2fa70444b99b3befec05b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panel: {fileID: 376058224}
 --- !u!1 &957273153
 GameObject:
   m_ObjectHideFlags: 0

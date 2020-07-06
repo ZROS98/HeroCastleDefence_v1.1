@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ShopHighlight : MonoBehaviour
 {
-    [SerializeField] private Material _material;
+    //   [SerializeField] private Material _material;
+    [SerializeField] private Renderer _renderer;
 
     public void ShopInTarget(bool shopInTarget)
     {
@@ -20,11 +21,11 @@ public class ShopHighlight : MonoBehaviour
 
     private void ShopHighlightOn()
     {
-        _material.SetFloat("EmissionMultiply", 1);
+        _renderer.material.SetFloat("EmissionMultiply", 1);
     }
 
     private void ShopHighlightOff()
     {
-        _material.SetFloat("EmissionMultiply", 0);
+        _renderer.material.SetFloat("EmissionMultiply", 0);
     }
 }

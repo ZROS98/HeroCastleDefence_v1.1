@@ -10,7 +10,6 @@ public class ShopInteraction : MonoBehaviour
     [SerializeField] private PhotonView _photonView;
     [SerializeField] private CharacterAutoAim _characterAutoAim;
     [SerializeField] private int _distanceToShop = 5;
-    private Material _previousShopMaterial;
     private ShopInfo _shopInfo;
     private GameObject _previousObject;
     private int _previousShopID;
