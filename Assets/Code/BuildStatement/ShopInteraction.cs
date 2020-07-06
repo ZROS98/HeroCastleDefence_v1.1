@@ -10,6 +10,7 @@ public class ShopInteraction : MonoBehaviour
     [SerializeField] private PhotonView _photonView;
     [SerializeField] private CharacterAutoAim _characterAutoAim;
     [SerializeField] private int _distanceToShop = 5;
+    [SerializeField] private LayerMask _layerMask;
     private ShopInfo _shopInfo;
     private GameObject _previousObject;
     private int _previousShopID;
@@ -33,13 +34,13 @@ public class ShopInteraction : MonoBehaviour
 
         Debug.DrawRay(_rayPosition, cameraDirection * _distanceToShop, Color.blue);
 
-        if (Physics.Raycast(rayToMob, out RaycastHit hit, _distanceToShop))
+        if (Physics.Raycast(rayToMob, out RaycastHit hit, _distanceToShop, _layerMask))
         {
             GameObject hitObject = hit.transform.gameObject;
-            if (hitObject.CompareTag("Shop") && _previousObject == null)
+            if (_previousObject == null)
             {
                 _shopInfo = hitObject.GetComponent<ShopInfo>();
-                _shopInfo.SetShopInTarget(true, _characterAutoAim);
+                _shopInfo.SetShopInTarget(true, transform.position, _characterAutoAim);
                 _previousObject = hitObject;
             }
             else if (_previousObject != null && _previousObject != hitObject)

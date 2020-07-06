@@ -402,7 +402,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48634189}
-  m_LocalRotation: {x: 0.056956947, y: -0.028935343, z: 0.0714471, w: 0.9953964}
+  m_LocalRotation: {x: 0.056957778, y: -0.02896534, z: 0.073144056, w: 0.9952722}
   m_LocalPosition: {x: 21.69109, y: 4, z: 28.169998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -674,7 +674,8 @@ GameObject:
   - component: {fileID: 201202340}
   - component: {fileID: 201202339}
   - component: {fileID: 201202341}
-  m_Layer: 0
+  - component: {fileID: 201202342}
+  m_Layer: 11
   m_Name: PotionShopL
   m_TagString: Shop
   m_Icon: {fileID: 0}
@@ -795,6 +796,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shopHighlight: {fileID: 201202337}
   _shopAimCharacter: {fileID: 201202340}
+  _pressFPanelAvailability: {fileID: 201202342}
   shopId: 3
 --- !u!114 &201202340
 MonoBehaviour:
@@ -820,7 +822,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e24ee2e5f2fa70444b99b3befec05b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _panel: {fileID: 1591378951}
+  _shopPanel: {fileID: 1591378951}
+--- !u!114 &201202342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 201202332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a21e9ef9afd804da864890193a743f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _distanceToShow: 10
+  _pressFPanel: {fileID: 1498958542}
+  _shopPanelShow: {fileID: 201202341}
 --- !u!1 &213659495
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,7 +1137,8 @@ GameObject:
   - component: {fileID: 275797007}
   - component: {fileID: 275797006}
   - component: {fileID: 275797008}
-  m_Layer: 0
+  - component: {fileID: 275797009}
+  m_Layer: 11
   m_Name: WeapongShopL
   m_TagString: Shop
   m_Icon: {fileID: 0}
@@ -1228,6 +1246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shopHighlight: {fileID: 275797005}
   _shopAimCharacter: {fileID: 275797007}
+  _pressFPanelAvailability: {fileID: 275797009}
   shopId: 1
 --- !u!114 &275797007
 MonoBehaviour:
@@ -1253,7 +1272,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e24ee2e5f2fa70444b99b3befec05b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _panel: {fileID: 376058224}
+  _shopPanel: {fileID: 376058224}
+--- !u!114 &275797009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275797000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a21e9ef9afd804da864890193a743f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _distanceToShow: 10
+  _pressFPanel: {fileID: 1498958542}
+  _shopPanelShow: {fileID: 275797008}
 --- !u!1 &352483723
 GameObject:
   m_ObjectHideFlags: 0
@@ -1577,7 +1611,8 @@ GameObject:
   - component: {fileID: 383447079}
   - component: {fileID: 383447078}
   - component: {fileID: 383447080}
-  m_Layer: 0
+  - component: {fileID: 383447081}
+  m_Layer: 11
   m_Name: PotionShopR
   m_TagString: Shop
   m_Icon: {fileID: 0}
@@ -1685,6 +1720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shopHighlight: {fileID: 383447077}
   _shopAimCharacter: {fileID: 383447079}
+  _pressFPanelAvailability: {fileID: 383447081}
   shopId: 6
 --- !u!114 &383447079
 MonoBehaviour:
@@ -1710,7 +1746,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e24ee2e5f2fa70444b99b3befec05b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _panel: {fileID: 1591378951}
+  _shopPanel: {fileID: 1591378951}
+--- !u!114 &383447081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383447072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a21e9ef9afd804da864890193a743f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _distanceToShow: 10
+  _pressFPanel: {fileID: 1498958542}
+  _shopPanelShow: {fileID: 383447080}
 --- !u!1 &449436987
 GameObject:
   m_ObjectHideFlags: 0
@@ -2048,7 +2099,8 @@ GameObject:
   - component: {fileID: 534228696}
   - component: {fileID: 534228695}
   - component: {fileID: 534228697}
-  m_Layer: 0
+  - component: {fileID: 534228698}
+  m_Layer: 11
   m_Name: ArmorShopL
   m_TagString: Shop
   m_Icon: {fileID: 0}
@@ -2156,6 +2208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shopHighlight: {fileID: 534228694}
   _shopAimCharacter: {fileID: 534228696}
+  _pressFPanelAvailability: {fileID: 534228698}
   shopId: 2
 --- !u!114 &534228696
 MonoBehaviour:
@@ -2181,7 +2234,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e24ee2e5f2fa70444b99b3befec05b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _panel: {fileID: 352483723}
+  _shopPanel: {fileID: 352483723}
+--- !u!114 &534228698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 534228689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a21e9ef9afd804da864890193a743f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _distanceToShow: 10
+  _pressFPanel: {fileID: 1498958542}
+  _shopPanelShow: {fileID: 534228697}
 --- !u!1 &547998449
 GameObject:
   m_ObjectHideFlags: 0
@@ -2441,7 +2509,8 @@ GameObject:
   - component: {fileID: 591204321}
   - component: {fileID: 591204320}
   - component: {fileID: 591204322}
-  m_Layer: 0
+  - component: {fileID: 591204323}
+  m_Layer: 11
   m_Name: ArmorShopR
   m_TagString: Shop
   m_Icon: {fileID: 0}
@@ -2549,6 +2618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shopHighlight: {fileID: 591204319}
   _shopAimCharacter: {fileID: 591204321}
+  _pressFPanelAvailability: {fileID: 591204323}
   shopId: 5
 --- !u!114 &591204321
 MonoBehaviour:
@@ -2574,7 +2644,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e24ee2e5f2fa70444b99b3befec05b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _panel: {fileID: 352483723}
+  _shopPanel: {fileID: 352483723}
+--- !u!114 &591204323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 591204314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a21e9ef9afd804da864890193a743f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _distanceToShow: 10
+  _pressFPanel: {fileID: 1498958542}
+  _shopPanelShow: {fileID: 591204322}
 --- !u!1 &624110287
 GameObject:
   m_ObjectHideFlags: 3
@@ -3047,7 +3132,8 @@ GameObject:
   - component: {fileID: 942153966}
   - component: {fileID: 942153965}
   - component: {fileID: 942153967}
-  m_Layer: 0
+  - component: {fileID: 942153968}
+  m_Layer: 11
   m_Name: WeapongShopR
   m_TagString: Shop
   m_Icon: {fileID: 0}
@@ -3155,6 +3241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shopHighlight: {fileID: 942153964}
   _shopAimCharacter: {fileID: 942153966}
+  _pressFPanelAvailability: {fileID: 942153968}
   shopId: 4
 --- !u!114 &942153966
 MonoBehaviour:
@@ -3180,7 +3267,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e24ee2e5f2fa70444b99b3befec05b2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _panel: {fileID: 376058224}
+  _shopPanel: {fileID: 376058224}
+--- !u!114 &942153968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942153959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a21e9ef9afd804da864890193a743f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _distanceToShow: 10
+  _pressFPanel: {fileID: 1498958542}
+  _shopPanelShow: {fileID: 942153967}
 --- !u!1 &957273153
 GameObject:
   m_ObjectHideFlags: 0
