@@ -28,16 +28,20 @@ public class DamageSystem : MonoBehaviour
         {
             if (_scriptHolderIsMob)
             {
-                if (other.TryGetComponent(out CharacterInfo characterInfo))
+                if (other.TryGetComponent(out CharacterHealthController characterHealthController))
                 {
-                    characterInfo._healthPoint -= _weapon.damage;
+                    characterHealthController.TakeDamage(_weapon.damage);
+                }
+                else if (other.TryGetComponent(out MainCastleInfo mainCastleInfo))
+                {
+                    mainCastleInfo.TakeDamage(_weapon.damage);
                 }
             }
             else 
             {
                 if (other.TryGetComponent(out MobInfo mobInfo))
                 {
-                    mobInfo._healthPoint -= _weapon.damage;
+                    mobInfo.TakeDamage(_weapon.damage);
                 }
             }
         }
