@@ -12,6 +12,8 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
 
     [SerializeField] private Transform _mainCameraTransform;
     [SerializeField] private CinemachineFreeLook _cinemachineFreeLook;
+
+    [SerializeField] private ShopUpgradeCharacterController shopUpgradeCharacterController;
     private GameObject _currentCharacter;
 
     public void Start()
@@ -48,6 +50,8 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
         
         ShopInteraction shopInteraction = _currentCharacter.GetComponent<ShopInteraction>();
         shopInteraction.cinemachineFreeLook = _cinemachineFreeLook;
+        
+        shopUpgradeCharacterController.characterStatsInfo = _currentCharacter.GetComponent<CharacterStatsInfo>();
     }
 
 }
