@@ -485,12 +485,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3450234c0cd53e440ace5f1fe5bafd82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characterAnimation: {fileID: -276682394863718703}
   _characterStats: {fileID: 11400000, guid: fcf2e3ee55a625f45a44582f6d9d0757, type: 2}
   healthPoint: 0
   defencePoint: 0
   moveSpeed: 0
-  attackSpeed: 0
+  _attackSpeed: 0
   skillCooldownSpeed: 0
   castSpeed: 0
   attackDamage: 0

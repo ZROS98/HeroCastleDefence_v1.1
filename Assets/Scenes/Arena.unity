@@ -402,7 +402,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48634189}
-  m_LocalRotation: {x: 0.05693392, y: -0.030956514, z: 0.1002882, w: 0.99284565}
+  m_LocalRotation: {x: 0.057067815, y: -0.03148377, z: 0.111643285, w: 0.99160874}
   m_LocalPosition: {x: 21.69109, y: 4, z: 28.169998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1257,9 +1257,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 275797000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09ced39e7aa776b499b392e2666f8e23, type: 3}
+  m_Script: {fileID: 11500000, guid: 6cdad906c1abe63438c70b8bbb138830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   characterStatsInfo: {fileID: 0}
 --- !u!1 &293037527
 GameObject:
@@ -1355,7 +1356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &354831812
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1663,7 +1664,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &376058225
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1759,10 +1760,10 @@ RectTransform:
   m_Father: {fileID: 962776036}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 609.1667, y: -25}
+  m_SizeDelta: {x: 239.66667, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &380244138
 MonoBehaviour:
@@ -2161,7 +2162,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 275797010}
+      - m_Target: {fileID: 0}
         m_MethodName: UpgradeSkillDamage
         m_Mode: 1
         m_Arguments:
@@ -2172,7 +2173,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 942153969}
+      - m_Target: {fileID: 0}
         m_MethodName: UpgradeSkillDamage
         m_Mode: 1
         m_Arguments:
@@ -2577,7 +2578,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -50, y: 0}
-  m_SizeDelta: {x: 25, y: 25}
+  m_SizeDelta: {x: 40, y: 25}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &486682043
 MonoBehaviour:
@@ -2597,7 +2598,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: eb4a3c617c3916e47bb3fab36a723a8a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2650,7 +2651,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -50, y: 0}
-  m_SizeDelta: {x: 25, y: 25}
+  m_SizeDelta: {x: 40, y: 25}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &491398408
 MonoBehaviour:
@@ -2670,7 +2671,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: eb4a3c617c3916e47bb3fab36a723a8a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4265,8 +4266,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 942153969}
-        m_MethodName: UpgradeAttackSpeed
+      - m_Target: {fileID: 275797010}
+        m_MethodName: IncreaseAttackSpeed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4276,8 +4277,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 275797010}
-        m_MethodName: UpgradeAttackSpeed
+      - m_Target: {fileID: 942153969}
+        m_MethodName: IncreaseAttackSpeed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4858,7 +4859,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -50, y: 0}
-  m_SizeDelta: {x: 25, y: 25}
+  m_SizeDelta: {x: 40, y: 25}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &928005720
 MonoBehaviour:
@@ -4878,7 +4879,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: eb4a3c617c3916e47bb3fab36a723a8a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5073,9 +5074,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 942153959}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 09ced39e7aa776b499b392e2666f8e23, type: 3}
+  m_Script: {fileID: 11500000, guid: 6cdad906c1abe63438c70b8bbb138830, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
   characterStatsInfo: {fileID: 0}
 --- !u!1 &945164771
 GameObject:
@@ -6459,7 +6461,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 275797010}
+      - m_Target: {fileID: 0}
         m_MethodName: UpgradeMoveSpeed
         m_Mode: 1
         m_Arguments:
@@ -6470,7 +6472,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 942153969}
+      - m_Target: {fileID: 0}
         m_MethodName: UpgradeMoveSpeed
         m_Mode: 1
         m_Arguments:
@@ -6992,7 +6994,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1258455857
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7744,7 +7746,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -50, y: 0}
-  m_SizeDelta: {x: 25, y: 25}
+  m_SizeDelta: {x: 40, y: 25}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1371042512
 MonoBehaviour:
@@ -7764,7 +7766,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: eb4a3c617c3916e47bb3fab36a723a8a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7945,7 +7947,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 275797010}
+      - m_Target: {fileID: 0}
         m_MethodName: UpgradeSkillCooldownSpeed
         m_Mode: 1
         m_Arguments:
@@ -7956,7 +7958,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 942153969}
+      - m_Target: {fileID: 0}
         m_MethodName: UpgradeSkillCooldownSpeed
         m_Mode: 1
         m_Arguments:
@@ -8292,7 +8294,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -50, y: 0}
-  m_SizeDelta: {x: 25, y: 25}
+  m_SizeDelta: {x: 40, y: 25}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1440273825
 MonoBehaviour:
@@ -8312,7 +8314,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: eb4a3c617c3916e47bb3fab36a723a8a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8680,7 +8682,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 275797010}
+      - m_Target: {fileID: 0}
         m_MethodName: UpgradeHealthPoints
         m_Mode: 1
         m_Arguments:
@@ -8691,7 +8693,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 942153969}
+      - m_Target: {fileID: 0}
         m_MethodName: UpgradeHealthPoints
         m_Mode: 1
         m_Arguments:
@@ -8847,7 +8849,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -50, y: 0}
-  m_SizeDelta: {x: 25, y: 25}
+  m_SizeDelta: {x: 40, y: 25}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1519437366
 MonoBehaviour:
@@ -8867,7 +8869,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: eb4a3c617c3916e47bb3fab36a723a8a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8919,10 +8921,10 @@ RectTransform:
   m_Father: {fileID: 962776036}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0, y: -25}
+  m_SizeDelta: {x: 239.66667, y: 50}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1521774004
 MonoBehaviour:
@@ -9236,7 +9238,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -50, y: 0}
-  m_SizeDelta: {x: 25, y: 25}
+  m_SizeDelta: {x: 40, y: 25}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1551914275
 MonoBehaviour:
@@ -9256,7 +9258,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: eb4a3c617c3916e47bb3fab36a723a8a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9404,7 +9406,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 275797010}
+      - m_Target: {fileID: 0}
         m_MethodName: UpgradeDefencePoint
         m_Mode: 1
         m_Arguments:
@@ -9415,7 +9417,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 942153969}
+      - m_Target: {fileID: 0}
         m_MethodName: UpgradeDefencePoint
         m_Mode: 1
         m_Arguments:
@@ -9529,7 +9531,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
   m_AnchoredPosition: {x: -50, y: 0}
-  m_SizeDelta: {x: 25, y: 25}
+  m_SizeDelta: {x: 40, y: 25}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!114 &1673293846
 MonoBehaviour:
@@ -9549,7 +9551,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: eb4a3c617c3916e47bb3fab36a723a8a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -10093,29 +10095,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1759844942}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 942153969}
-        m_MethodName: UpgradeAttackDamage
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 275797010}
-        m_MethodName: UpgradeAttackDamage
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1759844942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11192,7 +11172,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 275797010}
+      - m_Target: {fileID: 0}
         m_MethodName: UpgradeCastSpeed
         m_Mode: 1
         m_Arguments:
@@ -11203,7 +11183,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 942153969}
+      - m_Target: {fileID: 0}
         m_MethodName: UpgradeCastSpeed
         m_Mode: 1
         m_Arguments:
@@ -11510,10 +11490,10 @@ RectTransform:
   m_Father: {fileID: 962776036}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 364.5, y: -25}
+  m_SizeDelta: {x: 239.66667, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2051883518
 MonoBehaviour:
@@ -11721,7 +11701,9 @@ MonoBehaviour:
   - {fileID: 8410609415546749117}
   _mainCameraTransform: {fileID: 48634192}
   _cinemachineFreeLook: {fileID: 449436988}
-  shopUpgradeCharacterController: {fileID: 942153969}
+  _upgradeAttackSpeed:
+  - {fileID: 275797010}
+  - {fileID: 942153969}
 --- !u!114 &2068072957
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -27,17 +27,19 @@
               <e p="ChangeSliderHealthBar.cs" t="Include" />
               <e p="OwnPicture.cs" t="Include" />
             </e>
-            <e p="ShopUpgradeCharacterController.cs" t="Include" />
           </e>
           <e p="BrokedScripts" t="Include">
             <e p="DamageSystem_With_Interface.cs" t="Include" />
           </e>
-          <e p="BuildStatement" t="Include">
+          <e p="Buildings" t="Include">
             <e p="MainCastleInfo.cs" t="Include" />
             <e p="ShopAimCharacter.cs" t="Include" />
             <e p="ShopHighlight.cs" t="Include" />
             <e p="ShopInfo.cs" t="Include" />
             <e p="ShopInteraction.cs" t="Include" />
+            <e p="Shops" t="Include">
+              <e p="UpgradeAttackSpeed.cs" t="Include" />
+            </e>
           </e>
           <e p="Characters" t="Include">
             <e p="AimCharacterToMob.cs" t="Include" />

@@ -13,7 +13,7 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
     [SerializeField] private Transform _mainCameraTransform;
     [SerializeField] private CinemachineFreeLook _cinemachineFreeLook;
 
-    [SerializeField] private ShopUpgradeCharacterController shopUpgradeCharacterController;
+    [SerializeField] private UpgradeAttackSpeed[] _upgradeAttackSpeed;
     private GameObject _currentCharacter;
 
     public void Start()
@@ -28,7 +28,7 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
     private void SpawnCharacter()
     {
         Transform spawnPoint = (PhotonNetwork.IsMasterClient ? _spawnPoints[0] : _spawnPoints[1]);
-
+        
         _currentCharacter = PhotonNetwork.Instantiate(SelectedCharacter.Prefab.name,
         spawnPoint.position, Quaternion.identity);
 
@@ -50,8 +50,19 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
         
         ShopInteraction shopInteraction = _currentCharacter.GetComponent<ShopInteraction>();
         shopInteraction.cinemachineFreeLook = _cinemachineFreeLook;
+
+        #region Shop
+
+        UpgradeAttackSpeed upgradeAttackSpeed =
+            (PhotonNetwork.IsMasterClient ? _upgradeAttackSpeed[0] : _upgradeAttackSpeed[1]);
         
-        shopUpgradeCharacterController.characterStatsInfo = _currentCharacter.GetComponent<CharacterStatsInfo>();
+        CharacterStatsInfo characterStatsInfo = _currentCharacter.GetComponent<CharacterStatsInfo>();
+        upgradeAttackSpeed.characterStatsInfo = characterStatsInfo;
+        
+        Animator animator = _currentCharacter.GetComponent<Animator>();
+        upgradeAttackSpeed.animator = animator;
+        #endregion
+   
     }
 
 }
