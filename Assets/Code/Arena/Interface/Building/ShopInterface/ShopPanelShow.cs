@@ -6,12 +6,13 @@ public class ShopPanelShow : MonoBehaviour
 {
     [SerializeField] private GameObject _shopPanel;
     private bool _pressFPanelShown = false;
+    public static bool shopPanelShown = false;
 
     public void SetPressFPanelShown(bool pressFPanelShown)
     {
-        _pressFPanelShown = pressFPanelShown;
-
         if (!pressFPanelShown) _shopPanel.SetActive(false);
+
+        _pressFPanelShown = pressFPanelShown;
     }
 
     private void Update()
@@ -19,6 +20,7 @@ public class ShopPanelShow : MonoBehaviour
         if (Input.GetKeyDown("f"))
         {
             if (_pressFPanelShown) _shopPanel.SetActive(!_shopPanel.activeSelf);
+            shopPanelShown = true;
         }
     }
 }

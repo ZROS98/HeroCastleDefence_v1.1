@@ -23,7 +23,7 @@ public class PressFPanelAvailability : MonoBehaviour
         if (_shopInTarget)
         {
             float distanceDifference = Vector3.Distance(_characterPosition, transform.position);
-            if (distanceDifference <= _distanceToShow)
+            if (distanceDifference <= _distanceToShow && !ShopPanelShow.shopPanelShown)
             {
                 _pressFPanel.SetActive(true);
                 _shopPanelShow.SetPressFPanelShown(true);
