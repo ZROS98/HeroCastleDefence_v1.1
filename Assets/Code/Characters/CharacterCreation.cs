@@ -63,14 +63,19 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
         upgradeAttackSpeed.animator = animator;
         #endregion
 
-        CurrentCharacter.SetCurrentCharacter(_currentCharacter);
+        CurrentCharacter.currentCharacter = _currentCharacter;
     }
 
     private void Update()
     {
         if (Input.GetButtonDown("Jump"))
         {
-            Debug.Log(CurrentCharacter.GetCurrentCharacter());
+            Debug.Log(CurrentCharacter.currentCharacter);
+        }
+
+        if (Input.GetButtonDown("Submit"))
+        {
+            CurrentCharacter.currentCharacter = _currentCharacter;
         }
     }
 }
