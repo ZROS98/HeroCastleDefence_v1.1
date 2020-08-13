@@ -5,7 +5,7 @@ using UnityEngine;
 
 public static class CurrentCharacter
 {
-    private static GameObject[] charactersArray = new GameObject[2];
+    public static GameObject[] charactersArray = new GameObject[2];
 
     public static GameObject GetCurrentCharacter()
     {
