@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class UpgradeAttackSpeed : MonoBehaviour
 {
@@ -15,5 +13,11 @@ public class UpgradeAttackSpeed : MonoBehaviour
         
         animator.SetFloat("AttackSpeed", newAttackSpeed);
         characterStatsInfo.SetAttackSpeed(newAttackSpeed);
+    }
+
+    private void Start()
+    {
+        animator = CurrentCharacter.currentCharacter.GetComponent<Animator>();
+        characterStatsInfo = CurrentCharacter.currentCharacter.GetComponent<CharacterStatsInfo>();
     }
 }

@@ -13,7 +13,6 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
     [SerializeField] private Transform _mainCameraTransform;
     [SerializeField] private CinemachineFreeLook _cinemachineFreeLook;
 
-    [SerializeField] private UpgradeAttackSpeed[] _upgradeAttackSpeed;
     private GameObject _currentCharacter;
 
     public void Start()
@@ -32,6 +31,7 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
         _currentCharacter = PhotonNetwork.Instantiate(SelectedCharacter.Prefab.name,
         spawnPoint.position, Quaternion.identity);
 
+        CurrentCharacter.currentCharacter = _currentCharacter;
 
         ThirdPersonMovement thirdPersonMovement = _currentCharacter.GetComponent<ThirdPersonMovement>();
         thirdPersonMovement.mainCameraTransform = _mainCameraTransform;
@@ -50,32 +50,5 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
         
         ShopInteraction shopInteraction = _currentCharacter.GetComponent<ShopInteraction>();
         shopInteraction.cinemachineFreeLook = _cinemachineFreeLook;
-
-        #region Shop
-
-        UpgradeAttackSpeed upgradeAttackSpeed =
-            (PhotonNetwork.IsMasterClient ? _upgradeAttackSpeed[0] : _upgradeAttackSpeed[1]);
-        
-        CharacterStatsInfo characterStatsInfo = _currentCharacter.GetComponent<CharacterStatsInfo>();
-        upgradeAttackSpeed.characterStatsInfo = characterStatsInfo;
-        
-        Animator animator = _currentCharacter.GetComponent<Animator>();
-        upgradeAttackSpeed.animator = animator;
-        #endregion
-
-        CurrentCharacter.currentCharacter = _currentCharacter;
-    }
-
-    private void Update()
-    {
-        if (Input.GetButtonDown("Jump"))
-        {
-            Debug.Log(CurrentCharacter.currentCharacter);
-        }
-
-        if (Input.GetButtonDown("Submit"))
-        {
-            CurrentCharacter.currentCharacter = _currentCharacter;
-        }
     }
 }
