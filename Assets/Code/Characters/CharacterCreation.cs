@@ -68,7 +68,7 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
 
     private void Update()
     {
-        if (Input.GetButtonDown("Space"))
+        if (Input.GetButtonDown("Jump"))
         {
             Debug.Log(CurrentCharacter.GetCurrentCharacter());
         }
