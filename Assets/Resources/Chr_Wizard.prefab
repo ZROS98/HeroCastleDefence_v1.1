@@ -462,6 +462,7 @@ MonoBehaviour:
   _capsuleCollider: {fileID: 954627132366467129}
   _holder_ThirdPersonCameraTransform: {fileID: 8046869136246377358}
   _photonView: {fileID: 3533209790041736914}
+  _characterStatsInfo: {fileID: 2180958995764925964}
   cinemachineFreeLook: {fileID: 0}
   mainCameraTransform: {fileID: 0}
   stopMovement: 0
@@ -599,8 +600,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3450234c0cd53e440ace5f1fe5bafd82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _characterAnimation: {fileID: -8307961148697726785}
   _characterStats: {fileID: 11400000, guid: c3e541460823ee141aa3e183a82f639c, type: 2}
+  healthPoint: 0
+  defencePoint: 0
+  _moveSpeed: 0
+  _attackSpeed: 0
+  skillCooldownSpeed: 0
+  castSpeed: 0
+  attackDamage: 0
+  skillDamage: 0
 --- !u!1 &132115340227565673
 GameObject:
   m_ObjectHideFlags: 0

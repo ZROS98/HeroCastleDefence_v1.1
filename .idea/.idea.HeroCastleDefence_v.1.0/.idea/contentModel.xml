@@ -21,6 +21,7 @@
               <e p="Building" t="Include">
                 <e p="PressFPanelAvailability.cs" t="Include" />
                 <e p="ShopInterface" t="Include">
+                  <e p="ShopPanelHide.cs" t="Include" />
                   <e p="ShopPanelShow.cs" t="Include" />
                 </e>
               </e>
@@ -38,7 +39,10 @@
             <e p="ShopInfo.cs" t="Include" />
             <e p="ShopInteraction.cs" t="Include" />
             <e p="Shops" t="Include">
+              <e p="UpgradeAttackDamage.cs" t="Include" />
               <e p="UpgradeAttackSpeed.cs" t="Include" />
+              <e p="UpgradeHealthPoint.cs" t="Include" />
+              <e p="UpgradeMoveSpeed.cs" t="Include" />
             </e>
           </e>
           <e p="Characters" t="Include">
@@ -52,9 +56,7 @@
             <e p="CharacterStats.cs" t="Include" />
             <e p="CharacterStatsInfo.cs" t="Include" />
             <e p="CharacterWeaponTransform.cs" t="Include" />
-            <e p="Interface" t="Include">
-              <e p="CharacterHealthBarController.cs" t="Include" />
-            </e>
+            <e p="CurrentCharacter.cs" t="Include" />
             <e p="ShootingMechanics.cs" t="Include" />
             <e p="ThirdPersonMovement.cs" t="Include" />
           </e>

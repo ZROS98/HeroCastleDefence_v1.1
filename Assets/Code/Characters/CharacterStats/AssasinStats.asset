@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthPoint: 100
   defencePoint: 0
-  moveSpeed: 1
+  moveSpeed: 6
   attackSpeed: 1
   skillCooldownSpeed: 0
   castSpeed: 0

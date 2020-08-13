@@ -14,6 +14,7 @@ public class MobCreation : MonoBehaviour
 
     private void Start()
     {
+        targetCharacter = CurrentCharacter.currentCharacter;
         _spawnPointPosition = (PhotonNetwork.IsMasterClient ? _spawnPointsTransform[0].position : _spawnPointsTransform[1].position);
         _targetCastlePosition = (PhotonNetwork.IsMasterClient ? _targetCastlesTransform[0].position : _targetCastlesTransform[1].position);
     }

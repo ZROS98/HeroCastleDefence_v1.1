@@ -27,19 +27,18 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
     private void SpawnCharacter()
     {
         Transform spawnPoint = (PhotonNetwork.IsMasterClient ? _spawnPoints[0] : _spawnPoints[1]);
-        
+
         _currentCharacter = PhotonNetwork.Instantiate(SelectedCharacter.Prefab.name,
-        spawnPoint.position, Quaternion.identity);
+            spawnPoint.position, Quaternion.identity);
 
         CurrentCharacter.currentCharacter = _currentCharacter;
 
         ThirdPersonMovement thirdPersonMovement = _currentCharacter.GetComponent<ThirdPersonMovement>();
         thirdPersonMovement.mainCameraTransform = _mainCameraTransform;
         thirdPersonMovement.cinemachineFreeLook = _cinemachineFreeLook;
-        MobCreation mobCreation = gameObject.GetComponent<MobCreation>();
-        mobCreation.targetCharacter = _currentCharacter;
 
-        CharacterRespawnDeathController characterRespawnDeathController = _currentCharacter.GetComponent<CharacterRespawnDeathController>();
+        CharacterRespawnDeathController characterRespawnDeathController =
+            _currentCharacter.GetComponent<CharacterRespawnDeathController>();
         characterRespawnDeathController.spawnPoint = spawnPoint;
 
         ChangeSliderHealthBar healthBar = _currentCharacter.GetComponent<ChangeSliderHealthBar>();
@@ -47,7 +46,7 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
 
         AimCharacterToMob aimCharacterToMob = _currentCharacter.GetComponent<AimCharacterToMob>();
         aimCharacterToMob.cinemachineFreeLook = _cinemachineFreeLook;
-        
+
         ShopInteraction shopInteraction = _currentCharacter.GetComponent<ShopInteraction>();
         shopInteraction.cinemachineFreeLook = _cinemachineFreeLook;
     }

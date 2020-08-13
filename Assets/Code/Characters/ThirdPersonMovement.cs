@@ -7,11 +7,12 @@ public class ThirdPersonMovement : MonoBehaviour
     [SerializeField] private CapsuleCollider _capsuleCollider;
     [SerializeField] private Transform _holder_ThirdPersonCameraTransform;
     [SerializeField] private PhotonView _photonView;
+    [SerializeField] private CharacterStatsInfo _characterStatsInfo;
     public CinemachineFreeLook cinemachineFreeLook;
     public Transform mainCameraTransform;
     public bool stopMovement = false;
 
-    private const float speed = 6f;
+    public float speed;
     private const float turnSmoothTime = 0.0f;
     private float turnSmoothVelocity;
 
@@ -19,15 +20,10 @@ public class ThirdPersonMovement : MonoBehaviour
     {
         stopMovement = eventValue == 1 ? true : false;
     }
-    private void Awake()
-    {
-        if (!_photonView.IsMine) enabled = false;
-    }
 
-    private void Start()
+    public void SetNewMoveSpeed()
     {
-        cinemachineFreeLook.LookAt = _holder_ThirdPersonCameraTransform;
-        cinemachineFreeLook.Follow = _holder_ThirdPersonCameraTransform;
+        speed = _characterStatsInfo.moveSpeed;
     }
 
     private void Update()
@@ -35,15 +31,28 @@ public class ThirdPersonMovement : MonoBehaviour
         if (stopMovement) return;
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        
+
         Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
         if (direction.magnitude >= 0.1f)
         {
-            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + mainCameraTransform.eulerAngles.y;
+            float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg +
+                                mainCameraTransform.eulerAngles.y;
             transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
 
-            Vector3 movementDirection = Quaternion.Euler(0f, direction.y, 0f)*Vector3.forward;
-            _capsuleCollider.transform.Translate(movementDirection.normalized * speed * Time.deltaTime);          
+            Vector3 movementDirection = Quaternion.Euler(0f, direction.y, 0f) * Vector3.forward;
+            _capsuleCollider.transform.Translate(movementDirection.normalized * speed * Time.deltaTime);
         }
+    }
+
+    private void Awake()
+    {
+        if (!_photonView.IsMine) enabled = false;
+    }
+
+    private void Start()
+    {
+        SetNewMoveSpeed();
+        cinemachineFreeLook.LookAt = _holder_ThirdPersonCameraTransform;
+        cinemachineFreeLook.Follow = _holder_ThirdPersonCameraTransform;
     }
 }

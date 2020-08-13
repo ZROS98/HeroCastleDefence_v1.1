@@ -13,10 +13,12 @@ public class EventManager : MonoBehaviour
     }
 
     #region CharacterEvents
+
     /// <summary>
     /// true = respawn, false = death
     /// </summary>
     public event Action<bool> LifeStatusChanged;
+
     public void OnLifeStatusDeath()
     {
         LifeStatusChanged?.Invoke(false);
@@ -26,9 +28,11 @@ public class EventManager : MonoBehaviour
     {
         LifeStatusChanged?.Invoke(true);
     }
+
     #endregion
 
     #region MobEvents
+
     /// <summary>
     /// true = turn On, false = turn Off
     /// </summary>
@@ -43,8 +47,7 @@ public class EventManager : MonoBehaviour
     {
         MobHighlightingStatusChanged?.Invoke(false, mobEventID);
     }
-    #endregion
 
-//    #region ShopEvents
-//    #endregion
+    #endregion
+    
 }
