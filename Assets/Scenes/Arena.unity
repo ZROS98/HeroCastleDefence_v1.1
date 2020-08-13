@@ -402,11 +402,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48634189}
-<<<<<<< HEAD
-  m_LocalRotation: {x: 0.05693724, y: -0.030938111, z: 0.10035919, w: 0.9928389}
-=======
   m_LocalRotation: {x: 0.057067815, y: -0.03148377, z: 0.111643285, w: 0.99160874}
->>>>>>> remotes/origin/ZROS_ok
   m_LocalPosition: {x: 21.69109, y: 4, z: 28.169998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1766,13 +1762,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: 1170.8334, y: -25}
-  m_SizeDelta: {x: 464.33334, y: 50}
-=======
   m_AnchoredPosition: {x: 609.1667, y: -25}
   m_SizeDelta: {x: 239.66667, y: 50}
->>>>>>> remotes/origin/ZROS_ok
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &380244138
 MonoBehaviour:
@@ -8933,11 +8924,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 0, y: -25}
-<<<<<<< HEAD
-  m_SizeDelta: {x: 464.33334, y: 50}
-=======
   m_SizeDelta: {x: 239.66667, y: 50}
->>>>>>> remotes/origin/ZROS_ok
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1521774004
 MonoBehaviour:
@@ -11505,13 +11492,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: 701.5, y: -25}
-  m_SizeDelta: {x: 464.33334, y: 50}
-=======
   m_AnchoredPosition: {x: 364.5, y: -25}
   m_SizeDelta: {x: 239.66667, y: 50}
->>>>>>> remotes/origin/ZROS_ok
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2051883518
 MonoBehaviour:

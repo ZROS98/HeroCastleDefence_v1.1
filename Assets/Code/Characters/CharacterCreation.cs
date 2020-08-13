@@ -62,7 +62,15 @@ public class CharacterCreation : MonoBehaviourPunCallbacks
         Animator animator = _currentCharacter.GetComponent<Animator>();
         upgradeAttackSpeed.animator = animator;
         #endregion
-   
+
+        CurrentCharacter.SetCurrentCharacter(_currentCharacter);
     }
 
+    private void Update()
+    {
+        if (Input.GetButtonDown("Space"))
+        {
+            Debug.Log(CurrentCharacter.GetCurrentCharacter());
+        }
+    }
 }
