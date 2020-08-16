@@ -8,17 +8,19 @@ public class ThirdPersonMovement : MonoBehaviour
     [SerializeField] private Transform _holder_ThirdPersonCameraTransform;
     [SerializeField] private PhotonView _photonView;
     [SerializeField] private CharacterStatsInfo _characterStatsInfo;
+    [SerializeField] private CharacterAnimation _characterAnimation;
+    private bool _stopMovement = false;
     public CinemachineFreeLook cinemachineFreeLook;
     public Transform mainCameraTransform;
-    public bool stopMovement = false;
 
     public float speed;
     private const float turnSmoothTime = 0.0f;
     private float turnSmoothVelocity;
 
-    private void SetStopMovement(int eventValue)
+    public void SetStopMovement(bool stopMovement)
     {
-        stopMovement = eventValue == 1 ? true : false;
+        _stopMovement = stopMovement;
+        if (_stopMovement) _characterAnimation.SetIsMoving(false);
     }
 
     public void SetNewMoveSpeed()
@@ -28,7 +30,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     private void Update()
     {
-        if (stopMovement) return;
+        if (_stopMovement) return;
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
 
@@ -41,6 +43,12 @@ public class ThirdPersonMovement : MonoBehaviour
 
             Vector3 movementDirection = Quaternion.Euler(0f, direction.y, 0f) * Vector3.forward;
             _capsuleCollider.transform.Translate(movementDirection.normalized * speed * Time.deltaTime);
+
+            _characterAnimation.SetIsMoving(true);
+        }
+        else
+        {
+            _characterAnimation.SetIsMoving(false);
         }
     }
 

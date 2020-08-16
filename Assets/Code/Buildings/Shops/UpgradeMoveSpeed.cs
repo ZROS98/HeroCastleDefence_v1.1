@@ -7,7 +7,7 @@ public class UpgradeMoveSpeed : MonoBehaviour
 {
     private const float speedValueStep = 1;
     private float speedMoveAnimation = 1;
-    private Animator _animator;
+    private CharacterAnimation _сharacterAnimation;
     private CharacterStatsInfo _characterStatsInfo;
     private ThirdPersonMovement _thirdPersonMovement;
 
@@ -16,7 +16,7 @@ public class UpgradeMoveSpeed : MonoBehaviour
     {
         _characterStatsInfo.moveSpeed += speedValueStep;
         _thirdPersonMovement.SetNewMoveSpeed();
-        _animator.SetFloat("MoveSpeed", NewSpeedMoveAnimation());
+        _сharacterAnimation.ChangeMoveSpeed(NewSpeedMoveAnimation());
     }
 
     private float NewSpeedMoveAnimation()
@@ -28,7 +28,7 @@ public class UpgradeMoveSpeed : MonoBehaviour
 
     private void Start()
     {
-        _animator = CurrentCharacter.currentCharacter.GetComponent<Animator>();
+        _сharacterAnimation = CurrentCharacter.currentCharacter.GetComponent<CharacterAnimation>();
         _characterStatsInfo = CurrentCharacter.currentCharacter.GetComponent<CharacterStatsInfo>();
         _thirdPersonMovement = CurrentCharacter.currentCharacter.GetComponent<ThirdPersonMovement>();
     }

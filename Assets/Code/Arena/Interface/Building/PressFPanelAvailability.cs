@@ -6,7 +6,7 @@ public class PressFPanelAvailability : MonoBehaviour
 {
     [SerializeField] private float _distanceToShow;
     [SerializeField] private GameObject _pressFPanel;
-    [SerializeField] private ShopPanelShow _shopPanelShow;
+    [SerializeField] private ShopPanelController _shopPanelShow;
     private bool _shopInTarget = false;
     private Vector3 _characterPosition;
 
@@ -23,7 +23,7 @@ public class PressFPanelAvailability : MonoBehaviour
         if (_shopInTarget)
         {
             float distanceDifference = Vector3.Distance(_characterPosition, transform.position);
-            if (distanceDifference <= _distanceToShow && !ShopPanelShow.shopPanelShown)
+            if (distanceDifference <= _distanceToShow && !_shopPanelShow.shopPanelShown)
             {
                 _pressFPanel.SetActive(true);
                 _shopPanelShow.SetPressFPanelShown(true);

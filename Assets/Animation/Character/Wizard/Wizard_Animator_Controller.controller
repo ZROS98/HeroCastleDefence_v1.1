@@ -32,7 +32,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Mage_Animator_Controller
+  m_Name: Wizard_Animator_Controller
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:

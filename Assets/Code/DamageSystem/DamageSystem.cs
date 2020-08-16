@@ -7,19 +7,15 @@ using UnityEngine;
 public class DamageSystem : MonoBehaviour
 {
     [SerializeField] private Weapon _weapon;
-    public bool attackAnimationIsActive = false; //filling from animations event
     private bool _scriptHolderIsMob = false;
+    [HideInInspector] public bool attackAnimationIsActive = false;
+
     void Start()
     {
         if(CompareTag("Mob"))
         {
             _scriptHolderIsMob = true;
         }
-    }
-
-    private void SetAttackAnimationIsActive(int eventValue)
-    {
-        attackAnimationIsActive = eventValue == 1 ? true : false;
     }
 
     private void OnTriggerEnter(Collider other)

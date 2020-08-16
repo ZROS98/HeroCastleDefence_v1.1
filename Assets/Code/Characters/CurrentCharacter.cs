@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public static class CurrentCharacter
+public class CurrentCharacter
 {
     public static GameObject currentCharacter;
 }

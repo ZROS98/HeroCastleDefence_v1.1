@@ -4,7 +4,7 @@ using UnityEngine;
 public class UpgradeAttackSpeed : MonoBehaviour
 {
     private const float speedValueStep = 1;
-    private Animator _animator;
+    private CharacterAnimation _сharacterAnimation;
     private CharacterStatsInfo _characterStatsInfo;
 
     public void IncreaseAttackSpeed()
@@ -12,13 +12,13 @@ public class UpgradeAttackSpeed : MonoBehaviour
         float currentAttackSpeed = _characterStatsInfo.attackSpeed;
         float newAttackSpeed = currentAttackSpeed + speedValueStep;
 
-        _animator.SetFloat("AttackSpeed", newAttackSpeed);
+        _сharacterAnimation.ChangeAttackSpeed(newAttackSpeed);
         _characterStatsInfo.attackSpeed = newAttackSpeed;
     }
 
     private void Start()
     {
-        _animator = CurrentCharacter.currentCharacter.GetComponent<Animator>();
+        _сharacterAnimation = CurrentCharacter.currentCharacter.GetComponent<CharacterAnimation>();
         _characterStatsInfo = CurrentCharacter.currentCharacter.GetComponent<CharacterStatsInfo>();
     }
 }

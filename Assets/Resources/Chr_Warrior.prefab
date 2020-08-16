@@ -181,6 +181,7 @@ GameObject:
   - component: {fileID: 1712776910155951801}
   - component: {fileID: -7305416631516398427}
   - component: {fileID: 7023882424477430242}
+  - component: {fileID: 140761294798309639}
   m_Layer: 9
   m_Name: Chr_Warrior
   m_TagString: Player
@@ -307,6 +308,7 @@ MonoBehaviour:
   _holder_ThirdPersonCameraTransform: {fileID: 1160785665798440003}
   _photonView: {fileID: 4292569332387551890}
   _characterStatsInfo: {fileID: 7023882424477430242}
+  _characterAnimation: {fileID: -276682394863718703}
   cinemachineFreeLook: {fileID: 0}
   mainCameraTransform: {fileID: 0}
   stopMovement: 0
@@ -324,8 +326,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _animator: {fileID: 5731104665664843776}
-  _rigidbody: {fileID: 8072456564086212706}
-  dontChangeAnimation: 0
 --- !u!114 &-6418731964768924982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -492,6 +492,20 @@ MonoBehaviour:
   _moveSpeed: 0
   _attackSpeed: 0
   _attackDamage: 0
+--- !u!114 &140761294798309639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5682434098739292252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c4d714c780be2a40ac78c7c4f3499ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _characterAnimation: {fileID: -276682394863718703}
+  _damageSystem: {fileID: -4014825313017950058}
 --- !u!1 &5682444290630811978
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,9 +18,8 @@ public class CharacterRespawnDeathController : MonoBehaviour
     private void Death()
     {
         _alreadyDead = true;
-        _animator.Play("Death");
-        _thirdPersonMovement.stopMovement = true;
-        _characterAnimation.dontChangeAnimation = true;
+        _characterAnimation.SetIsDead(true);
+        _thirdPersonMovement.SetStopMovement(true);
         StartCoroutine("Respawn");
 
         EventManager.current.OnLifeStatusDeath();
@@ -33,9 +32,8 @@ public class CharacterRespawnDeathController : MonoBehaviour
 
         transform.position = spawnPoint.position;
         _characterHealthController.RestoreHealth();
-        _thirdPersonMovement.stopMovement = false;
-        _characterAnimation.dontChangeAnimation = false;
-        _animator.Play("Idle");
+        _thirdPersonMovement.SetStopMovement(false);
+        _characterAnimation.SetIsDead(false);
 
         EventManager.current.OnLifeStatusRespawn();
     }
